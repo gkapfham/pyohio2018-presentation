@@ -37,15 +37,7 @@ import preloader from '../../src/utils/preloader';
 
 import createTheme from '../../src/themes/default';
 
-import Interactive from '../assets/interactive';
-
 require('normalize.css');
-
-const images = {
-  city: require('../assets/city.jpg'),
-};
-
-preloader(images);
 
 const theme = createTheme({
   primary: '#bdbdbd',
@@ -71,12 +63,6 @@ library.add(fab, far, fas)
 export const Archive = () => (
   <div>
     <FontAwesomeIcon icon={['fas', 'archive']} size="3x" color="#212121"/>
-  </div>
-)
-
-export const Coffee = () => (
-  <div>
-    <FontAwesomeIcon icon={['fas', 'coffee']} size="3x" color="#1565c0"/>
   </div>
 )
 
