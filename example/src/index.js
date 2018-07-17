@@ -206,6 +206,7 @@ export default class Presentation extends Component {
           </Layout>
 
         </Slide>
+        {/* Slide } */}
 
         <Slide transition={['slide']} transitionDuration={500} margin="50px 0px 0px -125px" bgColor="primary">
 
