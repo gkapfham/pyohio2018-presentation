@@ -108,7 +108,7 @@ export default class Presentation extends Component {
 
   render() {
 
-    {/* Create the Deck of slides, with no controls and no progress bars */}
+    {/* Create the Deck of slides with no controls and no progress bars */}
     return (
       <Deck
         transition={['zoom', 'slide']}
