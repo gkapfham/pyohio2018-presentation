@@ -83,6 +83,12 @@ export const Twitter = () => (
   </div>
 )
 
+export const Map = () => (
+  <div>
+    <FontAwesomeIcon icon={['fas', 'map']} size="2x" color="#212121"/>
+  </div>
+)
+
 export const Web = () => (
   <div>
     <FontAwesomeIcon icon={['fas', 'globe']} size="3x" color="#1565c0"/>
@@ -152,21 +158,21 @@ export default class Presentation extends Component {
           <Layout>
             <Fill>
               <Text bold fit textColor="darktext">
-              Hi! My name is
+                Hi! My name is
               </Text>
             </Fill>
           </Layout>
 
           <Layout>
             <Text height="20px">
-            &nbsp;
+              &nbsp;
             </Text>
           </Layout>
 
           <Layout>
             <Fill>
               <Text bold fit caps textColor="secondary">
-              Gregory M. Kapfhammer
+                Gregory M. Kapfhammer
               </Text>
             </Fill>
           </Layout>
@@ -183,26 +189,64 @@ export default class Presentation extends Component {
             </Fit>
             <Fit>
               <Text bold margin="10px 0px 0px 25px" textSize="2em" textColor="tertiary">
-              @GregKapfhammer
+                @GregKapfhammer
               </Text>
             </Fit>
           </Layout>
 
           <Layout>
             <Text height="20px">
-            &nbsp;
+              &nbsp;
             </Text>
           </Layout>
 
           <Layout>
             <Fit>
-            <Web/>
+              <Web/>
             </Fit>
             <Fit>
               <Text bold margin="10px 0px 0px 25px" textSize="2em" textColor="tertiary">
-              www.gregorykapfhammer.com
+                www.gregorykapfhammer.com
               </Text>
             </Fit>
+          </Layout>
+
+        </Slide>
+        {/* Slide } */}
+
+        {/* Slide { */}
+        <Slide transition={['slide']} transitionDuration={0} bgColor="primary">
+
+          <Layout>
+            <Appear>
+              <Fill>
+                <Text bold fit margin="-10px 0px 0px 25px" textColor="darktext">
+                  Roadmap for this Talk
+                </Text>
+              </Fill>
+            </Appear>
+          </Layout>
+
+          <Layout>
+            <Text height="20px">
+              &nbsp;
+            </Text>
+          </Layout>
+
+          <Layout>
+            <Appear>
+              <Fill>
+                <Text bold fit textColor="secondary">
+                  Ask and answer technical questions!
+                </Text>
+              </Fill>
+            </Appear>
+          </Layout>
+
+          <Layout>
+            <Text height="20px">
+              &nbsp;
+            </Text>
           </Layout>
 
         </Slide>
