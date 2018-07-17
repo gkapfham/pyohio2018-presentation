@@ -120,6 +120,7 @@ export default class Presentation extends Component {
         progress={'none'}
       >
 
+        {/* Slide { */}
         <Slide transition={['zoom']} bgColor="primary">
 
           <Text textSize="3em" textColor="darktext" bold>
@@ -145,6 +146,7 @@ export default class Presentation extends Component {
           </Text>
 
         </Slide>
+        {/* Slide } */}
 
         <Slide transition={['slide']} bgColor="primary">
 
