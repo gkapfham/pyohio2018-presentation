@@ -211,87 +211,43 @@ export default class Presentation extends Component {
 
         <Layout>
 
-        <Appear>
-        <PaddedFill>
-        <Text textSize="2em" bold>
-        <Archive/>
-        </Text>
-        <Heading size={2}>Process</Heading>
-        </PaddedFill>
-        </Appear>
+          <Appear>
+            <PaddedFill>
+              <Text textSize="2em" bold>
+                <Archive/>
+              </Text>
+              <Heading size={2}>Process</Heading>
+            </PaddedFill>
+          </Appear>
 
-        <Appear>
-        <PaddedFill>
-        <Text textSize="2em" bold>
-        <Archive/>
-        </Text>
-        <Heading size={2}>Process</Heading>
-        </PaddedFill>
-        </Appear>
+          <Appear>
+            <PaddedFill>
+              <Text textSize="2em" bold>
+                <Archive/>
+              </Text>
+              <Heading size={2}>Process</Heading>
+            </PaddedFill>
+          </Appear>
 
-        <Appear>
-        <PaddedFill>
-        <Text textSize="2em" bold>
-        <Archive/>
-        </Text>
-        <Heading size={2}>Process</Heading>
-        </PaddedFill>
-        </Appear>
+          <Appear>
+            <PaddedFill>
+              <Text textSize="2em" bold>
+                <Archive/>
+              </Text>
+              <Heading size={2}>Process</Heading>
+            </PaddedFill>
+          </Appear>
 
         </Layout>
 
         <Layout>
-
-        <PaddedFill>
-        <Text textSize="1em" bold>
-        &nbsp;
-        </Text>
-        </PaddedFill>
+          <PaddedFill>
+            <Text textSize="1em" bold>
+              &nbsp;
+            </Text>
+          </PaddedFill>
         </Layout>
 
-        <Layout>
-
-        <Appear>
-        <Fill>
-        <Text textSize="2em" bold>
-        <Archive/>
-        </Text>
-        <Heading size={2}>Process</Heading>
-        </Fill>
-        </Appear>
-
-        <Appear>
-        <Fill>
-        <Text textSize="2em" bold>
-        <Archive/>
-        </Text>
-        <Heading size={2}>Process</Heading>
-        </Fill>
-        </Appear>
-
-        <Appear>
-        <Fill>
-        <Text textSize="2em" bold>
-        <Archive/>
-        </Text>
-        <Heading size={2}>Process</Heading>
-        </Fill>
-        </Appear>
-
-        </Layout>
-
-        </Slide>
-
-        <Slide transitionIn={['slide']} transitionOut={['slide', 'zoom']} transitionDuration={500} bgColor="primary">
-          <Heading size={1} fit caps lineHeight={2} textColor="black">
-            Spectacle Again
-          </Heading>
-          <Heading size={1} fit caps textColor="secondary">
-            A ReactJS Presentation Library
-          </Heading>
-          <Heading size={1} fit caps textColor="black">
-            Where You Can Write Your Decks In JSX
-          </Heading>
         </Slide>
 
       </Deck>
