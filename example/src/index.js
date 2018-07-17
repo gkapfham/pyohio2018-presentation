@@ -83,6 +83,10 @@ export const Twitter = () => (
   </div>
 )
 
+export const Lightbulb = () => (
+  <FontAwesomeIcon icon={['fas', 'lightbulb']} size="2x" transform="down-5, left-5" color="#1565c0"/>
+)
+
 export const Map = () => (
   <FontAwesomeIcon icon={['fas', 'map']} size="2x" transform="down-3, left-2" color="#212121"/>
 )
@@ -117,13 +121,13 @@ export default class Presentation extends Component {
       <Deck
         transition={['zoom', 'slide']}
         theme={theme}
-        transitionDuration={500}
+        transitionDuration={0}
         controls={false}
         progress={'none'}
       >
 
         {/* Slide { */}
-        <Slide transition={['zoom']} bgColor="primary">
+        <Slide transition={['zoom']} transitionDuration={500} bgColor="primary">
 
           <Text textSize="3em" textColor="darktext" bold>
             A Hands-On Guide to Teaching Programming with
@@ -151,7 +155,7 @@ export default class Presentation extends Component {
         {/* Slide } */}
 
         {/* Slide { */}
-        <Slide transition={['slide']} bgColor="primary">
+        <Slide transition={['slide']} transitionDuration={0} bgColor="primary">
 
           <Layout>
             <Fill>
@@ -213,12 +217,12 @@ export default class Presentation extends Component {
         {/* Slide } */}
 
         {/* Slide { */}
-        <Slide transition={['slide']} transitionDuration={0} bgColor="primary">
+        <Slide bgColor="primary">
 
           <Layout>
-            <Appear>
+            <Appear transitionDuration={100}>
               <Fill>
-                <Text bold fit textColor="darktext">
+                <Text bold fit textSize="3em" textColor="darktext">
                   <Map/>
                   Roadmap for this Talk
                 </Text>
@@ -227,16 +231,16 @@ export default class Presentation extends Component {
           </Layout>
 
           <Layout>
-            <Text height="20px">
+            <Text height="40px">
               &nbsp;
             </Text>
           </Layout>
 
           <Layout>
-            <Appear>
+            <Appear transitionDuration={100}>
               <Fill>
-                <Text bold fit textColor="secondary">
-                  Ask and answer technical questions!
+                <Text bold textSize="2em" textColor="secondary">
+                  Ask and answer questions about teaching programming
                 </Text>
               </Fill>
             </Appear>
@@ -248,10 +252,20 @@ export default class Presentation extends Component {
             </Text>
           </Layout>
 
+          <Layout>
+            <Appear transitionDuration={100}>
+              <Fill>
+                <Text bold textSize="2em" textColor="tertiary">
+                  How can I automatically check student submissions?
+                </Text>
+              </Fill>
+            </Appear>
+          </Layout>
+
         </Slide>
         {/* Slide } */}
 
-        <Slide transition={['slide']} transitionDuration={500} margin="50px 0px 0px -125px" bgColor="primary">
+        <Slide margin="50px 0px 0px -125px" bgColor="primary">
 
         <Layout>
 
