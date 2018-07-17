@@ -126,8 +126,8 @@ export default class Presentation extends Component {
             A Hands-On Guide to Teaching Programming with
           </Text>
 
-          <Text textSize="2.25em" textColor="secondary" bold>
-            GitHub, Travis CI, and ... Python!
+          <Text textSize="2.1em" textColor="secondary" bold>
+            GitHub, Travis CI, and Python
           </Text>
 
           <Layout>
