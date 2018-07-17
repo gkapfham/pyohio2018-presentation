@@ -11,6 +11,7 @@ import {
   ComponentPlayground,
   Deck,
   Fill,
+  Fit,
   Heading,
   Image,
   Layout,
@@ -63,12 +64,13 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { far } from '@fortawesome/free-regular-svg-icons'
+import { fas } from '@fortawesome/free-solid-svg-icons'
 
-library.add(fab, far, fas, faArchive, faCheckSquare)
+library.add(fab, far, fas)
 
 export const Archive = () => (
   <div>
-    <FontAwesomeIcon icon="archive" size="3x" color=""/>
+    <FontAwesomeIcon icon={['fas', 'archive']} size="3x" color="#212121"/>
   </div>
 )
 
@@ -81,6 +83,12 @@ export const Coffee = () => (
 export const Twitter = () => (
   <div>
     <FontAwesomeIcon icon={['fab', 'twitter']} size="3x" color="#1565c0"/>
+  </div>
+)
+
+export const Web = () => (
+  <div>
+    <FontAwesomeIcon icon={['fas', 'globe']} size="3x" color="#1565c0"/>
   </div>
 )
 
@@ -119,7 +127,7 @@ export default class Presentation extends Component {
           </Text>
 
           <Text textSize="2.25em" textColor="secondary" bold>
-            GitHub, Travis CI, and ... Python! <Smile/>
+            GitHub, Travis CI, and ... Python!
           </Text>
 
           <Layout>
@@ -135,6 +143,66 @@ export default class Presentation extends Component {
           <Text bold textColor="tertiary">
             July 28 at PyOhio 2018
           </Text>
+
+        </Slide>
+
+        <Slide transition={['slide']} bgColor="primary">
+
+          <Layout>
+            <Fill>
+              <Text bold fit textColor="darktext">
+              Hi! My name is
+              </Text>
+            </Fill>
+          </Layout>
+
+          <Layout>
+            <Text height="20px">
+            &nbsp;
+            </Text>
+          </Layout>
+
+          <Layout>
+            <Fill>
+              <Text bold fit caps textColor="secondary">
+              Gregory M. Kapfhammer
+              </Text>
+            </Fill>
+          </Layout>
+
+          <Layout>
+            <Text height="20px">
+            &nbsp;
+            </Text>
+          </Layout>
+
+          <Layout>
+            <Fit>
+            <Twitter/>
+            </Fit>
+            <Fit>
+              <Text bold margin="10px 0px 0px 25px" textSize="2em" textColor="tertiary">
+              @GregKapfhammer
+              </Text>
+            </Fit>
+          </Layout>
+
+          <Layout>
+            <Text height="20px">
+            &nbsp;
+            </Text>
+          </Layout>
+
+          <Layout>
+            <Fit>
+            <Web/>
+            </Fit>
+            <Fit>
+              <Text bold margin="10px 0px 0px 25px" textSize="2em" textColor="tertiary">
+              www.gregorykapfhammer.com
+              </Text>
+            </Fit>
+          </Layout>
 
         </Slide>
 
