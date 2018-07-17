@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import styled from 'react-emotion';
+
 import {
   Anim,
   Appear,
@@ -40,9 +42,6 @@ require('normalize.css');
 
 const images = {
   city: require('../assets/city.jpg'),
-  kat: require('../assets/kat.png'),
-  logo: require('../assets/formidable-logo.svg'),
-  markdown: require('../assets/markdown.png')
 };
 
 preloader(images);
@@ -51,9 +50,39 @@ const theme = createTheme({
   primary: '#bdbdbd',
   secondary: '#d84315',
   tertiary: '#1565c0',
-  textLight: '#212121',
-  textDark: '#9e9e9e'
+  darktext: '#212121',
+  lighttext: '#9e9e9e'
 });
+
+const PaddedFill = styled(Fill)`
+  margin-right: 100px;
+  justify-content: space-between;
+`;
+
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { far } from '@fortawesome/free-regular-svg-icons'
+
+library.add(fab, far, fas, faArchive, faCheckSquare)
+
+export const Archive = () => (
+  <div>
+    <FontAwesomeIcon icon="archive" size="3x" color=""/>
+  </div>
+)
+
+export const Coffee = () => (
+  <div>
+    <FontAwesomeIcon icon={['fas', 'coffee']} size="3x" color="#1565c0"/>
+  </div>
+)
+
+export const Twitter = () => (
+  <div>
+    <FontAwesomeIcon icon={['fab', 'twitter']} size="3x" color="#1565c0"/>
+  </div>
+)
 
 export default class Presentation extends Component {
   constructor() {
@@ -79,28 +108,125 @@ export default class Presentation extends Component {
         transition={['zoom', 'slide']}
         theme={theme}
         transitionDuration={500}
+        controls={false}
+        progress={'none'}
       >
+
         <Slide transition={['zoom']} bgColor="primary">
-          <Heading size={1} fit caps lineHeight={1} textColor="black">
-            Spectacle
+
+          <Text textSize="3em" textColor="darktext" bold>
+            A Hands-On Guide to Teaching Programming with
+          </Text>
+
+          <Text textSize="2.25em" textColor="secondary" bold>
+            GitHub, Travis CI, and ... Python! <Smile/>
+          </Text>
+
+          <Layout>
+            <Text height="20px">
+            &nbsp;
+            </Text>
+          </Layout>
+
+          <Text bold caps textColor="tertiary">
+            Gregory M. Kapfhammer
+          </Text>
+
+          <Text bold textColor="tertiary">
+            July 28 at PyOhio 2018
+          </Text>
+
+        </Slide>
+
+        <Slide transition={['slide']} transitionDuration={500} margin="50px 0px 0px -125px" bgColor="primary">
+
+        <Layout>
+
+        <Appear>
+        <PaddedFill>
+        <Text textSize="2em" bold>
+        <Archive/>
+        </Text>
+        <Heading size={2}>Process</Heading>
+        </PaddedFill>
+        </Appear>
+
+        <Appear>
+        <PaddedFill>
+        <Text textSize="2em" bold>
+        <Archive/>
+        </Text>
+        <Heading size={2}>Process</Heading>
+        </PaddedFill>
+        </Appear>
+
+        <Appear>
+        <PaddedFill>
+        <Text textSize="2em" bold>
+        <Archive/>
+        </Text>
+        <Heading size={2}>Process</Heading>
+        </PaddedFill>
+        </Appear>
+
+        </Layout>
+
+        <Layout>
+
+        <PaddedFill>
+        <Text textSize="1em" bold>
+        &nbsp;
+        </Text>
+        </PaddedFill>
+        </Layout>
+
+        <Layout>
+
+        <Appear>
+        <Fill>
+        <Text textSize="2em" bold>
+        <Archive/>
+        </Text>
+        <Heading size={2}>Process</Heading>
+        </Fill>
+        </Appear>
+
+        <Appear>
+        <Fill>
+        <Text textSize="2em" bold>
+        <Archive/>
+        </Text>
+        <Heading size={2}>Process</Heading>
+        </Fill>
+        </Appear>
+
+        <Appear>
+        <Fill>
+        <Text textSize="2em" bold>
+        <Archive/>
+        </Text>
+        <Heading size={2}>Process</Heading>
+        </Fill>
+        </Appear>
+
+        </Layout>
+
+        </Slide>
+
+        <Slide transitionIn={['slide']} transitionOut={['slide', 'zoom']} transitionDuration={500} bgColor="primary">
+          <Heading size={1} fit caps lineHeight={2} textColor="black">
+            Spectacle Again
           </Heading>
-          <Heading size={1} fit caps>
+          <Heading size={1} fit caps textColor="secondary">
             A ReactJS Presentation Library
           </Heading>
           <Heading size={1} fit caps textColor="black">
             Where You Can Write Your Decks In JSX
           </Heading>
-          <Link href="https://github.com/FormidableLabs/spectacle">
-            <Text bold caps textColor="tertiary">
-              View on Github
-            </Text>
-          </Link>
-          <Text textSize="1.5em" margin="20px 0px 0px" bold>
-            Hit Your Right Arrow To Begin!
-          </Text>
         </Slide>
 
       </Deck>
     );
   }
 }
+
