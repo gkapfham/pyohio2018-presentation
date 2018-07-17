@@ -119,15 +119,15 @@ export default class Presentation extends Component {
     {/* Create the Deck of slides with no controls and no progress bars */}
     return (
       <Deck
-        transition={['zoom', 'slide']}
-        theme={theme}
+        transition={['slide']}
         transitionDuration={0}
+        theme={theme}
         controls={false}
         progress={'none'}
       >
 
         {/* Slide { */}
-        <Slide transition={['zoom']} transitionDuration={500} bgColor="primary">
+        <Slide bgColor="primary">
 
           <Text textSize="3em" textColor="darktext" bold>
             A Hands-On Guide to Teaching Programming with
@@ -155,7 +155,7 @@ export default class Presentation extends Component {
         {/* Slide } */}
 
         {/* Slide { */}
-        <Slide transition={['slide']} transitionDuration={0} bgColor="primary">
+        <Slide bgColor="primary">
 
           <Layout>
             <Fill>
@@ -217,7 +217,7 @@ export default class Presentation extends Component {
         {/* Slide } */}
 
         {/* Slide { */}
-        <Slide bgColor="primary">
+        <Slide transitionDuration={0} bgColor="primary">
 
           <Layout>
             <Appear transitionDuration={100}>
@@ -265,7 +265,7 @@ export default class Presentation extends Component {
         </Slide>
         {/* Slide } */}
 
-        <Slide margin="50px 0px 0px -125px" bgColor="primary">
+        <Slide transitionDuration={0} margin="50px 0px 0px -125px" bgColor="primary">
 
         <Layout>
 
