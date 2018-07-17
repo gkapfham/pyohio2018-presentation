@@ -265,7 +265,7 @@ export default class Presentation extends Component {
         </Slide>
         {/* Slide } */}
 
-        <Slide bgColor="primary">
+        <Slide margin="50px 0px 0px -125px" bgColor="primary">
 
         <Layout>
 
