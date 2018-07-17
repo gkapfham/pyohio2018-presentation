@@ -217,7 +217,7 @@ export default class Presentation extends Component {
         {/* Slide } */}
 
         {/* Slide { */}
-        <Slide transitionDuration={0} bgColor="primary">
+        <Slide bgColor="primary">
 
           <Layout>
             <Appear transitionDuration={100}>
@@ -265,7 +265,7 @@ export default class Presentation extends Component {
         </Slide>
         {/* Slide } */}
 
-        <Slide transitionDuration={0} margin="50px 0px 0px -125px" bgColor="primary">
+        <Slide bgColor="primary">
 
         <Layout>
 
