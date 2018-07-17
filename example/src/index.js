@@ -84,9 +84,7 @@ export const Twitter = () => (
 )
 
 export const Map = () => (
-  <div>
-    <FontAwesomeIcon icon={['fas', 'map']} size="2x" color="#212121"/>
-  </div>
+  <FontAwesomeIcon icon={['fas', 'map']} size="2x" transform="down-3, left-2" color="#212121"/>
 )
 
 export const Web = () => (
@@ -220,7 +218,8 @@ export default class Presentation extends Component {
           <Layout>
             <Appear>
               <Fill>
-                <Text bold fit margin="-10px 0px 0px 25px" textColor="darktext">
+                <Text bold fit textColor="darktext">
+                  <Map/>
                   Roadmap for this Talk
                 </Text>
               </Fill>
