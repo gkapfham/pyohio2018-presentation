@@ -34,11 +34,11 @@ import {
 } from '../../src';
 
 import preloader from '../../src/utils/preloader';
-
 import createTheme from '../../src/themes/default';
 
 require('normalize.css');
 
+{/* Define the colors for the theme */}
 const theme = createTheme({
   primary: '#bdbdbd',
   secondary: '#d84315',
@@ -47,18 +47,29 @@ const theme = createTheme({
   lighttext: '#9e9e9e'
 });
 
+{/* Create a emotion-styled Fill with padding */}
 const PaddedFill = styled(Fill)`
   margin-right: 100px;
   justify-content: space-between;
 `;
 
+{/* Create a emotion-styled Fit with padding */}
+const PaddedFit = styled(Fit)`
+  margin-right: 100px;
+  justify-content: space-between;
+`;
+
+{/* Import all of the libraries from FontAwesomeIcon */}
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { far } from '@fortawesome/free-regular-svg-icons'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 
+{/* Add all of the libraries to the main library */}
 library.add(fab, far, fas)
+
+{/* Declare all of the specific icons used in the slides */}
 
 export const Archive = () => (
   <div>
@@ -97,6 +108,7 @@ export default class Presentation extends Component {
 
   render() {
 
+    {/* Create the Deck of slides, with no controls and no progress bars */}
     return (
       <Deck
         transition={['zoom', 'slide']}
@@ -134,6 +146,7 @@ export default class Presentation extends Component {
         </Slide>
         {/* Slide } */}
 
+        {/* Slide { */}
         <Slide transition={['slide']} bgColor="primary">
 
           <Layout>
@@ -160,13 +173,13 @@ export default class Presentation extends Component {
 
           <Layout>
             <Text height="20px">
-            &nbsp;
+              &nbsp;
             </Text>
           </Layout>
 
           <Layout>
             <Fit>
-            <Twitter/>
+              <Twitter/>
             </Fit>
             <Fit>
               <Text bold margin="10px 0px 0px 25px" textSize="2em" textColor="tertiary">
