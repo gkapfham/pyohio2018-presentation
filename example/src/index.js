@@ -38,6 +38,11 @@ import createTheme from '../../src/themes/default';
 
 require('normalize.css');
 
+const images = {
+  city: require('../assets/city.jpg'),
+};
+preloader(images);
+
 {/* Font used for all questions in section slides */}
 var questionFont = "Permanent Marker";
 
@@ -491,7 +496,11 @@ export default class Presentation extends Component {
         {/* Slide { */}
         <Slide bgColor="primary">
         </Slide>
-        {/* Slide ] */}
+        {/* Slide } */}
+
+        <Slide transition={[]}>
+            <Image width="150%" src={images.city} />
+        </Slide>
 
       </Deck>
     );
