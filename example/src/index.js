@@ -83,6 +83,14 @@ export const Twitter = () => (
   </div>
 )
 
+export const Lightbulb = () => (
+  <FontAwesomeIcon icon={['fas', 'lightbulb']} size="2x" transform="down-5, left-5" color="#1565c0"/>
+)
+
+export const Map = () => (
+  <FontAwesomeIcon icon={['fas', 'map']} size="2x" transform="down-3, left-2" color="#212121"/>
+)
+
 export const Web = () => (
   <div>
     <FontAwesomeIcon icon={['fas', 'globe']} size="3x" color="#1565c0"/>
@@ -111,15 +119,15 @@ export default class Presentation extends Component {
     {/* Create the Deck of slides with no controls and no progress bars */}
     return (
       <Deck
-        transition={['zoom', 'slide']}
+        transition={['slide']}
+        transitionDuration={0}
         theme={theme}
-        transitionDuration={500}
         controls={false}
         progress={'none'}
       >
 
         {/* Slide { */}
-        <Slide transition={['zoom']} bgColor="primary">
+        <Slide bgColor="primary">
 
           <Text textSize="3em" textColor="darktext" bold>
             A Hands-On Guide to Teaching Programming with
@@ -147,26 +155,26 @@ export default class Presentation extends Component {
         {/* Slide } */}
 
         {/* Slide { */}
-        <Slide transition={['slide']} bgColor="primary">
+        <Slide bgColor="primary">
 
           <Layout>
             <Fill>
               <Text bold fit textColor="darktext">
-              Hi! My name is
+                Hi! My name is
               </Text>
             </Fill>
           </Layout>
 
           <Layout>
             <Text height="20px">
-            &nbsp;
+              &nbsp;
             </Text>
           </Layout>
 
           <Layout>
             <Fill>
               <Text bold fit caps textColor="secondary">
-              Gregory M. Kapfhammer
+                Gregory M. Kapfhammer
               </Text>
             </Fill>
           </Layout>
@@ -183,24 +191,24 @@ export default class Presentation extends Component {
             </Fit>
             <Fit>
               <Text bold margin="10px 0px 0px 25px" textSize="2em" textColor="tertiary">
-              @GregKapfhammer
+                @GregKapfhammer
               </Text>
             </Fit>
           </Layout>
 
           <Layout>
             <Text height="20px">
-            &nbsp;
+              &nbsp;
             </Text>
           </Layout>
 
           <Layout>
             <Fit>
-            <Web/>
+              <Web/>
             </Fit>
             <Fit>
               <Text bold margin="10px 0px 0px 25px" textSize="2em" textColor="tertiary">
-              www.gregorykapfhammer.com
+                www.gregorykapfhammer.com
               </Text>
             </Fit>
           </Layout>
@@ -208,7 +216,56 @@ export default class Presentation extends Component {
         </Slide>
         {/* Slide } */}
 
-        <Slide transition={['slide']} transitionDuration={500} margin="50px 0px 0px -125px" bgColor="primary">
+        {/* Slide { */}
+        <Slide bgColor="primary">
+
+          <Layout>
+            <Appear transitionDuration={100}>
+              <Fill>
+                <Text bold fit textSize="3em" textColor="darktext">
+                  <Map/>
+                  Roadmap for this Talk
+                </Text>
+              </Fill>
+            </Appear>
+          </Layout>
+
+          <Layout>
+            <Text height="40px">
+              &nbsp;
+            </Text>
+          </Layout>
+
+          <Layout>
+            <Appear transitionDuration={100}>
+              <Fill>
+                <Text bold textSize="2em" textColor="secondary">
+                  Ask and answer questions about the teaching of programming
+                </Text>
+              </Fill>
+            </Appear>
+          </Layout>
+
+          <Layout>
+            <Text height="20px">
+              &nbsp;
+            </Text>
+          </Layout>
+
+          <Layout>
+            <Appear transitionDuration={100}>
+              <Fill>
+                <Text bold textSize="2em" textColor="tertiary">
+                  Like, "How can I automatically check student submissions?"
+                </Text>
+              </Fill>
+            </Appear>
+          </Layout>
+
+        </Slide>
+        {/* Slide } */}
+
+        <Slide margin="50px 0px 0px -125px" bgColor="primary">
 
         <Layout>
 
