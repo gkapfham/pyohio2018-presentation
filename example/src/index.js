@@ -353,6 +353,31 @@ export default class Presentation extends Component {
         </Slide>
         {/* Slide } */}
 
+        {/* SECTION: Motivation { */}
+
+        {/* Slide { */}
+        <Slide bgColor="secondarylight">
+
+          <Layout>
+            <Text textSize="2em" margin={-3} fill textColor="darktext" bold textAlign="left">
+            <Comments/>
+            </Text>
+            <Text textSize="4.25em" margin={-8} fill textColor="darktext" bold textAlign="left">
+              Why would I
+            </Text>
+          </Layout>
+
+          <Layout>
+            <Text textSize="4em" fill textColor="tertiary" bold textAlign="left">
+              opt to use GitHub and Travis CI?
+            </Text>
+          </Layout>
+
+        </Slide>
+        {/* Slide } */}
+
+        {/* SECTION: Motivation } */}
+
         {/* SECTION: Configure { */}
 
         {/* Slide { */}
