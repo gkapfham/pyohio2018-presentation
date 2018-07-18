@@ -40,6 +40,7 @@ require('normalize.css');
 
 var primary = '#bdbdbd';
 var secondary =  '#d84315';
+var secondarylight = "#ffe0b2";
 var tertiary = '#1565c0';
 var lighttext = '#9e9e9e';
 var darktext = '#212121';
@@ -49,6 +50,7 @@ var lighttext = '#9e9e9e';
 const theme = createTheme({
   primary: '#bdbdbd',
   secondary: '#d84315',
+  secondarylight: "#ff7043",
   tertiary: '#1565c0',
   darktext: '#212121',
   lighttext: '#9e9e9e'
@@ -97,8 +99,8 @@ export const GitHub = () => (
   </div>
 )
 
-export const Lightbulb = () => (
-  <FontAwesomeIcon icon={['fas', 'lightbulb']} size="2x" transform="down-5, left-5" color="#1565c0"/>
+export const Comments = () => (
+  <FontAwesomeIcon icon={['fas', 'comments']} size="2x" transform="down-2, left-5" color={darktext}/>
 )
 
 export const Python = () => (
@@ -346,6 +348,27 @@ export default class Presentation extends Component {
           </Appear>
 
         </Layout>
+
+        </Slide>
+        {/* Slide } */}
+
+        {/* Slide { */}
+        <Slide transition={['fade']} transitionDuration={100} bgColor="secondarylight">
+
+          <Layout>
+            <Text textSize="2em" margin={-2} fill textColor="darktext" bold textAlign="left">
+            <Comments/>
+            </Text>
+            <Text textSize="5em" margin={-8} fill textColor="darktext" bold textAlign="left">
+              How do I
+            </Text>
+          </Layout>
+
+          <Layout>
+            <Text textSize="4em" fill textColor="tertiary" bold textAlign="left">
+              configure and use GitHub Classroom?
+            </Text>
+          </Layout>
 
         </Slide>
         {/* Slide } */}
