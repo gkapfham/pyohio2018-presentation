@@ -41,6 +41,7 @@ require('normalize.css');
 {/* Load all of the images */}
 const images = {
   CreateOrganization: require('../assets/CreateOrganization.png'),
+  StartingOrganization: require('../assets/StartingOrganization.png'),
   GrantAccess: require('../assets/GrantAccess.png'),
 };
 preloader(images);
@@ -436,6 +437,18 @@ export default class Presentation extends Component {
 
         </Slide>
         {/* Slide } */}
+
+        {/* Slide { */}
+        <Slide>
+
+          <UpHeading size={1} lineHeight={2} fit textColor="darktext" bold>
+            Now we have an empty GitHub organization!
+          </UpHeading>
+          <BigImage src={images.StartingOrganization}/>
+
+        </Slide>
+        {/* Slide } */}
+
 
         {/* Slide { */}
         <Slide>
