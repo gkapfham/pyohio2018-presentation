@@ -38,6 +38,17 @@ import createTheme from '../../src/themes/default';
 
 require('normalize.css');
 
+{/* Load all of the images */}
+const images = {
+  CreateOrganization: require('../assets/CreateOrganization.png'),
+  StartingOrganization: require('../assets/StartingOrganization.png'),
+  GrantAccess: require('../assets/GrantAccess.png'),
+  CreateRoster: require('../assets/CreateRoster.png'),
+  StartCreatingAssignments: require('../assets/StartCreatingAssignments.png'),
+  CreateAssignment: require('../assets/CreateAssignment.png'),
+};
+preloader(images);
+
 {/* Font used for all questions in section slides */}
 var questionFont = "Permanent Marker";
 
@@ -59,6 +70,18 @@ const theme = createTheme({
   darktext: '#212121',
   lighttext: '#9e9e9e'
 });
+
+{/* Create a emotion-styled BigImage that shifts left */}
+const UpHeading = styled(Heading)`
+  margin-top: -50px;
+`;
+
+{/* Create a emotion-styled BigImage that shifts left */}
+const BigImage = styled(Image)`
+  max-width: 130%;
+  width: 130%;
+  margin-left: -110px;
+`;
 
 {/* Create a emotion-styled Fill with padding */}
 const PaddedFill = styled(Fill)`
@@ -163,7 +186,7 @@ export default class Presentation extends Component {
     return (
       <Deck
         transition={['slide']}
-        transitionDuration={0}
+        transitionDuration={400}
         theme={theme}
         controls={false}
         progress={'none'}
@@ -198,7 +221,7 @@ export default class Presentation extends Component {
         {/* Slide } */}
 
         {/* Slide { */}
-        <Slide margin={-10} bgColor="primary">
+        <Slide margin={-10} transitionDuration={0} bgColor="primary">
 
           <Layout>
             <BottomPaddedFill>
@@ -407,6 +430,72 @@ export default class Presentation extends Component {
         </Slide>
         {/* Slide } */}
 
+        {/* Slide { */}
+        <Slide transition={['spin']}>
+
+          <UpHeading size={1} lineHeight={2} fit textColor="darktext" bold>
+            Create a GitHub organization for your course
+          </UpHeading>
+          <BigImage src={images.CreateOrganization}/>
+
+        </Slide>
+        {/* Slide } */}
+
+        {/* Slide { */}
+        <Slide>
+
+          <UpHeading size={1} lineHeight={2} fit textColor="darktext" bold>
+            Now we have an empty GitHub organization!
+          </UpHeading>
+          <BigImage src={images.StartingOrganization}/>
+
+        </Slide>
+        {/* Slide } */}
+
+        {/* Slide { */}
+        <Slide>
+
+          <UpHeading size={1} lineHeight={2} fit textColor="darktext" bold>
+            Let GitHub Classroom access the organization
+          </UpHeading>
+          <BigImage src={images.GrantAccess}/>
+
+        </Slide>
+        {/* Slide } */}
+
+        {/* Slide { */}
+        <Slide>
+
+          <UpHeading size={1} lineHeight={2} fit textColor="darktext" bold>
+            Create a student roster for the Classroom
+          </UpHeading>
+          <BigImage src={images.CreateRoster}/>
+
+        </Slide>
+        {/* Slide } */}
+
+        {/* Slide { */}
+        <Slide transition={['spin']}>
+
+          <UpHeading size={1} lineHeight={2} fit textColor="darktext" bold>
+            Create an assignment for your course!
+          </UpHeading>
+          <BigImage src={images.StartCreatingAssignments}/>
+
+        </Slide>
+        {/* Slide } */}
+
+        {/* Slide { */}
+        <Slide>
+
+          <UpHeading size={1} lineHeight={2} fit textColor="darktext" bold>
+            Create an assignment using the solution
+          </UpHeading>
+          <BigImage src={images.CreateAssignment}/>
+
+        </Slide>
+        {/* Slide } */}
+
         {/* SECTION: Configure } */}
 
         {/* SECTION: Check { */}
@@ -491,7 +580,7 @@ export default class Presentation extends Component {
         {/* Slide { */}
         <Slide bgColor="primary">
         </Slide>
-        {/* Slide ] */}
+        {/* Slide } */}
 
       </Deck>
     );
