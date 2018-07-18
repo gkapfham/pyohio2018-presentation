@@ -41,9 +41,9 @@ communicate correctly. These installation instructions were tested on an Ubuntu
 
 To start the rendering and display of the presentation type the command `npm
 start` in your terminal window. If you want to display the presentation to your
-audience, you can go the [display site](http://localhost:3000/#/). If you want
-to see the presentation slides in a presenter mode, you can go to the [presenter
-mode site](http://localhost:3000/#/?presenter&timer).
+audience, you can go the [audience-mode site](http://localhost:3000/#/). If you
+want to see the presentation slides in a presenter mode, you can go to the
+[presenter-mode site](http://localhost:3000/#/?presenter&timer).
 
 ## Debugging the Presentation
 
