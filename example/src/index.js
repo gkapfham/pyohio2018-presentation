@@ -38,8 +38,10 @@ import createTheme from '../../src/themes/default';
 
 require('normalize.css');
 
+{/* Load all of the images */}
 const images = {
   CreateOrganization: require('../assets/CreateOrganization.png'),
+  GrantAccess: require('../assets/GrantAccess.png'),
 };
 preloader(images);
 
@@ -66,9 +68,14 @@ const theme = createTheme({
 });
 
 {/* Create a emotion-styled BigImage that shifts left */}
+const UpHeading = styled(Heading)`
+  margin-top: -50px;
+`;
+
+{/* Create a emotion-styled BigImage that shifts left */}
 const BigImage = styled(Image)`
-  max-width: 125%;
-  width: 125%;
+  max-width: 130%;
+  width: 130%;
   margin-left: -110px;
 `;
 
@@ -422,10 +429,21 @@ export default class Presentation extends Component {
         {/* Slide { */}
         <Slide>
 
-          <Heading size={1} lineHeight={2} fit textColor="darktext" bold>
+          <UpHeading size={1} lineHeight={2} fit textColor="darktext" bold>
             Create a GitHub organization for your course
-          </Heading>
+          </UpHeading>
           <BigImage src={images.CreateOrganization}/>
+
+        </Slide>
+        {/* Slide } */}
+
+        {/* Slide { */}
+        <Slide>
+
+          <UpHeading size={1} lineHeight={2} fit textColor="darktext" bold>
+            Let GitHub Classroom access the organization
+          </UpHeading>
+          <BigImage src={images.GrantAccess}/>
 
         </Slide>
         {/* Slide } */}
