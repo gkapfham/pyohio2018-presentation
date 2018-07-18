@@ -38,17 +38,23 @@ import createTheme from '../../src/themes/default';
 
 require('normalize.css');
 
+{/* Font used for all questions in section slides */}
+var questionFont = "Permanent Marker";
+
+{/* FontAwesome: Define the colors for the theme */}
 var primary = '#bdbdbd';
 var secondary =  '#d84315';
+var secondarylight = "#ff6e40";
 var tertiary = '#1565c0';
 var lighttext = '#9e9e9e';
 var darktext = '#212121';
 var lighttext = '#9e9e9e';
 
-{/* Define the colors for the theme */}
+{/* Spectacle: Define the colors for the theme */}
 const theme = createTheme({
   primary: '#bdbdbd',
   secondary: '#d84315',
+  secondarylight: "#ff6e40",
   tertiary: '#1565c0',
   darktext: '#212121',
   lighttext: '#9e9e9e'
@@ -64,6 +70,12 @@ const PaddedFill = styled(Fill)`
 const LeftShiftPaddedFill = styled(Fill)`
   margin-right: 110px;
   margin-left: -100px;
+  justify-content: space-between;
+`;
+
+{/* Create a emotion-styled Fill with padding */}
+const BottomPaddedFill = styled(Fill)`
+  margin-bottom: 40px;
   justify-content: space-between;
 `;
 
@@ -97,8 +109,12 @@ export const GitHub = () => (
   </div>
 )
 
-export const Lightbulb = () => (
-  <FontAwesomeIcon icon={['fas', 'lightbulb']} size="2x" transform="down-5, left-5" color="#1565c0"/>
+export const Comments = () => (
+  <FontAwesomeIcon icon={['fas', 'comments']} size="2x" transform="down-2, left-5" color={darktext}/>
+)
+
+export const CommentsShiftUp = () => (
+  <FontAwesomeIcon icon={['fas', 'comments']} size="2x" transform="down-1, left-5" color={darktext}/>
 )
 
 export const Python = () => (
@@ -190,17 +206,11 @@ export default class Presentation extends Component {
         <Slide margin={-10} bgColor="primary">
 
           <Layout>
-            <Fill>
+            <BottomPaddedFill>
               <Text bold fit textColor="darktext">
                 Hi! My name is
               </Text>
-            </Fill>
-          </Layout>
-
-          <Layout>
-            <Text height="20px">
-              &nbsp;
-            </Text>
+            </BottomPaddedFill>
           </Layout>
 
           <Layout>
@@ -298,7 +308,7 @@ export default class Presentation extends Component {
         {/* Slide } */}
 
         {/* Slide { */}
-        <Slide bgColor="primary">
+        <Slide transitionDuration={1000} bgColor="primary">
 
           <Layout>
             <Appear transitionDuration={100}>
@@ -336,7 +346,7 @@ export default class Presentation extends Component {
             </PaddedFill>
           </Appear>
 
-          <Appear order={3} transitionDuration={100}>
+          <Appear order={3} transitionduration={100}>
             <PaddedFill>
               <Text textSize="2em" bold>
                 <Python/>
@@ -349,6 +359,144 @@ export default class Presentation extends Component {
 
         </Slide>
         {/* Slide } */}
+
+        {/* SECTION: Motivation { */}
+
+        {/* Slide { */}
+        <Slide bgColor="primary">
+
+          <Layout>
+            <Text  textSize="2em" margin={-2} fill textColor="darktext" bold textAlign="left">
+            <CommentsShiftUp/>
+            </Text>
+            <Text textSize="4.25em" margin={-8} fill textColor="darktext" bold textAlign="left">
+              Why would I
+            </Text>
+          </Layout>
+
+          <Layout>
+            <Appear transitionDuration={100}>
+              <Text textFont={questionFont} textSize="4.25em" fill textColor="secondary" textAlign="left">
+                decide to use GitHub and Travis CI?
+              </Text>
+            </Appear>
+          </Layout>
+
+        </Slide>
+        {/* Slide } */}
+
+        {/* SECTION: Motivation } */}
+
+        {/* SECTION: Configure { */}
+
+        {/* Slide { */}
+        <Slide bgColor="primary">
+
+          <Layout>
+            <Text textSize="2em" margin={-2} fill textColor="darktext" bold textAlign="left">
+            <Comments/>
+            </Text>
+            <Text textSize="5em" margin={-8} fill textColor="darktext" bold textAlign="left">
+              How do I
+            </Text>
+          </Layout>
+
+          <Layout>
+            <Appear transitionDuration={100}>
+              <Text textFont={questionFont} textSize="4em" fill textColor="secondary" textAlign="left">
+                configure and use GitHub Classroom?
+              </Text>
+            </Appear>
+          </Layout>
+
+        </Slide>
+        {/* Slide } */}
+
+        {/* SECTION: Configure } */}
+
+        {/* SECTION: Check { */}
+
+        {/* Slide { */}
+        <Slide bgColor="primary">
+
+          <Layout>
+            <Text textSize="2em" margin={-2} fill textColor="darktext" bold textAlign="left">
+            <Comments/>
+            </Text>
+            <Text textSize="5em" margin={-8} fill textColor="darktext" bold textAlign="left">
+              How do I
+            </Text>
+          </Layout>
+
+          <Layout>
+            <Appear transitionDuration={100}>
+              <Text textFont={questionFont} textSize="4em" fill textColor="secondary" textAlign="left">
+                automatically check student submissions?
+              </Text>
+            </Appear>
+          </Layout>
+
+        </Slide>
+        {/* Slide } */}
+
+        {/* SECTION: Feedback { */}
+
+        {/* Slide { */}
+        <Slide bgColor="primary">
+
+          <Layout>
+            <Text  textSize="2em" margin={-2} fill textColor="darktext" bold textAlign="left">
+              <CommentsShiftUp/>
+            </Text>
+            <Text textSize="4.25em" margin={-8} fill textColor="darktext" bold textAlign="left">
+              What do the
+            </Text>
+          </Layout>
+
+          <Layout>
+            <Appear transitionDuration={100}>
+              <Text textFont={questionFont} textSize="4.5em" fill textColor="secondary" textAlign="left">
+                people think about this approach?
+              </Text>
+            </Appear>
+          </Layout>
+
+        </Slide>
+        {/* Slide } */}
+
+        {/* SECTION: Feedback } */}
+
+        {/* SECTION: Conclusion { */}
+
+        {/* Slide { */}
+        <Slide bgColor="primary">
+
+          <Layout>
+            <Text  textSize="2em" margin={-2} fill textColor="darktext" bold textAlign="left">
+            <CommentsShiftUp/>
+            </Text>
+            <Text textSize="4.25em" margin={-8} fill textColor="darktext" bold textAlign="left">
+              How can we
+            </Text>
+          </Layout>
+
+          <Layout>
+            <Appear transitionDuration={100}>
+              <Text textFont={questionFont} textSize="4.5em" fill textColor="secondary" textAlign="left">
+                improve and study this approach?
+              </Text>
+            </Appear>
+          </Layout>
+
+        </Slide>
+        {/* Slide } */}
+
+        {/* SECTION: Conclusion } */}
+
+        {/* Slide { */}
+        <Slide bgColor="primary">
+        </Slide>
+        {/* Slide ] */}
 
       </Deck>
     );
