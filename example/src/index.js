@@ -43,6 +43,8 @@ const images = {
   CreateOrganization: require('../assets/CreateOrganization.png'),
   StartingOrganization: require('../assets/StartingOrganization.png'),
   GrantAccess: require('../assets/GrantAccess.png'),
+  CreateRoster: require('../assets/CreateRoster.png'),
+  StartCreatingAssignments: require('../assets/StartCreatingAssignments.png'),
 };
 preloader(images);
 
@@ -449,7 +451,6 @@ export default class Presentation extends Component {
         </Slide>
         {/* Slide } */}
 
-
         {/* Slide { */}
         <Slide>
 
@@ -457,6 +458,28 @@ export default class Presentation extends Component {
             Let GitHub Classroom access the organization
           </UpHeading>
           <BigImage src={images.GrantAccess}/>
+
+        </Slide>
+        {/* Slide } */}
+
+        {/* Slide { */}
+        <Slide>
+
+          <UpHeading size={1} lineHeight={2} fit textColor="darktext" bold>
+            Create a student roster for the Classroom
+          </UpHeading>
+          <BigImage src={images.CreateRoster}/>
+
+        </Slide>
+        {/* Slide } */}
+
+        {/* Slide { */}
+        <Slide>
+
+          <UpHeading size={1} lineHeight={2} fit textColor="darktext" bold>
+            Start creating assignments for your course!
+          </UpHeading>
+          <BigImage src={images.StartCreatingAssignments}/>
 
         </Slide>
         {/* Slide } */}
