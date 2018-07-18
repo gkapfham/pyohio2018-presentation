@@ -36,13 +36,13 @@ npm i --save @fortawesome/react-fontawesome@prerelease
 npm install --save socket.io
 ```
 
-## Displaying the Presentation
+## Displaying and Giving the Presentation
 
 To start the rendering and display of the presentation type the command `npm
 start` in your terminal window. If you want to display the presentation to your
 audience, you can go the [display site](http://localhost:3000/#/). If you want
 to see the presentation slides in a presenter mode, you can go to the [presenter
-mode site](http://localhost:3000/#/?presenter&timer)
+mode site](http://localhost:3000/#/?presenter&timer).
 
 ## Problems or Praise
 
