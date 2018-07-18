@@ -73,6 +73,12 @@ const LeftShiftPaddedFill = styled(Fill)`
   justify-content: space-between;
 `;
 
+{/* Create a emotion-styled Fill with padding */}
+const BottomPaddedFill = styled(Fill)`
+  margin-bottom: 40px;
+  justify-content: space-between;
+`;
+
 {/* Create a emotion-styled Fit with padding */}
 const PaddedFit = styled(Fit)`
   margin-right: 100px;
@@ -200,17 +206,11 @@ export default class Presentation extends Component {
         <Slide margin={-10} bgColor="primary">
 
           <Layout>
-            <Fill>
+            <BottomPaddedFill>
               <Text bold fit textColor="darktext">
                 Hi! My name is
               </Text>
-            </Fill>
-          </Layout>
-
-          <Layout>
-            <Text height="20px">
-              &nbsp;
-            </Text>
+            </BottomPaddedFill>
           </Layout>
 
           <Layout>
