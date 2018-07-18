@@ -38,6 +38,7 @@ import createTheme from '../../src/themes/default';
 
 require('normalize.css');
 
+{/* Font used for all questions in section slides */}
 var questionFont = "Permanent Marker";
 
 {/* FontAwesome: Define the colors for the theme */}
@@ -399,7 +400,7 @@ export default class Presentation extends Component {
           </Layout>
 
           <Layout>
-            <Text textFont="Permanent Marker" textSize="4em" fill textColor="secondary" textAlign="left">
+            <Text textFont={questionFont} textSize="4em" fill textColor="secondary" textAlign="left">
               configure and use GitHub Classroom?
             </Text>
           </Layout>
@@ -424,7 +425,7 @@ export default class Presentation extends Component {
           </Layout>
 
           <Layout>
-            <Text textFont="Permanent Marker" textSize="4em" fill textColor="secondary" textAlign="left">
+            <Text textFont={questionFont} textSize="4em" fill textColor="secondary" textAlign="left">
               automatically check student submissions?
             </Text>
           </Layout>
