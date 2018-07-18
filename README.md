@@ -25,17 +25,11 @@ npm install
 npm install babel-loader@next
 ```
 
-```shell
-npm i --save @fortawesome/fontawesome-svg-core@prerelease
-npm i --save @fortawesome/free-solid-svg-icons@prerelease
-npm i --save @fortawesome/free-regular-svg-icons@prerelease
-npm i --save @fortawesome/free-brands-svg-icons@prerelease
-npm i --save @fortawesome/react-fontawesome@prerelease
-```
-
-```shell
-npm install --save socket.io
-```
+Please note that this `package.json` file will lead to the installation of a
+wide variety of Node modules, including required for the use of Font Awesome and
+the Socket.io server needed to ensure that the display and presenter modes can
+communicate correctly. These installation instructions were tested on an Ubuntu
+16.04 workstation running the 3.9.5 version of `npm`.
 
 ## Displaying and Giving the Presentation
 
