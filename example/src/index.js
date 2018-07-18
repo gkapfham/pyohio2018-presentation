@@ -375,9 +375,11 @@ export default class Presentation extends Component {
           </Layout>
 
           <Layout>
-            <Text textFont={questionFont} textSize="4em" fill textColor="secondary" textAlign="left">
-              decide to use GitHub and Travis CI?
-            </Text>
+            <Appear transitionDuration={100}>
+              <Text textFont={questionFont} textSize="4.25em" fill textColor="secondary" textAlign="left">
+                decide to use GitHub and Travis CI?
+              </Text>
+            </Appear>
           </Layout>
 
         </Slide>
@@ -400,9 +402,11 @@ export default class Presentation extends Component {
           </Layout>
 
           <Layout>
-            <Text textFont={questionFont} textSize="4em" fill textColor="secondary" textAlign="left">
-              configure and use GitHub Classroom?
-            </Text>
+            <Appear transitionDuration={100}>
+              <Text textFont={questionFont} textSize="4em" fill textColor="secondary" textAlign="left">
+                configure and use GitHub Classroom?
+              </Text>
+            </Appear>
           </Layout>
 
         </Slide>
@@ -425,16 +429,69 @@ export default class Presentation extends Component {
           </Layout>
 
           <Layout>
-            <Text textFont={questionFont} textSize="4em" fill textColor="secondary" textAlign="left">
-              automatically check student submissions?
-            </Text>
+            <Appear transitionDuration={100}>
+              <Text textFont={questionFont} textSize="4em" fill textColor="secondary" textAlign="left">
+                automatically check student submissions?
+              </Text>
+            </Appear>
           </Layout>
 
         </Slide>
         {/* Slide } */}
 
-        {/* SECTION: Check } */}
+        {/* SECTION: Feedback { */}
 
+        {/* Slide { */}
+        <Slide bgColor="primary">
+
+          <Layout>
+            <Text  textSize="2em" margin={-2} fill textColor="darktext" bold textAlign="left">
+              <CommentsShiftUp/>
+            </Text>
+            <Text textSize="4.25em" margin={-8} fill textColor="darktext" bold textAlign="left">
+              What do the
+            </Text>
+          </Layout>
+
+          <Layout>
+            <Appear transitionDuration={100}>
+              <Text textFont={questionFont} textSize="4.5em" fill textColor="secondary" textAlign="left">
+                people think about this approach?
+              </Text>
+            </Appear>
+          </Layout>
+
+        </Slide>
+        {/* Slide } */}
+
+        {/* SECTION: Feedback } */}
+
+        {/* SECTION: Conclusion { */}
+
+        {/* Slide { */}
+        <Slide bgColor="primary">
+
+          <Layout>
+            <Text  textSize="2em" margin={-2} fill textColor="darktext" bold textAlign="left">
+            <CommentsShiftUp/>
+            </Text>
+            <Text textSize="4.25em" margin={-8} fill textColor="darktext" bold textAlign="left">
+              How can we
+            </Text>
+          </Layout>
+
+          <Layout>
+            <Appear transitionDuration={100}>
+              <Text textFont={questionFont} textSize="4.5em" fill textColor="secondary" textAlign="left">
+                improve and study this approach?
+              </Text>
+            </Appear>
+          </Layout>
+
+        </Slide>
+        {/* Slide } */}
+
+        {/* SECTION: Conclusion } */}
 
       </Deck>
     );
