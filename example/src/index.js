@@ -412,6 +412,17 @@ export default class Presentation extends Component {
         </Slide>
         {/* Slide } */}
 
+        {/* Slide { */}
+        <Slide>
+
+          <Heading size={1} lineHeight={2} fit textColor="darktext" bold>
+            Create a GitHub organization for your class
+          </Heading>
+          <Image width="100%" src={images.city} />
+
+        </Slide>
+        {/* Slide } */}
+
         {/* SECTION: Configure } */}
 
         {/* SECTION: Check { */}
@@ -497,10 +508,6 @@ export default class Presentation extends Component {
         <Slide bgColor="primary">
         </Slide>
         {/* Slide } */}
-
-        <Slide transition={[]}>
-            <Image width="150%" src={images.city} />
-        </Slide>
 
       </Deck>
     );
