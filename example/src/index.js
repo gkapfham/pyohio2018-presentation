@@ -38,19 +38,20 @@ import createTheme from '../../src/themes/default';
 
 require('normalize.css');
 
+{/* FontAwesome: Define the colors for the theme */}
 var primary = '#bdbdbd';
 var secondary =  '#d84315';
-var secondarylight = "#ffe0b2";
+var secondarylight = "#ff6e40";
 var tertiary = '#1565c0';
 var lighttext = '#9e9e9e';
 var darktext = '#212121';
 var lighttext = '#9e9e9e';
 
-{/* Define the colors for the theme */}
+{/* Spectacle: Define the colors for the theme */}
 const theme = createTheme({
   primary: '#bdbdbd',
   secondary: '#d84315',
-  secondarylight: "#ff7043",
+  secondarylight: "#ff6e40",
   tertiary: '#1565c0',
   darktext: '#212121',
   lighttext: '#9e9e9e'
@@ -300,7 +301,7 @@ export default class Presentation extends Component {
         {/* Slide } */}
 
         {/* Slide { */}
-        <Slide bgColor="primary">
+        <Slide transitionDuration={1000} bgColor="primary">
 
           <Layout>
             <Appear transitionDuration={100}>
@@ -338,7 +339,7 @@ export default class Presentation extends Component {
             </PaddedFill>
           </Appear>
 
-          <Appear order={3} transitionDuration={100}>
+          <Appear order={3} transitionduration={100}>
             <PaddedFill>
               <Text textSize="2em" bold>
                 <Python/>
@@ -352,8 +353,10 @@ export default class Presentation extends Component {
         </Slide>
         {/* Slide } */}
 
+        {/* SECTION: Configure { */}
+
         {/* Slide { */}
-        <Slide transition={['fade']} transitionDuration={100} bgColor="secondarylight">
+        <Slide bgColor="secondarylight">
 
           <Layout>
             <Text textSize="2em" margin={-2} fill textColor="darktext" bold textAlign="left">
@@ -372,6 +375,8 @@ export default class Presentation extends Component {
 
         </Slide>
         {/* Slide } */}
+
+        {/* SECTION: Configure } */}
 
       </Deck>
     );
