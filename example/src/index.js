@@ -65,6 +65,13 @@ const theme = createTheme({
   lighttext: '#9e9e9e'
 });
 
+{/* Create a emotion-styled BigImage that shifts left */}
+const BigImage = styled(Image)`
+  max-width: 125%;
+  width: 125%;
+  margin-left: -110px;
+`;
+
 {/* Create a emotion-styled Fill with padding */}
 const PaddedFill = styled(Fill)`
   margin-right: 110px;
@@ -418,7 +425,7 @@ export default class Presentation extends Component {
           <Heading size={1} lineHeight={2} fit textColor="darktext" bold>
             Create a GitHub organization for your course
           </Heading>
-          <Image width="120%" src={images.CreateOrganization} />
+          <BigImage src={images.CreateOrganization}/>
 
         </Slide>
         {/* Slide } */}
