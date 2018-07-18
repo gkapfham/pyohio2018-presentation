@@ -93,7 +93,7 @@ const PaddedFill = styled(Fill)`
 const LeftShiftPaddedFill = styled(Fill)`
   margin-right: 110px;
   // NOTE: comment out next line to get better printing
-  margin-left: -110px;
+  margin-left: -100px;
   justify-content: space-between;
 `;
 
@@ -481,6 +481,59 @@ export default class Presentation extends Component {
             Create an assignment for your course!
           </UpHeading>
           <BigImage src={images.StartCreatingAssignments}/>
+
+        </Slide>
+        {/* Slide } */}
+
+        {/* Slide { */}
+        <Slide align="flex-start center" bgColor="primary">
+
+          <Layout>
+            <Appear transitionDuration={100}>
+              <Fill>
+                <Text bold textSize="2.5em" textColor="darktext">
+                  Two Repositories for Each Assignment
+                </Text>
+              </Fill>
+            </Appear>
+          </Layout>
+
+          <Layout>
+            <Text height="50px">
+              &nbsp;
+            </Text>
+          </Layout>
+
+        <Layout>
+
+          <Appear order={1} transitionDuration={100}>
+            <LeftShiftPaddedFill>
+              <Text textSize="2em" bold>
+                <Travis/>
+              </Text>
+              <Heading size={2}>Travis</Heading>
+            </LeftShiftPaddedFill>
+          </Appear>
+
+          <Appear order={2} transitionDuration={100}>
+            <PaddedFill>
+              <Text textSize="2em" bold>
+                <GitHub/>
+              </Text>
+              <Heading size={2}>GitHub</Heading>
+            </PaddedFill>
+          </Appear>
+
+          <Appear order={3} transitionduration={100}>
+            <PaddedFill>
+              <Text textSize="2em" bold>
+                <Python/>
+              </Text>
+              <Heading size={2}>Python</Heading>
+            </PaddedFill>
+          </Appear>
+
+        </Layout>
 
         </Slide>
         {/* Slide } */}
