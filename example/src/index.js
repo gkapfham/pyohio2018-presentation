@@ -186,7 +186,7 @@ export default class Presentation extends Component {
     return (
       <Deck
         transition={['slide']}
-        transitionDuration={250}
+        transitionDuration={400}
         theme={theme}
         controls={false}
         progress={'none'}
@@ -489,7 +489,7 @@ export default class Presentation extends Component {
         <Slide>
 
           <UpHeading size={1} lineHeight={2} fit textColor="darktext" bold>
-            Create an assignment from the solution
+            Create an assignment using the solution
           </UpHeading>
           <BigImage src={images.CreateAssignment}/>
 
