@@ -97,14 +97,26 @@ export const GitHub = () => (
   </div>
 )
 
+export const Lightbulb = () => (
+  <FontAwesomeIcon icon={['fas', 'lightbulb']} size="2x" transform="down-5, left-5" color="#1565c0"/>
+)
+
+export const Python = () => (
+  <div>
+    <FontAwesomeIcon icon={['fab', 'python']} size="3x" color={darktext}/>
+  </div>
+)
+
+export const Travis = () => (
+  <div>
+    <FontAwesomeIcon icon={['fas', 'user-secret']} size="3x" color={darktext}/>
+  </div>
+)
+
 export const Twitter = () => (
   <div>
     <FontAwesomeIcon icon={['fab', 'twitter']} size="3x" color="#1565c0"/>
   </div>
-)
-
-export const Lightbulb = () => (
-  <FontAwesomeIcon icon={['fas', 'lightbulb']} size="2x" transform="down-5, left-5" color="#1565c0"/>
 )
 
 export const Map = () => (
@@ -175,7 +187,7 @@ export default class Presentation extends Component {
         {/* Slide } */}
 
         {/* Slide { */}
-        <Slide bgColor="primary">
+        <Slide margin={-10} bgColor="primary">
 
           <Layout>
             <Fill>
@@ -276,7 +288,7 @@ export default class Presentation extends Component {
             <Appear transitionDuration={100}>
               <Fill>
                 <Text bold textSize="2em" textColor="tertiary">
-                  Like, "How can I automatically check student submissions?"
+                  Like, "How can I automatically grade student submissions?"
                 </Text>
               </Fill>
             </Appear>
@@ -309,7 +321,7 @@ export default class Presentation extends Component {
           <Appear order={2} transitionDuration={100}>
             <LeftShiftPaddedFill>
               <Text textSize="2em" bold>
-                <Archive/>
+                <Travis/>
               </Text>
               <Heading size={2}>Travis</Heading>
             </LeftShiftPaddedFill>
@@ -327,7 +339,7 @@ export default class Presentation extends Component {
           <Appear order={3} transitionDuration={100}>
             <PaddedFill>
               <Text textSize="2em" bold>
-                <Archive/>
+                <Python/>
               </Text>
               <Heading size={2}>Python</Heading>
             </PaddedFill>
