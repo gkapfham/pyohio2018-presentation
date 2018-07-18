@@ -56,14 +56,14 @@ const theme = createTheme({
 
 {/* Create a emotion-styled Fill with padding */}
 const PaddedFill = styled(Fill)`
-  margin-right: 100px;
+  margin-right: 110px;
   justify-content: space-between;
 `;
 
 {/* Create a emotion-styled Fill with padding */}
 const LeftShiftPaddedFill = styled(Fill)`
-  margin-right: 100px;
-  margin-left: -110px;
+  margin-right: 110px;
+  margin-left: -100px;
   justify-content: space-between;
 `;
 
