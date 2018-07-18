@@ -17,9 +17,15 @@ You can type the following command if you want to clone this repository:
 git clone https://github.com/gkapfham/pyohio2018-presentation.git
 ```
 
+Now you should install of all of the packages needed for the presentation:
+
 ```shell
 npm install
 ```
+
+Finally, please ensure the correct version of the Babel loader. This command was
+suggested in the issue tracker for Spectacle; it resolves a problem that I was
+experiencing when I tried to build and display the presentation.
 
 ```shell
 npm install babel-loader@next
