@@ -38,6 +38,13 @@ import createTheme from '../../src/themes/default';
 
 require('normalize.css');
 
+var primary = '#bdbdbd';
+var secondary =  '#d84315';
+var tertiary = '#1565c0';
+var lighttext = '#9e9e9e';
+var darktext = '#212121';
+var lighttext = '#9e9e9e';
+
 {/* Define the colors for the theme */}
 const theme = createTheme({
   primary: '#bdbdbd',
@@ -49,7 +56,14 @@ const theme = createTheme({
 
 {/* Create a emotion-styled Fill with padding */}
 const PaddedFill = styled(Fill)`
-  margin-right: 100px;
+  margin-right: 110px;
+  justify-content: space-between;
+`;
+
+{/* Create a emotion-styled Fill with padding */}
+const LeftShiftPaddedFill = styled(Fill)`
+  margin-right: 110px;
+  margin-left: -100px;
   justify-content: space-between;
 `;
 
@@ -77,14 +91,32 @@ export const Archive = () => (
   </div>
 )
 
-export const Twitter = () => (
+export const GitHub = () => (
   <div>
-    <FontAwesomeIcon icon={['fab', 'twitter']} size="3x" color="#1565c0"/>
+    <FontAwesomeIcon icon={['fab', 'github']} size="3x" color={darktext}/>
   </div>
 )
 
 export const Lightbulb = () => (
   <FontAwesomeIcon icon={['fas', 'lightbulb']} size="2x" transform="down-5, left-5" color="#1565c0"/>
+)
+
+export const Python = () => (
+  <div>
+    <FontAwesomeIcon icon={['fab', 'python']} size="3x" color={darktext}/>
+  </div>
+)
+
+export const Travis = () => (
+  <div>
+    <FontAwesomeIcon icon={['fas', 'user-secret']} size="3x" color={darktext}/>
+  </div>
+)
+
+export const Twitter = () => (
+  <div>
+    <FontAwesomeIcon icon={['fab', 'twitter']} size="3x" color="#1565c0"/>
+  </div>
 )
 
 export const Map = () => (
@@ -155,7 +187,7 @@ export default class Presentation extends Component {
         {/* Slide } */}
 
         {/* Slide { */}
-        <Slide bgColor="primary">
+        <Slide margin={-10} bgColor="primary">
 
           <Layout>
             <Fill>
@@ -256,7 +288,7 @@ export default class Presentation extends Component {
             <Appear transitionDuration={100}>
               <Fill>
                 <Text bold textSize="2em" textColor="tertiary">
-                  Like, "How can I automatically check student submissions?"
+                  Like, "How can I automatically grade student submissions?"
                 </Text>
               </Fill>
             </Appear>
@@ -265,48 +297,58 @@ export default class Presentation extends Component {
         </Slide>
         {/* Slide } */}
 
-        <Slide margin="50px 0px 0px -125px" bgColor="primary">
+        {/* Slide { */}
+        <Slide bgColor="primary">
 
-        <Layout>
+          <Layout>
+            <Appear transitionDuration={100}>
+              <Fill>
+                <Text bold textSize="3em" textColor="darktext">
+                  Exploring these Technologies
+                </Text>
+              </Fill>
+            </Appear>
+          </Layout>
 
-          <Appear>
-            <PaddedFill>
-              <Text textSize="2em" bold>
-                <Archive/>
-              </Text>
-              <Heading size={2}>Process</Heading>
-            </PaddedFill>
-          </Appear>
-
-          <Appear>
-            <PaddedFill>
-              <Text textSize="2em" bold>
-                <Archive/>
-              </Text>
-              <Heading size={2}>Process</Heading>
-            </PaddedFill>
-          </Appear>
-
-          <Appear>
-            <PaddedFill>
-              <Text textSize="2em" bold>
-                <Archive/>
-              </Text>
-              <Heading size={2}>Process</Heading>
-            </PaddedFill>
-          </Appear>
-
-        </Layout>
-
-        <Layout>
-          <PaddedFill>
-            <Text textSize="1em" bold>
+          <Layout>
+            <Text height="50px">
               &nbsp;
             </Text>
-          </PaddedFill>
+          </Layout>
+
+        <Layout>
+
+          <Appear order={2} transitionDuration={100}>
+            <LeftShiftPaddedFill>
+              <Text textSize="2em" bold>
+                <Travis/>
+              </Text>
+              <Heading size={2}>Travis</Heading>
+            </LeftShiftPaddedFill>
+          </Appear>
+
+          <Appear order={1} transitionDuration={100}>
+            <PaddedFill>
+              <Text textSize="2em" bold>
+                <GitHub/>
+              </Text>
+              <Heading size={2}>GitHub</Heading>
+            </PaddedFill>
+          </Appear>
+
+          <Appear order={3} transitionDuration={100}>
+            <PaddedFill>
+              <Text textSize="2em" bold>
+                <Python/>
+              </Text>
+              <Heading size={2}>Python</Heading>
+            </PaddedFill>
+          </Appear>
+
         </Layout>
 
         </Slide>
+        {/* Slide } */}
 
       </Deck>
     );
