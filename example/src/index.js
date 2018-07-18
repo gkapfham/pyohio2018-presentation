@@ -39,7 +39,7 @@ import createTheme from '../../src/themes/default';
 require('normalize.css');
 
 const images = {
-  city: require('../assets/city.jpg'),
+  CreateOrganization: require('../assets/CreateOrganization.png'),
 };
 preloader(images);
 
@@ -416,9 +416,9 @@ export default class Presentation extends Component {
         <Slide>
 
           <Heading size={1} lineHeight={2} fit textColor="darktext" bold>
-            Create a GitHub organization for your class
+            Create a GitHub organization for your course
           </Heading>
-          <Image width="100%" src={images.city} />
+          <Image width="120%" src={images.CreateOrganization} />
 
         </Slide>
         {/* Slide } */}
