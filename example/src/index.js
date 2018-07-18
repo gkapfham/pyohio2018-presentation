@@ -240,7 +240,7 @@ export default class Presentation extends Component {
             <Appear transitionDuration={100}>
               <Fill>
                 <Text bold textSize="2em" textColor="secondary">
-                  Ask and answer questions about teaching programming
+                  Ask and answer questions about the teaching of programming
                 </Text>
               </Fill>
             </Appear>
@@ -256,7 +256,7 @@ export default class Presentation extends Component {
             <Appear transitionDuration={100}>
               <Fill>
                 <Text bold textSize="2em" textColor="tertiary">
-                  How can I automatically check student submissions?
+                  Like, "How can I automatically check student submissions?"
                 </Text>
               </Fill>
             </Appear>
