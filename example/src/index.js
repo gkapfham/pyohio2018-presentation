@@ -45,6 +45,7 @@ const images = {
   GrantAccess: require('../assets/GrantAccess.png'),
   CreateRoster: require('../assets/CreateRoster.png'),
   StartCreatingAssignments: require('../assets/StartCreatingAssignments.png'),
+  CreateAssignment: require('../assets/CreateAssignment.png'),
 };
 preloader(images);
 
@@ -185,7 +186,7 @@ export default class Presentation extends Component {
     return (
       <Deck
         transition={['slide']}
-        transitionDuration={0}
+        transitionDuration={250}
         theme={theme}
         controls={false}
         progress={'none'}
@@ -220,7 +221,7 @@ export default class Presentation extends Component {
         {/* Slide } */}
 
         {/* Slide { */}
-        <Slide margin={-10} bgColor="primary">
+        <Slide margin={-10} transitionDuration={0} bgColor="primary">
 
           <Layout>
             <BottomPaddedFill>
@@ -430,7 +431,7 @@ export default class Presentation extends Component {
         {/* Slide } */}
 
         {/* Slide { */}
-        <Slide>
+        <Slide transition={['spin']}>
 
           <UpHeading size={1} lineHeight={2} fit textColor="darktext" bold>
             Create a GitHub organization for your course
@@ -474,12 +475,23 @@ export default class Presentation extends Component {
         {/* Slide } */}
 
         {/* Slide { */}
+        <Slide transition={['spin']}>
+
+          <UpHeading size={1} lineHeight={2} fit textColor="darktext" bold>
+            Create an assignment for your course!
+          </UpHeading>
+          <BigImage src={images.StartCreatingAssignments}/>
+
+        </Slide>
+        {/* Slide } */}
+
+        {/* Slide { */}
         <Slide>
 
           <UpHeading size={1} lineHeight={2} fit textColor="darktext" bold>
-            Start creating assignments for your course!
+            Create an assignment from the solution
           </UpHeading>
-          <BigImage src={images.StartCreatingAssignments}/>
+          <BigImage src={images.CreateAssignment}/>
 
         </Slide>
         {/* Slide } */}
