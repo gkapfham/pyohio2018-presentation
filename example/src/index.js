@@ -38,6 +38,8 @@ import createTheme from '../../src/themes/default';
 
 require('normalize.css');
 
+var questionFont = "Permanent Marker";
+
 {/* FontAwesome: Define the colors for the theme */}
 var primary = '#bdbdbd';
 var secondary =  '#d84315';
@@ -102,6 +104,10 @@ export const GitHub = () => (
 
 export const Comments = () => (
   <FontAwesomeIcon icon={['fas', 'comments']} size="2x" transform="down-2, left-5" color={darktext}/>
+)
+
+export const CommentsShiftUp = () => (
+  <FontAwesomeIcon icon={['fas', 'comments']} size="2x" transform="down-1, left-5" color={darktext}/>
 )
 
 export const Python = () => (
@@ -356,11 +362,11 @@ export default class Presentation extends Component {
         {/* SECTION: Motivation { */}
 
         {/* Slide { */}
-        <Slide bgColor="secondarylight">
+        <Slide bgColor="primary">
 
           <Layout>
-            <Text textSize="2em" margin={-3} fill textColor="darktext" bold textAlign="left">
-            <Comments/>
+            <Text  textSize="2em" margin={-2} fill textColor="darktext" bold textAlign="left">
+            <CommentsShiftUp/>
             </Text>
             <Text textSize="4.25em" margin={-8} fill textColor="darktext" bold textAlign="left">
               Why would I
@@ -368,8 +374,8 @@ export default class Presentation extends Component {
           </Layout>
 
           <Layout>
-            <Text textSize="4em" fill textColor="tertiary" bold textAlign="left">
-              opt to use GitHub and Travis CI?
+            <Text textFont={questionFont} textSize="4em" fill textColor="secondary" textAlign="left">
+              decide to use GitHub and Travis CI?
             </Text>
           </Layout>
 
@@ -381,7 +387,7 @@ export default class Presentation extends Component {
         {/* SECTION: Configure { */}
 
         {/* Slide { */}
-        <Slide bgColor="secondarylight">
+        <Slide bgColor="primary">
 
           <Layout>
             <Text textSize="2em" margin={-2} fill textColor="darktext" bold textAlign="left">
@@ -393,7 +399,7 @@ export default class Presentation extends Component {
           </Layout>
 
           <Layout>
-            <Text textSize="4em" fill textColor="tertiary" bold textAlign="left">
+            <Text textFont="Permanent Marker" textSize="4em" fill textColor="secondary" textAlign="left">
               configure and use GitHub Classroom?
             </Text>
           </Layout>
@@ -402,6 +408,32 @@ export default class Presentation extends Component {
         {/* Slide } */}
 
         {/* SECTION: Configure } */}
+
+        {/* SECTION: Check { */}
+
+        {/* Slide { */}
+        <Slide bgColor="primary">
+
+          <Layout>
+            <Text textSize="2em" margin={-2} fill textColor="darktext" bold textAlign="left">
+            <Comments/>
+            </Text>
+            <Text textSize="5em" margin={-8} fill textColor="darktext" bold textAlign="left">
+              How do I
+            </Text>
+          </Layout>
+
+          <Layout>
+            <Text textFont="Permanent Marker" textSize="4em" fill textColor="secondary" textAlign="left">
+              automatically check student submissions?
+            </Text>
+          </Layout>
+
+        </Slide>
+        {/* Slide } */}
+
+        {/* SECTION: Check } */}
+
 
       </Deck>
     );
