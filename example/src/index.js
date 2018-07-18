@@ -69,7 +69,8 @@ const PaddedFill = styled(Fill)`
 {/* Create a emotion-styled Fill with padding */}
 const LeftShiftPaddedFill = styled(Fill)`
   margin-right: 110px;
-  margin-left: -100px;
+  // NOTE: comment out next line to get better printing
+  margin-left: -110px;
   justify-content: space-between;
 `;
 
@@ -104,9 +105,7 @@ export const Archive = () => (
 )
 
 export const GitHub = () => (
-  <div>
     <FontAwesomeIcon icon={['fab', 'github']} size="3x" color={darktext}/>
-  </div>
 )
 
 export const Comments = () => (
@@ -118,15 +117,11 @@ export const CommentsShiftUp = () => (
 )
 
 export const Python = () => (
-  <div>
     <FontAwesomeIcon icon={['fab', 'python']} size="3x" color={darktext}/>
-  </div>
 )
 
 export const Travis = () => (
-  <div>
     <FontAwesomeIcon icon={['fas', 'user-secret']} size="3x" color={darktext}/>
-  </div>
 )
 
 export const Twitter = () => (
@@ -177,7 +172,7 @@ export default class Presentation extends Component {
         {/* Slide { */}
         <Slide bgColor="primary">
 
-          <Text textSize="3em" textColor="darktext" bold>
+          <Text textSize="3.25em" textColor="darktext" bold>
             A Hands-On Guide to Teaching Programming with
           </Text>
 
@@ -308,7 +303,7 @@ export default class Presentation extends Component {
         {/* Slide } */}
 
         {/* Slide { */}
-        <Slide transitionDuration={1000} bgColor="primary">
+        <Slide align="flex-start center" bgColor="primary">
 
           <Layout>
             <Appear transitionDuration={100}>
