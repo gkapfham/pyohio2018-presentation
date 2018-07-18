@@ -6,7 +6,8 @@ Kapfhammer](https://www.gregorykapfhammer.com/), gave during a panel at the 2018
 edition of the PyOhio conference. The presentation's source code uses the
 [Spectacle](https://github.com/FormidableLabs/spectacle) framework to control
 the display of each slide. I have developed a custom theme for the slides that
-manages the formatting, color scheme, and the use of photographs and icons.
+manages the formatting, color scheme, and the use of photographs and icons. All
+of the colors in the presentation come from the Material Design color palette.
 
 ## Installation Instructions
 
@@ -43,6 +44,13 @@ start` in your terminal window. If you want to display the presentation to your
 audience, you can go the [display site](http://localhost:3000/#/). If you want
 to see the presentation slides in a presenter mode, you can go to the [presenter
 mode site](http://localhost:3000/#/?presenter&timer).
+
+## Debugging the Presentation
+
+Since these slides are implemented in the
+[Spectacle](https://github.com/FormidableLabs/spectacle) framework, you may need
+to use Chrome Developer Tools, augmented with the React Developer Plugin, to
+resolve errors that prevent the slides from displaying correctly.
 
 ## Problems or Praise
 
