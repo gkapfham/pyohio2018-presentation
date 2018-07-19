@@ -181,7 +181,7 @@ export const Travis = () => (
 
 export const Twitter = () => (
   <div>
-    <FontAwesomeIcon icon={['fab', 'twitter']} size="3x" color="#1565c0"/>
+    <FontAwesomeIcon icon={['fab', 'twitter']} size="3x" transform="left-2" color="#1565c0"/>
   </div>
 )
 
@@ -191,7 +191,7 @@ export const Map = () => (
 
 export const Web = () => (
   <div>
-    <FontAwesomeIcon icon={['fas', 'globe']} size="3x" color="#1565c0"/>
+    <FontAwesomeIcon icon={['fas', 'globe']} size="3x" transform="left-2" color="#1565c0"/>
   </div>
 )
 
@@ -288,7 +288,7 @@ export default class Presentation extends Component {
               <Twitter/>
             </Fit>
             <Fit>
-              <Text bold margin="10px 0px 0px 25px" textSize="2em" textColor="tertiary">
+              <Text fill bold textSize="2em" textColor="tertiary">
                 @GregKapfhammer
               </Text>
             </Fit>
@@ -305,7 +305,7 @@ export default class Presentation extends Component {
               <Web/>
             </Fit>
             <Fit>
-              <Text bold margin="10px 0px 0px 25px" textSize="2em" textColor="tertiary">
+              <Text fill bold textSize="2em" textColor="tertiary">
                 www.gregorykapfhammer.com
               </Text>
             </Fit>
