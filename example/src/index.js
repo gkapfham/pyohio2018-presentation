@@ -344,22 +344,6 @@ export default class Presentation extends Component {
             </Appear>
           </Layout>
 
-          <Layout>
-            <Text height="20px">
-              &nbsp;
-            </Text>
-          </Layout>
-
-          <Layout>
-            <Appear transitionDuration={100}>
-              <Fill>
-                <Text bold textSize="2em" textColor="tertiary">
-                  Like, "How can I automatically grade student submissions?"
-                </Text>
-              </Fill>
-            </Appear>
-          </Layout>
-
         </Slide>
         {/* Slide } */}
 
