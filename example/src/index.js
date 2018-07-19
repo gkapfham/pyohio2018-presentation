@@ -50,6 +50,9 @@ const images = {
 };
 preloader(images);
 
+{/* Standard all-side margin size */}
+var standardMargin = 40;
+
 {/* Font used for all questions in section slides */}
 var questionFont = "Noto Sans";
 
@@ -374,6 +377,47 @@ export default class Presentation extends Component {
         </Slide>
         {/* Slide } */}
 
+        <Slide transition={['zoom', 'fade']} bgColor="primary">
+          <Heading fit textColor="secondary">
+            Exciting Technology
+          </Heading>
+
+          <Layout>
+            <Text height="40px">
+              &nbsp;
+            </Text>
+          </Layout>
+
+          <Layout>
+            <Fill>
+              <Heading
+                size={2}
+                textColor="secondary"
+                margin={standardMargin}
+              >
+                <Travis/>
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading
+                size={2}
+                textColor="secondary"
+                margin={standardMargin}
+              >
+                <GitHub/>
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading
+                size={2}
+                textColor="secondary"
+                margin={standardMargin}
+              >
+                <Python/>
+              </Heading>
+            </Fill>
+          </Layout>
+        </Slide>
 
         {/* SECTION: Motivation { */}
 
