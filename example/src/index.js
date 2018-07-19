@@ -507,7 +507,7 @@ export default class Presentation extends Component {
         {/* Slide } */}
 
         {/* Slide { */}
-        <Slide transition={['spin']}>
+        <Slide transitionIn={['spin']} transitionOut={['spin','slide']}>
 
           <UpHeading size={1} lineHeight={2} fit textColor="darktext" bold>
             Create an assignment for your course!
