@@ -46,6 +46,7 @@ const images = {
   CreateRoster: require('../assets/CreateRoster.png'),
   StartCreatingAssignments: require('../assets/StartCreatingAssignments.png'),
   CreateAssignment: require('../assets/CreateAssignment.png'),
+  ExampleAssignments: require('../assets/ExampleAssignments.png'),
 };
 preloader(images);
 
@@ -93,7 +94,7 @@ const PaddedFill = styled(Fill)`
 const LeftShiftPaddedFill = styled(Fill)`
   margin-right: 110px;
   // NOTE: comment out next line to get better printing
-  margin-left: -110px;
+  margin-left: -120px;
   justify-content: space-between;
 `;
 
@@ -338,7 +339,7 @@ export default class Presentation extends Component {
         {/* Slide } */}
 
         {/* Slide { */}
-        <Slide align="flex-start center" bgColor="primary">
+        <Slide bgColor="primary">
 
           <Layout>
             <Appear transitionDuration={100}>
@@ -498,7 +499,7 @@ export default class Presentation extends Component {
         {/* Slide } */}
 
         {/* Slide { */}
-        <Slide align="flex-start center" bgColor="primary">
+        <Slide bgColor="primary">
 
           <Layout>
             <Appear transitionDuration={100}>
@@ -545,6 +546,22 @@ export default class Presentation extends Component {
             </PaddedFill>
           </Appear>
 
+        </Layout>
+
+        <Layout>
+          <Text height="50px">
+            &nbsp;
+          </Text>
+        </Layout>
+
+        <Layout>
+          <Appear order={4} transitionDuration={100}>
+            <Fill>
+              <Text bold fit textSize="5em" textColor="darktext">
+                Solution's build should pass and starter's should fail
+              </Text>
+            </Fill>
+          </Appear>
         </Layout>
 
         </Slide>
