@@ -93,7 +93,7 @@ const PaddedFill = styled(Fill)`
 const LeftShiftPaddedFill = styled(Fill)`
   margin-right: 110px;
   // NOTE: comment out next line to get better printing
-  margin-left: -100px;
+  margin-left: -110px;
   justify-content: space-between;
 `;
 
@@ -141,6 +141,18 @@ export const CommentsShiftUp = () => (
 
 export const Python = () => (
     <FontAwesomeIcon icon={['fab', 'python']} size="3x" color={darktext}/>
+)
+
+export const RepoFull = () => (
+    <FontAwesomeIcon icon={['fas', 'square']} size="3x" color={darktext}/>
+)
+
+export const RepoMinus = () => (
+    <FontAwesomeIcon icon={['fas', 'minus-square']} size="3x" color={darktext}/>
+)
+
+export const Toggle = () => (
+    <FontAwesomeIcon icon={['fas', 'toggle-on']} size="3x" color={darktext}/>
 )
 
 export const Travis = () => (
@@ -491,7 +503,7 @@ export default class Presentation extends Component {
           <Layout>
             <Appear transitionDuration={100}>
               <Fill>
-                <Text bold textSize="2.5em" textColor="darktext">
+                <Text bold margin={-2} textSize="2.5em" textColor="darktext">
                   Two Repositories for Each Assignment
                 </Text>
               </Fill>
@@ -509,27 +521,27 @@ export default class Presentation extends Component {
           <Appear order={1} transitionDuration={100}>
             <LeftShiftPaddedFill>
               <Text textSize="2em" bold>
-                <Travis/>
+                <RepoFull/>
               </Text>
-              <Heading size={2}>Travis</Heading>
+              <Heading size={2}>Starter</Heading>
             </LeftShiftPaddedFill>
           </Appear>
 
           <Appear order={2} transitionDuration={100}>
             <PaddedFill>
               <Text textSize="2em" bold>
-                <GitHub/>
+                <RepoMinus/>
               </Text>
-              <Heading size={2}>GitHub</Heading>
+              <Heading size={2}>Solution</Heading>
             </PaddedFill>
           </Appear>
 
           <Appear order={3} transitionduration={100}>
             <PaddedFill>
               <Text textSize="2em" bold>
-                <Python/>
+                <Toggle/>
               </Text>
-              <Heading size={2}>Python</Heading>
+              <Heading size={2}>Check</Heading>
             </PaddedFill>
           </Appear>
 
@@ -539,7 +551,7 @@ export default class Presentation extends Component {
         {/* Slide } */}
 
         {/* Slide { */}
-        <Slide>
+        <Slide transition={['spin']}>
 
           <UpHeading size={1} lineHeight={2} fit textColor="darktext" bold>
             Create an assignment using the solution
@@ -618,7 +630,7 @@ export default class Presentation extends Component {
           </Layout>
 
           <Layout>
-            <Appear transitionDuration={100}>
+            <Appear transitionDuration={0}>
               <Text textFont={questionFont} textSize="4.5em" fill textColor="secondary" textAlign="left">
                 improve and study this approach?
               </Text>
