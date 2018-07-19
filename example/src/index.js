@@ -51,7 +51,7 @@ const images = {
 preloader(images);
 
 {/* Font used for all questions in section slides */}
-var questionFont = "Permanent Marker";
+var questionFont = "Noto Sans";
 
 {/* FontAwesome: Define the colors for the theme */}
 var primary = '#bdbdbd';
@@ -72,7 +72,7 @@ const theme = createTheme({
   lighttext: '#9e9e9e'
 });
 
-{/* Create a emotion-styled BigImage that shifts left */}
+{/* Create a emotion-styled UpHeading that shifts up */}
 const UpHeading = styled(Heading)`
   margin-top: -50px;
 `;
@@ -81,7 +81,7 @@ const UpHeading = styled(Heading)`
 const BigImage = styled(Image)`
   max-width: 130%;
   width: 130%;
-  margin-left: -110px;
+  margin-left: -130px;
 `;
 
 {/* Create a emotion-styled Fill with padding */}
@@ -92,6 +92,14 @@ const PaddedFill = styled(Fill)`
 
 {/* Create a emotion-styled Fill with padding */}
 const LeftShiftPaddedFill = styled(Fill)`
+  margin-right: 110px;
+  // NOTE: comment out next line to get better printing
+  margin-left: -100px;
+  justify-content: space-between;
+`;
+
+{/* Create a emotion-styled Fill with padding */}
+const BigLeftShiftPaddedFill = styled(Fill)`
   margin-right: 110px;
   // NOTE: comment out next line to get better printing
   margin-left: -120px;
@@ -199,7 +207,7 @@ export default class Presentation extends Component {
     return (
       <Deck
         transition={['slide']}
-        transitionDuration={400}
+        transitionDuration={500}
         theme={theme}
         controls={false}
         progress={'none'}
@@ -407,7 +415,7 @@ export default class Presentation extends Component {
 
           <Layout>
             <Appear transitionDuration={100}>
-              <Text textFont={questionFont} textSize="4.25em" fill textColor="secondary" textAlign="left">
+              <Text bold textFont={questionFont} textSize="4.25em" fill textColor="secondary" textAlign="left">
                 decide to use GitHub and Travis CI?
               </Text>
             </Appear>
@@ -434,7 +442,7 @@ export default class Presentation extends Component {
 
           <Layout>
             <Appear transitionDuration={100}>
-              <Text textFont={questionFont} textSize="4em" fill textColor="secondary" textAlign="left">
+              <Text bold textFont={questionFont} textSize="4em" fill textColor="secondary" textAlign="left">
                 configure and use GitHub Classroom?
               </Text>
             </Appear>
@@ -520,12 +528,12 @@ export default class Presentation extends Component {
         <Layout>
 
           <Appear order={1} transitionDuration={100}>
-            <LeftShiftPaddedFill>
+            <BigLeftShiftPaddedFill>
               <Text textSize="2em" bold>
                 <RepoFull/>
               </Text>
               <Heading size={2}>Starter</Heading>
-            </LeftShiftPaddedFill>
+            </BigLeftShiftPaddedFill>
           </Appear>
 
           <Appear order={2} transitionDuration={100}>
@@ -549,7 +557,7 @@ export default class Presentation extends Component {
         </Layout>
 
         <Layout>
-          <Text height="50px">
+          <Text height="40px">
             &nbsp;
           </Text>
         </Layout>
@@ -557,7 +565,7 @@ export default class Presentation extends Component {
         <Layout>
           <Appear order={4} transitionDuration={100}>
             <Fill>
-              <Text bold fit textSize="5em" textColor="darktext">
+              <Text bold textSize="1.5em" textColor="darktext">
                 Solution's build should pass and starter's should fail
               </Text>
             </Fill>
@@ -582,7 +590,7 @@ export default class Presentation extends Component {
         <Slide transition={['slide']}>
 
           <UpHeading size={1} lineHeight={2} fit textColor="darktext" bold>
-            A classroom contains many assignments
+            A classroom will contain many assignments
           </UpHeading>
           <BigImage src={images.ExampleAssignments}/>
 
@@ -607,7 +615,7 @@ export default class Presentation extends Component {
 
           <Layout>
             <Appear transitionDuration={100}>
-              <Text textFont={questionFont} textSize="4em" fill textColor="secondary" textAlign="left">
+              <Text bold textFont={questionFont} textSize="4em" fill textColor="secondary" textAlign="left">
                 automatically check student submissions?
               </Text>
             </Appear>
@@ -632,7 +640,7 @@ export default class Presentation extends Component {
 
           <Layout>
             <Appear transitionDuration={100}>
-              <Text textFont={questionFont} textSize="4.5em" fill textColor="secondary" textAlign="left">
+              <Text bold textFont={questionFont} textSize="4.5em" fill textColor="secondary" textAlign="left">
                 people think about this approach?
               </Text>
             </Appear>
@@ -659,7 +667,7 @@ export default class Presentation extends Component {
 
           <Layout>
             <Appear transitionDuration={0}>
-              <Text textFont={questionFont} textSize="4.5em" fill textColor="secondary" textAlign="left">
+              <Text bold textFont={questionFont} textSize="4.5em" fill textColor="secondary" textAlign="left">
                 improve and study this approach?
               </Text>
             </Appear>
