@@ -50,6 +50,9 @@ const images = {
 };
 preloader(images);
 
+{/* Standard horizontal padding between rows */}
+var standardHorizontalPadding = 40;
+
 {/* Standard all-side margin size */}
 var standardMargin = 40;
 
@@ -151,7 +154,7 @@ export const Archive = () => (
 )
 
 export const GitHub = () => (
-    <FontAwesomeIcon icon={['fab', 'github']} size="3x" color={darktext}/>
+    <FontAwesomeIcon icon={['fab', 'github']} transform="grow-15" color={darktext}/>
 )
 
 export const Comments = () => (
@@ -163,7 +166,7 @@ export const CommentsShiftUp = () => (
 )
 
 export const Python = () => (
-    <FontAwesomeIcon icon={['fab', 'python']} size="3x" color={darktext}/>
+    <FontAwesomeIcon icon={['fab', 'python']} transform="grow-15" color={darktext}/>
 )
 
 export const RepoFull = () => (
@@ -179,7 +182,7 @@ export const Toggle = () => (
 )
 
 export const Travis = () => (
-    <FontAwesomeIcon icon={['fas', 'user-secret']} size="3x" color={darktext}/>
+    <FontAwesomeIcon icon={['fas', 'user-secret']} transform="grow-15" color={darktext}/>
 )
 
 export const Twitter = () => (
@@ -221,7 +224,7 @@ export default class Presentation extends Component {
     return (
       <Deck
         contentHeight={700}
-        contentWidth={1000}
+        contentWidth={1024}
         transition={['slide']}
         transitionDuration={500}
         theme={theme}
@@ -351,16 +354,46 @@ export default class Presentation extends Component {
         {/* Slide } */}
 
         {/* Slide { */}
-        <Slide transitionDuration={0} transition={['']} bgColor="primary">
+        <Slide transition={['']} bgColor="primary">
+          <Heading fit textColor="secondary">
+            Exploring Technologies
+          </Heading>
 
           <Layout>
-            <Appear transitionDuration={100}>
-              <Heading size={1} fill lineHeight={1.2} bold textColor="darktext">
-                Exploring Cool Technologies
-              </Heading>
-            </Appear>
+            <Text height={standardHorizontalPadding}>
+              &nbsp;
+            </Text>
           </Layout>
 
+          <Layout>
+            <Fill>
+              <Heading
+                size={1}
+                textColor="secondary"
+                margin={standardMargin}
+              >
+                <GitHub/>
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading
+                size={1}
+                textColor="secondary"
+                margin={standardMargin}
+              >
+                <Travis/>
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading
+                size={1}
+                textColor="secondary"
+                margin={standardMargin}
+              >
+                <Python/>
+              </Heading>
+            </Fill>
+          </Layout>
         </Slide>
         {/* Slide } */}
 
@@ -376,48 +409,6 @@ export default class Presentation extends Component {
 
         </Slide>
         {/* Slide } */}
-
-        <Slide transition={['zoom', 'fade']} bgColor="primary">
-          <Heading fit textColor="secondary">
-            Exciting Technology
-          </Heading>
-
-          <Layout>
-            <Text height="40px">
-              &nbsp;
-            </Text>
-          </Layout>
-
-          <Layout>
-            <Fill>
-              <Heading
-                size={2}
-                textColor="secondary"
-                margin={standardMargin}
-              >
-                <Travis/>
-              </Heading>
-            </Fill>
-            <Fill>
-              <Heading
-                size={2}
-                textColor="secondary"
-                margin={standardMargin}
-              >
-                <GitHub/>
-              </Heading>
-            </Fill>
-            <Fill>
-              <Heading
-                size={2}
-                textColor="secondary"
-                margin={standardMargin}
-              >
-                <Python/>
-              </Heading>
-            </Fill>
-          </Layout>
-        </Slide>
 
         {/* SECTION: Motivation { */}
 
