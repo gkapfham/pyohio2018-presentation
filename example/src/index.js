@@ -217,6 +217,8 @@ export default class Presentation extends Component {
     {/* Create the Deck of slides with no controls and no progress bars */}
     return (
       <Deck
+        contentHeight={700}
+        contentWidth={1000}
         transition={['slide']}
         transitionDuration={500}
         theme={theme}
@@ -227,13 +229,17 @@ export default class Presentation extends Component {
         {/* Slide { */}
         <Slide bgColor="primary">
 
-          <Text textSize="3.25em" textColor="darktext" bold>
-            A Hands-On Guide to Teaching Programming with
-          </Text>
+          <Heading size={1} fit lineHeight={1.2} bold textColor="darktext">
+            A Hands-On Guide to
+          </Heading>
 
-          <Text textSize="2.1em" textColor="secondary" bold>
+          <Heading size={1} fit lineHeight={1.4} bold textColor="darktext">
+            Teaching Programming with
+          </Heading>
+
+          <Heading size={1} fit lineHeight={1.2} bold textColor="secondary">
             GitHub, Travis CI, and Python
-          </Text>
+          </Heading>
 
           <Layout>
             <Text height="20px">
@@ -241,11 +247,11 @@ export default class Presentation extends Component {
             </Text>
           </Layout>
 
-          <Text bold caps textColor="tertiary">
+          <Text fit bold textColor="tertiary">
             Gregory M. Kapfhammer
           </Text>
 
-          <Text bold textColor="tertiary">
+          <Text bold textSize="1.5em" textColor="tertiary">
             July 28 at PyOhio 2018
           </Text>
 
