@@ -94,6 +94,14 @@ const PaddedFill = styled(Fill)`
 const LeftShiftPaddedFill = styled(Fill)`
   margin-right: 110px;
   // NOTE: comment out next line to get better printing
+  margin-left: -100px;
+  justify-content: space-between;
+`;
+
+{/* Create a emotion-styled Fill with padding */}
+const BigLeftShiftPaddedFill = styled(Fill)`
+  margin-right: 110px;
+  // NOTE: comment out next line to get better printing
   margin-left: -120px;
   justify-content: space-between;
 `;
@@ -199,7 +207,7 @@ export default class Presentation extends Component {
     return (
       <Deck
         transition={['slide']}
-        transitionDuration={400}
+        transitionDuration={500}
         theme={theme}
         controls={false}
         progress={'none'}
@@ -520,12 +528,12 @@ export default class Presentation extends Component {
         <Layout>
 
           <Appear order={1} transitionDuration={100}>
-            <LeftShiftPaddedFill>
+            <BigLeftShiftPaddedFill>
               <Text textSize="2em" bold>
                 <RepoFull/>
               </Text>
               <Heading size={2}>Starter</Heading>
-            </LeftShiftPaddedFill>
+            </BigLeftShiftPaddedFill>
           </Appear>
 
           <Appear order={2} transitionDuration={100}>
@@ -549,7 +557,7 @@ export default class Presentation extends Component {
         </Layout>
 
         <Layout>
-          <Text height="50px">
+          <Text height="40px">
             &nbsp;
           </Text>
         </Layout>
@@ -557,7 +565,7 @@ export default class Presentation extends Component {
         <Layout>
           <Appear order={4} transitionDuration={100}>
             <Fill>
-              <Text bold fit textSize="5em" textColor="darktext">
+              <Text bold textSize="1.5em" textColor="darktext">
                 Solution's build should pass and starter's should fail
               </Text>
             </Fill>
