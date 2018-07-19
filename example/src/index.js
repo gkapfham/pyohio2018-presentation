@@ -72,6 +72,17 @@ const theme = createTheme({
   lighttext: '#9e9e9e'
 });
 
+{/* Create a emotion-styled PlainCite without italics */}
+const PlainCite = styled(Cite)`
+  font-style: normal;
+  margin-left: 30px;
+`;
+
+{/* Create a emotion-styled SpacedBlockQuote that breathes */}
+const SpacedQuote = styled(Quote)`
+  line-height: 1.2;
+`;
+
 {/* Create a emotion-styled UpHeading that shifts up */}
 const UpHeading = styled(Heading)`
   margin-top: -50px;
@@ -242,7 +253,7 @@ export default class Presentation extends Component {
         {/* Slide } */}
 
         {/* Slide { */}
-        <Slide margin={-10} transitionDuration={0} bgColor="primary">
+        <Slide margin={-10} transitionDuration={0} transition={['']} bgColor="primary">
 
           <Layout>
             <BottomPaddedFill>
@@ -298,7 +309,7 @@ export default class Presentation extends Component {
         {/* Slide } */}
 
         {/* Slide { */}
-        <Slide bgColor="primary">
+        <Slide transitionDuration={0} transition={['']} bgColor="primary">
 
           <Layout>
             <Appear transitionDuration={100}>
@@ -321,7 +332,7 @@ export default class Presentation extends Component {
             <Appear transitionDuration={100}>
               <Fill>
                 <Text bold textSize="2em" textColor="secondary">
-                  Ask and answer questions about the teaching of programming
+                  Ask and answer questions about effective instruction in the programming field
                 </Text>
               </Fill>
             </Appear>
@@ -347,7 +358,7 @@ export default class Presentation extends Component {
         {/* Slide } */}
 
         {/* Slide { */}
-        <Slide bgColor="primary">
+        <Slide transitionDuration={0} transition={['']} bgColor="primary">
 
           <Layout>
             <Appear transitionDuration={100}>
@@ -402,7 +413,7 @@ export default class Presentation extends Component {
         {/* SECTION: Motivation { */}
 
         {/* Slide { */}
-        <Slide bgColor="primary">
+        <Slide transitionDuration={0} transition={['']} bgColor="primary">
 
           <Layout>
             <Text  textSize="2em" margin={-2} fill textColor="darktext" bold textAlign="left">
@@ -429,7 +440,7 @@ export default class Presentation extends Component {
         {/* SECTION: Configure { */}
 
         {/* Slide { */}
-        <Slide bgColor="primary">
+        <Slide transitionDuration={0} transition={['']} bgColor="primary">
 
           <Layout>
             <Text textSize="2em" margin={-2} fill textColor="darktext" bold textAlign="left">
@@ -452,7 +463,7 @@ export default class Presentation extends Component {
         {/* Slide } */}
 
         {/* Slide { */}
-        <Slide transition={['spin']}>
+        <Slide transitionOut={['slide']} transitionIn={['slide', 'spin']}>
 
           <UpHeading size={1} lineHeight={2} fit textColor="darktext" bold>
             Create a GitHub organization for your course
@@ -496,7 +507,7 @@ export default class Presentation extends Component {
         {/* Slide } */}
 
         {/* Slide { */}
-        <Slide transition={['spin']}>
+        <Slide transitionIn={['spin']} transitionOut={['spin','slide']}>
 
           <UpHeading size={1} lineHeight={2} fit textColor="darktext" bold>
             Create an assignment for your course!
@@ -645,6 +656,25 @@ export default class Presentation extends Component {
               </Text>
             </Appear>
           </Layout>
+
+        </Slide>
+        {/* Slide } */}
+
+        {/* Slide { */}
+        <Slide transition={['spin']}bgColor="primary">
+
+          <BlockQuote>
+
+            <SpacedQuote textSize="2em" textColor="darktext">
+
+              This approach ensures that the source code and GitHub
+              repositories are organized. It is easier for me to help the
+              students who are struggling in an introductory course.
+
+            </SpacedQuote>
+
+            <PlainCite bold caps textSize="2em">Saejin Mahlau-Heinert</PlainCite>
+          </BlockQuote>
 
         </Slide>
         {/* Slide } */}

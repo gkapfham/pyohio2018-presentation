@@ -15,7 +15,7 @@ export default class Cite extends Component {
     ];
     return (
       <StyledCite className={this.props.className} styles={styles}>
-        - {this.props.children}
+        {this.props.children}
       </StyledCite>
     );
   }
