@@ -578,6 +578,17 @@ export default class Presentation extends Component {
         </Slide>
         {/* Slide } */}
 
+        {/* Slide { */}
+        <Slide transition={['slide']}>
+
+          <UpHeading size={1} lineHeight={2} fit textColor="darktext" bold>
+            A classroom contains many assignments
+          </UpHeading>
+          <BigImage src={images.ExampleAssignments}/>
+
+        </Slide>
+        {/* Slide } */}
+
         {/* SECTION: Configure } */}
 
         {/* SECTION: Check { */}
