@@ -352,53 +352,28 @@ export default class Presentation extends Component {
 
           <Layout>
             <Appear transitionDuration={100}>
-              <Fill>
-                <Text bold textSize="3em" textColor="darktext">
-                  Exploring these Technologies
-                </Text>
-              </Fill>
+              <Heading size={1} fill lineHeight={1.2} bold textColor="darktext">
+                Exploring Cool Technologies
+              </Heading>
             </Appear>
           </Layout>
 
-          <Layout>
-            <Text height="50px">
-              &nbsp;
-            </Text>
-          </Layout>
+        </Slide>
+        {/* Slide } */}
+
+        {/* Slide { */}
+        <Slide transitionDuration={0} transition={['']} align="center center" bgColor="primary">
 
         <Layout>
-
-          <Appear order={2} transitionDuration={100}>
-            <LeftShiftPaddedFill>
-              <Text textSize="2em" bold>
-                <Travis/>
-              </Text>
-              <Heading size={2}>Travis</Heading>
-            </LeftShiftPaddedFill>
-          </Appear>
-
-          <Appear order={1} transitionDuration={100}>
-            <PaddedFill>
-              <Text textSize="2em" bold>
-                <GitHub/>
-              </Text>
-              <Heading size={2}>GitHub</Heading>
-            </PaddedFill>
-          </Appear>
-
-          <Appear order={3} transitionduration={100}>
-            <PaddedFill>
-              <Text textSize="2em" bold>
-                <Python/>
-              </Text>
-              <Heading size={2}>Python</Heading>
-            </PaddedFill>
-          </Appear>
-
+          <Fill>
+            <Heading size={1}><Travis/></Heading>
+            <Heading fit size={1} textColor="secondary">Travis</Heading>
+          </Fill>
         </Layout>
 
         </Slide>
         {/* Slide } */}
+
 
         {/* SECTION: Motivation { */}
 
