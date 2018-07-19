@@ -46,6 +46,7 @@ const images = {
   CreateRoster: require('../assets/CreateRoster.png'),
   StartCreatingAssignments: require('../assets/StartCreatingAssignments.png'),
   CreateAssignment: require('../assets/CreateAssignment.png'),
+  ExampleAssignments: require('../assets/ExampleAssignments.png'),
 };
 preloader(images);
 
@@ -93,7 +94,7 @@ const PaddedFill = styled(Fill)`
 const LeftShiftPaddedFill = styled(Fill)`
   margin-right: 110px;
   // NOTE: comment out next line to get better printing
-  margin-left: -110px;
+  margin-left: -120px;
   justify-content: space-between;
 `;
 
@@ -141,6 +142,18 @@ export const CommentsShiftUp = () => (
 
 export const Python = () => (
     <FontAwesomeIcon icon={['fab', 'python']} size="3x" color={darktext}/>
+)
+
+export const RepoFull = () => (
+    <FontAwesomeIcon icon={['fas', 'square']} size="3x" color={darktext}/>
+)
+
+export const RepoMinus = () => (
+    <FontAwesomeIcon icon={['fas', 'minus-square']} size="3x" color={darktext}/>
+)
+
+export const Toggle = () => (
+    <FontAwesomeIcon icon={['fas', 'toggle-on']} size="3x" color={darktext}/>
 )
 
 export const Travis = () => (
@@ -326,7 +339,7 @@ export default class Presentation extends Component {
         {/* Slide } */}
 
         {/* Slide { */}
-        <Slide align="flex-start center" bgColor="primary">
+        <Slide bgColor="primary">
 
           <Layout>
             <Appear transitionDuration={100}>
@@ -486,12 +499,92 @@ export default class Presentation extends Component {
         {/* Slide } */}
 
         {/* Slide { */}
-        <Slide>
+        <Slide bgColor="primary">
+
+          <Layout>
+            <Appear transitionDuration={100}>
+              <Fill>
+                <Text bold margin={-2} textSize="2.5em" textColor="darktext">
+                  Two Repositories for Each Assignment
+                </Text>
+              </Fill>
+            </Appear>
+          </Layout>
+
+          <Layout>
+            <Text height="50px">
+              &nbsp;
+            </Text>
+          </Layout>
+
+        <Layout>
+
+          <Appear order={1} transitionDuration={100}>
+            <LeftShiftPaddedFill>
+              <Text textSize="2em" bold>
+                <RepoFull/>
+              </Text>
+              <Heading size={2}>Starter</Heading>
+            </LeftShiftPaddedFill>
+          </Appear>
+
+          <Appear order={2} transitionDuration={100}>
+            <PaddedFill>
+              <Text textSize="2em" bold>
+                <RepoMinus/>
+              </Text>
+              <Heading size={2}>Solution</Heading>
+            </PaddedFill>
+          </Appear>
+
+          <Appear order={3} transitionduration={100}>
+            <PaddedFill>
+              <Text textSize="2em" bold>
+                <Toggle/>
+              </Text>
+              <Heading size={2}>Check</Heading>
+            </PaddedFill>
+          </Appear>
+
+        </Layout>
+
+        <Layout>
+          <Text height="50px">
+            &nbsp;
+          </Text>
+        </Layout>
+
+        <Layout>
+          <Appear order={4} transitionDuration={100}>
+            <Fill>
+              <Text bold fit textSize="5em" textColor="darktext">
+                Solution's build should pass and starter's should fail
+              </Text>
+            </Fill>
+          </Appear>
+        </Layout>
+
+        </Slide>
+        {/* Slide } */}
+
+        {/* Slide { */}
+        <Slide transition={['spin']}>
 
           <UpHeading size={1} lineHeight={2} fit textColor="darktext" bold>
             Create an assignment using the solution
           </UpHeading>
           <BigImage src={images.CreateAssignment}/>
+
+        </Slide>
+        {/* Slide } */}
+
+        {/* Slide { */}
+        <Slide transition={['slide']}>
+
+          <UpHeading size={1} lineHeight={2} fit textColor="darktext" bold>
+            A classroom contains many assignments
+          </UpHeading>
+          <BigImage src={images.ExampleAssignments}/>
 
         </Slide>
         {/* Slide } */}
@@ -565,7 +658,7 @@ export default class Presentation extends Component {
           </Layout>
 
           <Layout>
-            <Appear transitionDuration={100}>
+            <Appear transitionDuration={0}>
               <Text textFont={questionFont} textSize="4.5em" fill textColor="secondary" textAlign="left">
                 improve and study this approach?
               </Text>
