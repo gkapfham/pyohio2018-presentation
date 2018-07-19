@@ -72,6 +72,11 @@ const theme = createTheme({
   lighttext: '#9e9e9e'
 });
 
+{/* Create a emotion-styled SpacedBlockQuote that breathes */}
+const SpacedQuote = styled(Quote)`
+  line-height: 1.2;
+`;
+
 {/* Create a emotion-styled UpHeading that shifts up */}
 const UpHeading = styled(Heading)`
   margin-top: -50px;
@@ -645,6 +650,25 @@ export default class Presentation extends Component {
               </Text>
             </Appear>
           </Layout>
+
+        </Slide>
+        {/* Slide } */}
+
+        {/* Slide { */}
+        <Slide bgColor="primary">
+
+          <BlockQuote>
+
+            <SpacedQuote textSize="2em" textColor="darktext">
+
+              This approach ensures that the source code and GitHub
+              repositories are organized. It is easier for me to help the
+              students who are struggling in an introductory course.
+
+            </SpacedQuote>
+
+            <Cite textSize="2em">Saejin Mahlau-Heinert</Cite>
+          </BlockQuote>
 
         </Slide>
         {/* Slide } */}
