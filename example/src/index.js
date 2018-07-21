@@ -355,12 +355,12 @@ export default class Presentation extends Component {
 
         {/* Slide { */}
         <Slide transition={['']} bgColor="primary">
-          <Heading fit textColor="secondary">
+          <Heading fit textColor="darktext">
             Exploring Technologies
           </Heading>
 
           <Layout>
-            <Text height={standardHorizontalPadding}>
+            <Text height={standardHorizontalPadding*2}>
               &nbsp;
             </Text>
           </Layout>
@@ -394,6 +394,37 @@ export default class Presentation extends Component {
               </Heading>
             </Fill>
           </Layout>
+
+          <Layout>
+            <Fill>
+              <Heading
+                size={4}
+                textColor="secondary"
+                margin={standardMargin}
+              >
+                GitHub
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading
+                size={4}
+                textColor="secondary"
+                margin={standardMargin}
+              >
+                Travis
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading
+                size={4}
+                textColor="secondary"
+                margin={standardMargin}
+              >
+                Python
+              </Heading>
+            </Fill>
+          </Layout>
+
         </Slide>
         {/* Slide } */}
 
