@@ -162,7 +162,7 @@ export const Comments = () => (
 )
 
 export const CommentsShiftUp = () => (
-  <FontAwesomeIcon icon={['fas', 'comments']} size="2x" transform="down-1, left-5" color={darktext}/>
+  <FontAwesomeIcon icon={['fas', 'comments']} transform="grow-8, left-2" color={darktext}/>
 )
 
 export const Python = () => (
@@ -367,29 +367,17 @@ export default class Presentation extends Component {
 
           <Layout>
             <Fill>
-              <Heading
-                size={1}
-                textColor="secondary"
-                margin={standardMargin}
-              >
+              <Heading size={1} textColor="secondary" margin={standardMargin}>
                 <GitHub/>
               </Heading>
             </Fill>
             <Fill>
-              <Heading
-                size={1}
-                textColor="secondary"
-                margin={standardMargin}
-              >
+              <Heading size={1} textColor="secondary" margin={standardMargin}>
                 <Travis/>
               </Heading>
             </Fill>
             <Fill>
-              <Heading
-                size={1}
-                textColor="secondary"
-                margin={standardMargin}
-              >
+              <Heading size={1} textColor="secondary" margin={standardMargin}>
                 <Python/>
               </Heading>
             </Fill>
@@ -397,29 +385,17 @@ export default class Presentation extends Component {
 
           <Layout>
             <Fill>
-              <Heading
-                size={4}
-                textColor="secondary"
-                margin={standardMargin}
-              >
+              <Heading size={4} textColor="secondary" margin={standardMargin}>
                 GitHub
               </Heading>
             </Fill>
             <Fill>
-              <Heading
-                size={4}
-                textColor="secondary"
-                margin={standardMargin}
-              >
+              <Heading size={4} textColor="secondary" margin={standardMargin}>
                 Travis
               </Heading>
             </Fill>
             <Fill>
-              <Heading
-                size={4}
-                textColor="secondary"
-                margin={standardMargin}
-              >
+              <Heading size={4} textColor="secondary" margin={standardMargin}>
                 Python
               </Heading>
             </Fill>
@@ -473,20 +449,21 @@ export default class Presentation extends Component {
         <Slide transitionDuration={0} transition={['']} bgColor="primary">
 
           <Layout>
-            <Text  textSize="2em" margin={-2} fill textColor="darktext" bold textAlign="left">
-            <CommentsShiftUp/>
-            </Text>
-            <Text textSize="4.25em" margin={-8} fill textColor="darktext" bold textAlign="left">
-              Why would I
+            <Heading fit size={1} textColor="darktext">
+              <CommentsShiftUp/> Why would I
+            </Heading>
+          </Layout>
+
+          <Layout>
+            <Text height={standardHorizontalPadding}>
+              &nbsp;
             </Text>
           </Layout>
 
           <Layout>
-            <Appear transitionDuration={100}>
-              <Text bold textFont={questionFont} textSize="4.25em" fill textColor="secondary" textAlign="left">
+              <Heading fill size={1} lineHeight={1.2} textAlign="left" textColor="secondary">
                 decide to use GitHub and Travis CI?
-              </Text>
-            </Appear>
+              </Heading>
           </Layout>
 
         </Slide>
