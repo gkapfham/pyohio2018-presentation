@@ -233,7 +233,7 @@ export default class Presentation extends Component {
       >
 
         {/* Slide { */}
-        <Slide bgColor="primary">
+        <Slide transition={['spin', 'zoom']} bgColor="primary">
 
           <Heading size={1} fit lineHeight={1.2} bold textColor="darktext">
             A Hands-On Guide to
