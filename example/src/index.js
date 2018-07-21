@@ -433,8 +433,34 @@ export default class Presentation extends Component {
 
         <Layout>
           <Fill>
+            <Heading margin={standardMargin} size={1}><GitHub/></Heading>
+            <Heading fit size={1} textColor="secondary">GitHub</Heading>
+          </Fill>
+        </Layout>
+
+        </Slide>
+        {/* Slide } */}
+
+        {/* Slide { */}
+        <Slide transitionDuration={0} transition={['']} align="center center" bgColor="primary">
+
+        <Layout>
+          <Fill>
             <Heading size={1}><Travis/></Heading>
             <Heading fit size={1} textColor="secondary">Travis</Heading>
+          </Fill>
+        </Layout>
+
+        </Slide>
+        {/* Slide } */}
+
+        {/* Slide { */}
+        <Slide transitionDuration={0} transition={['']} align="center center" bgColor="primary">
+
+        <Layout>
+          <Fill>
+            <Heading margin={standardMargin} size={1}><Python/></Heading>
+            <Heading fit size={1} textColor="secondary">Python</Heading>
           </Fill>
         </Layout>
 
