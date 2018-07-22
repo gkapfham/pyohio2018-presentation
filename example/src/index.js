@@ -232,7 +232,7 @@ export default class Presentation extends Component {
       >
 
         {/* Slide { */}
-        <Slide transition={['spin', 'zoom']} bgColor="primary">
+        <Slide transition={['slide', 'spin']} bgColor="primary">
 
           <Heading size={1} fit lineHeight={1.2} bold textColor="darktext">
             A Hands-On Guide to
@@ -538,23 +538,29 @@ export default class Presentation extends Component {
 
         {/* Slide { */}
         <Slide>
-
-          <UpHeading size={1} lineHeight={2} fit textColor="darktext" bold>
+          <Heading fit size={1} textColor="darktext">
             Create a student roster for the Classroom
-          </UpHeading>
-          <BigImage src={images.CreateRoster}/>
-
+          </Heading>
+          <Layout>
+            <Text height={standardHorizontalPadding}>
+              &nbsp;
+            </Text>
+          </Layout>
+          <Image src={images.CreateRoster}/>
         </Slide>
         {/* Slide } */}
 
         {/* Slide { */}
-        <Slide transitionIn={['spin']} transitionOut={['spin','slide']}>
-
-          <UpHeading size={1} lineHeight={2} fit textColor="darktext" bold>
-            Create an assignment for your course!
-          </UpHeading>
-          <BigImage src={images.StartCreatingAssignments}/>
-
+        <Slide>
+          <Heading fit size={1} textColor="darktext">
+            Create an assignment for your course
+          </Heading>
+          <Layout>
+            <Text height={standardHorizontalPadding}>
+              &nbsp;
+            </Text>
+          </Layout>
+          <Image src={images.StartCreatingAssignments}/>
         </Slide>
         {/* Slide } */}
 
