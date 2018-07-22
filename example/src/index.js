@@ -446,7 +446,7 @@ export default class Presentation extends Component {
         {/* SECTION: Motivation { */}
 
         {/* Slide { */}
-        <Slide transitionDuration={0} transition={['']} bgColor="primary">
+        <Slide transitionDuration={0} transition={['slide']} bgColor="primary">
 
           <Layout>
             <Heading fit size={1} textColor="darktext">
@@ -474,30 +474,31 @@ export default class Presentation extends Component {
         {/* SECTION: Configure { */}
 
         {/* Slide { */}
-        <Slide transitionDuration={0} transition={['']} bgColor="primary">
+        <Slide transition={['slide']} bgColor="primary">
 
           <Layout>
-            <Text textSize="2em" margin={-2} fill textColor="darktext" bold textAlign="left">
-            <Comments/>
-            </Text>
-            <Text textSize="5em" margin={-8} fill textColor="darktext" bold textAlign="left">
-              How do I
+            <Heading fit size={1} textColor="darktext">
+              <CommentsShiftUp/> How do I
+            </Heading>
+          </Layout>
+
+          <Layout>
+            <Text height={standardHorizontalPadding}>
+              &nbsp;
             </Text>
           </Layout>
 
           <Layout>
-            <Appear transitionDuration={100}>
-              <Text bold textFont={questionFont} textSize="4em" fill textColor="secondary" textAlign="left">
+              <Heading fill size={1} lineHeight={1.2} textAlign="left" textColor="secondary">
                 configure and use GitHub Classroom?
-              </Text>
-            </Appear>
+              </Heading>
           </Layout>
 
         </Slide>
         {/* Slide } */}
 
         {/* Slide { */}
-        <Slide transitionOut={['slide']} transitionIn={['slide', 'spin']}>
+        <Slide transitionIn={['slide', 'spin']} transitionOut={['slide']}>
 
           <UpHeading size={1} lineHeight={2} fit textColor="darktext" bold>
             Create a GitHub organization for your course
