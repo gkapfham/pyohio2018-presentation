@@ -153,7 +153,7 @@ export const Archive = () => (
 )
 
 export const GitHub = () => (
-    <FontAwesomeIcon icon={['fab', 'github']} transform="grow-15" color={darktext}/>
+    <FontAwesomeIcon icon={['fab', 'github']} transform="grow-20" color={darktext}/>
 )
 
 export const Comments = () => (
@@ -165,7 +165,7 @@ export const CommentsShiftUp = () => (
 )
 
 export const Python = () => (
-    <FontAwesomeIcon icon={['fab', 'python']} transform="grow-15" color={darktext}/>
+    <FontAwesomeIcon icon={['fab', 'python']} transform="grow-20" color={darktext}/>
 )
 
 export const RepoFull = () => (
@@ -181,7 +181,7 @@ export const Toggle = () => (
 )
 
 export const Travis = () => (
-    <FontAwesomeIcon icon={['fas', 'user-secret']} transform="grow-15" color={darktext}/>
+    <FontAwesomeIcon icon={['fas', 'user-secret']} transform="grow-20" color={darktext}/>
 )
 
 export const Twitter = () => (
