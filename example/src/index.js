@@ -480,7 +480,7 @@ export default class Presentation extends Component {
 
           <Layout>
             <Heading fit size={1} textColor="darktext">
-              <CommentsShiftUp/> How do I
+              <CommentsShiftUp/> How should I
             </Heading>
           </Layout>
 
@@ -569,14 +569,8 @@ export default class Presentation extends Component {
 
         {/* Slide { */}
         <Slide bgColor="primary">
-          <Heading fill size={1} lineHeight={1.1} textColor="tertiary">
-            Create two repositories
-          </Heading>
-            <Text height={minimalHorizontalPadding}>
-              &nbsp;
-            </Text>
-          <Heading fill size={1} lineHeight={1.1} textColor="tertiary">
-            for each assignment
+          <Heading fill bold size={1} lineHeight={1.1} textColor="tertiary">
+            Create two repositories for each assignment
           </Heading>
         </Slide>
         {/* Slide { */}
