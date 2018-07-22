@@ -566,6 +566,17 @@ export default class Presentation extends Component {
 
         {/* Slide { */}
         <Slide bgColor="primary">
+          <Heading fill size={1} lineHeight={1.1} textColor="darktext">
+            Two Repositories
+          </Heading>
+          <Heading fill size={1} lineHeight={1.1} textColor="darktext">
+            for Each Assignment
+          </Heading>
+        </Slide>
+        {/* Slide { */}
+
+        {/* Slide { */}
+        <Slide bgColor="primary">
 
           <Layout>
             <Appear transitionDuration={100}>
