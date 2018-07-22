@@ -50,6 +50,9 @@ const images = {
 };
 preloader(images);
 
+{/* Minimal horizontal padding between rows */}
+var minimalHorizontalPadding = 20;
+
 {/* Standard horizontal padding between rows */}
 var standardHorizontalPadding = 40;
 
@@ -169,15 +172,15 @@ export const Python = () => (
 )
 
 export const RepoFull = () => (
-    <FontAwesomeIcon icon={['fas', 'square']} size="3x" color={darktext}/>
+    <FontAwesomeIcon icon={['fas', 'square']} transform="grow-20" color={darktext}/>
 )
 
 export const RepoMinus = () => (
-    <FontAwesomeIcon icon={['fas', 'minus-square']} size="3x" color={darktext}/>
+    <FontAwesomeIcon icon={['fas', 'minus-square']} transform="grow-20" color={darktext}/>
 )
 
 export const Toggle = () => (
-    <FontAwesomeIcon icon={['fas', 'toggle-on']} size="3x" color={darktext}/>
+    <FontAwesomeIcon icon={['fas', 'toggle-on']} transform="grow-20" color={darktext}/>
 )
 
 export const Travis = () => (
@@ -566,80 +569,65 @@ export default class Presentation extends Component {
 
         {/* Slide { */}
         <Slide bgColor="primary">
-          <Heading fill size={1} lineHeight={1.1} textColor="darktext">
-            Two Repositories
+          <Heading fill size={1} lineHeight={1.1} textColor="tertiary">
+            Create two repositories
           </Heading>
-          <Heading fill size={1} lineHeight={1.1} textColor="darktext">
-            for Each Assignment
+            <Text height={minimalHorizontalPadding}>
+              &nbsp;
+            </Text>
+          <Heading fill size={1} lineHeight={1.1} textColor="tertiary">
+            for each assignment
           </Heading>
         </Slide>
         {/* Slide { */}
 
         {/* Slide { */}
-        <Slide bgColor="primary">
+        <Slide transition={['']} bgColor="primary">
+          <Heading fit textColor="darktext">
+            Using Travis CI
+          </Heading>
 
           <Layout>
-            <Appear transitionDuration={100}>
-              <Fill>
-                <Text bold margin={-2} textSize="2.5em" textColor="darktext">
-                  Two Repositories for Each Assignment
-                </Text>
-              </Fill>
-            </Appear>
-          </Layout>
-
-          <Layout>
-            <Text height="50px">
+            <Text height={standardHorizontalPadding*2}>
               &nbsp;
             </Text>
           </Layout>
 
-        <Layout>
-
-          <Appear order={1} transitionDuration={100}>
-            <BigLeftShiftPaddedFill>
-              <Text textSize="2em" bold>
-                <RepoFull/>
-              </Text>
-              <Heading size={2}>Starter</Heading>
-            </BigLeftShiftPaddedFill>
-          </Appear>
-
-          <Appear order={2} transitionDuration={100}>
-            <PaddedFill>
-              <Text textSize="2em" bold>
-                <RepoMinus/>
-              </Text>
-              <Heading size={2}>Solution</Heading>
-            </PaddedFill>
-          </Appear>
-
-          <Appear order={3} transitionduration={100}>
-            <PaddedFill>
-              <Text textSize="2em" bold>
-                <Toggle/>
-              </Text>
-              <Heading size={2}>Check</Heading>
-            </PaddedFill>
-          </Appear>
-
-        </Layout>
-
-        <Layout>
-          <Text height="40px">
-            &nbsp;
-          </Text>
-        </Layout>
-
-        <Layout>
-          <Appear order={4} transitionDuration={100}>
+          <Layout>
             <Fill>
-              <Text bold textSize="1.5em" textColor="darktext">
-                Solution's build should pass and starter's should fail
-              </Text>
+              <Heading size={1} textColor="secondary" margin={standardMargin}>
+                <RepoFull/>
+              </Heading>
             </Fill>
-          </Appear>
-        </Layout>
+            <Fill>
+              <Heading size={1} textColor="secondary" margin={standardMargin}>
+                <RepoMinus/>
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading size={1} textColor="secondary" margin={standardMargin}>
+                <Toggle/>
+              </Heading>
+            </Fill>
+          </Layout>
+
+          <Layout>
+            <Fill>
+              <Heading size={4} textColor="secondary" margin={standardMargin}>
+                Starter
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading size={4} textColor="secondary" margin={standardMargin}>
+                Solution
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading size={4} textColor="secondary" margin={standardMargin}>
+                Check
+              </Heading>
+            </Fill>
+          </Layout>
 
         </Slide>
         {/* Slide } */}
