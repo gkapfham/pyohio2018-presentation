@@ -627,6 +627,14 @@ export default class Presentation extends Component {
         {/* Slide } */}
 
         {/* Slide { */}
+        <Slide bgColor="primary">
+          <Heading fill bold size={1} lineHeight={1.1} textColor="tertiary">
+            The starter should "break" the build!
+          </Heading>
+        </Slide>
+        {/* Slide { */}
+
+        {/* Slide { */}
         <Slide transition={['spin']}>
 
           <UpHeading size={1} lineHeight={2} fit textColor="darktext" bold>
