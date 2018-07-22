@@ -569,7 +569,7 @@ export default class Presentation extends Component {
 
         {/* Slide { */}
         <Slide bgColor="primary">
-          <Heading fill bold size={1} lineHeight={1.1} textColor="tertiary">
+          <Heading fill bold caps size={1} lineHeight={1.1} textColor="tertiary">
             Create two repositories for each assignment
           </Heading>
         </Slide>
@@ -628,8 +628,8 @@ export default class Presentation extends Component {
 
         {/* Slide { */}
         <Slide bgColor="primary">
-          <Heading fill bold size={1} lineHeight={1.1} textColor="tertiary">
-            The starter should "break" the build!
+          <Heading fill bold caps size={1} lineHeight={1.1} textColor="tertiary">
+            The starter repository should not pass the tests
           </Heading>
         </Slide>
         {/* Slide { */}
