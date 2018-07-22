@@ -629,30 +629,36 @@ export default class Presentation extends Component {
         {/* Slide { */}
         <Slide bgColor="primary">
           <Heading fill bold caps size={1} lineHeight={1.1} textColor="tertiary">
-            The starter repository should not pass the tests
+            The starter repository should <em>not</em> pass the tests
           </Heading>
         </Slide>
         {/* Slide { */}
 
         {/* Slide { */}
         <Slide transition={['spin']}>
-
-          <UpHeading size={1} lineHeight={2} fit textColor="darktext" bold>
+          <Heading fit size={1} textColor="darktext">
             Create an assignment using the solution
-          </UpHeading>
-          <BigImage src={images.CreateAssignment}/>
-
+          </Heading>
+          <Layout>
+            <Text height={standardHorizontalPadding}>
+              &nbsp;
+            </Text>
+          </Layout>
+          <Image src={images.CreateAssignment}/>
         </Slide>
         {/* Slide } */}
 
         {/* Slide { */}
-        <Slide transition={['slide']}>
-
-          <UpHeading size={1} lineHeight={2} fit textColor="darktext" bold>
+        <Slide transition={['spin']}>
+          <Heading fit size={1} textColor="darktext">
             A classroom will contain many assignments
-          </UpHeading>
-          <BigImage src={images.ExampleAssignments}/>
-
+          </Heading>
+          <Layout>
+            <Text height={standardHorizontalPadding}>
+              &nbsp;
+            </Text>
+          </Layout>
+          <Image src={images.ExampleAssignments}/>
         </Slide>
         {/* Slide } */}
 
