@@ -485,7 +485,7 @@ export default class Presentation extends Component {
           </Layout>
           <Layout>
               <Heading caps fill size={1} lineHeight={1.2} textAlign="left" textColor="secondary">
-                configure and use GitHub Classroom?
+                setup and use GitHub Classroom?
               </Heading>
           </Layout>
         </Slide>
