@@ -694,7 +694,7 @@ export default class Presentation extends Component {
           </Layout>
           <Layout>
               <Heading caps fill size={1} lineHeight={1.2} textAlign="left" textColor="secondary">
-               students think about this approach?
+               students think about this idea?
               </Heading>
           </Layout>
         </Slide>
