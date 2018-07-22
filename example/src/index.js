@@ -96,9 +96,8 @@ const UpHeading = styled(Heading)`
 
 {/* Create a emotion-styled BigImage that shifts left */}
 const BigImage = styled(Image)`
-  max-width: 130%;
-  width: 130%;
-  margin-left: -130px;
+  max-width: 110%;
+  width: 110%;
 `;
 
 {/* Create a emotion-styled Fill with padding */}
@@ -499,34 +498,41 @@ export default class Presentation extends Component {
 
         {/* Slide { */}
         <Slide transitionIn={['slide', 'spin']} transitionOut={['slide']}>
-
-          <UpHeading size={1} lineHeight={2} fit textColor="darktext" bold>
-            Create a GitHub organization for your course
-          </UpHeading>
-          <BigImage src={images.CreateOrganization}/>
-
+          <Heading fit size={1} textColor="darktext">Create a GitHub organization for your course</Heading>
+          <Layout>
+            <Text height={standardHorizontalPadding}>
+              &nbsp;
+            </Text>
+          </Layout>
+          <Image src={images.CreateOrganization}/>
         </Slide>
         {/* Slide } */}
 
         {/* Slide { */}
         <Slide>
-
-          <UpHeading size={1} lineHeight={2} fit textColor="darktext" bold>
-            Now we have an empty GitHub organization!
-          </UpHeading>
-          <BigImage src={images.StartingOrganization}/>
-
+          <Heading fit size={1} textColor="darktext">
+            Now you have an empty organization
+          </Heading>
+          <Layout>
+            <Text height={standardHorizontalPadding}>
+              &nbsp;
+            </Text>
+          </Layout>
+          <Image src={images.StartingOrganization}/>
         </Slide>
         {/* Slide } */}
 
         {/* Slide { */}
         <Slide>
-
-          <UpHeading size={1} lineHeight={2} fit textColor="darktext" bold>
+          <Heading fit size={1} textColor="darktext">
             Let GitHub Classroom access the organization
-          </UpHeading>
-          <BigImage src={images.GrantAccess}/>
-
+          </Heading>
+          <Layout>
+            <Text height={standardHorizontalPadding}>
+              &nbsp;
+            </Text>
+          </Layout>
+          <Image src={images.GrantAccess}/>
         </Slide>
         {/* Slide } */}
 
