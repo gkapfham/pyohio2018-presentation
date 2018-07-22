@@ -50,6 +50,15 @@ const images = {
 };
 preloader(images);
 
+{/* Minimal horizontal padding between rows */}
+var minimalHorizontalPadding = 20;
+
+{/* Standard horizontal padding between rows */}
+var standardHorizontalPadding = 40;
+
+{/* Standard all-side margin size */}
+var standardMargin = 40;
+
 {/* Font used for all questions in section slides */}
 var questionFont = "Noto Sans";
 
@@ -80,7 +89,7 @@ const PlainCite = styled(Cite)`
 
 {/* Create a emotion-styled SpacedBlockQuote that breathes */}
 const SpacedQuote = styled(Quote)`
-  line-height: 1.2;
+  line-height: 1.1;
 `;
 
 {/* Create a emotion-styled UpHeading that shifts up */}
@@ -90,9 +99,8 @@ const UpHeading = styled(Heading)`
 
 {/* Create a emotion-styled BigImage that shifts left */}
 const BigImage = styled(Image)`
-  max-width: 130%;
-  width: 130%;
-  margin-left: -130px;
+  max-width: 110%;
+  width: 110%;
 `;
 
 {/* Create a emotion-styled Fill with padding */}
@@ -148,7 +156,7 @@ export const Archive = () => (
 )
 
 export const GitHub = () => (
-    <FontAwesomeIcon icon={['fab', 'github']} size="3x" color={darktext}/>
+    <FontAwesomeIcon icon={['fab', 'github']} transform="grow-20" color={darktext}/>
 )
 
 export const Comments = () => (
@@ -156,32 +164,32 @@ export const Comments = () => (
 )
 
 export const CommentsShiftUp = () => (
-  <FontAwesomeIcon icon={['fas', 'comments']} size="2x" transform="down-1, left-5" color={darktext}/>
+  <FontAwesomeIcon icon={['fas', 'comments']} transform="grow-8, left-2" color={darktext}/>
 )
 
 export const Python = () => (
-    <FontAwesomeIcon icon={['fab', 'python']} size="3x" color={darktext}/>
+    <FontAwesomeIcon icon={['fab', 'python']} transform="grow-20" color={darktext}/>
 )
 
 export const RepoFull = () => (
-    <FontAwesomeIcon icon={['fas', 'square']} size="3x" color={darktext}/>
+    <FontAwesomeIcon icon={['fas', 'square']} transform="grow-20" color={darktext}/>
 )
 
 export const RepoMinus = () => (
-    <FontAwesomeIcon icon={['fas', 'minus-square']} size="3x" color={darktext}/>
+    <FontAwesomeIcon icon={['fas', 'minus-square']} transform="grow-20" color={darktext}/>
 )
 
 export const Toggle = () => (
-    <FontAwesomeIcon icon={['fas', 'toggle-on']} size="3x" color={darktext}/>
+    <FontAwesomeIcon icon={['fas', 'toggle-on']} transform="grow-20" color={darktext}/>
 )
 
 export const Travis = () => (
-    <FontAwesomeIcon icon={['fas', 'user-secret']} size="3x" color={darktext}/>
+    <FontAwesomeIcon icon={['fas', 'user-secret']} transform="grow-20" color={darktext}/>
 )
 
 export const Twitter = () => (
   <div>
-    <FontAwesomeIcon icon={['fab', 'twitter']} size="3x" color="#1565c0"/>
+    <FontAwesomeIcon icon={['fab', 'twitter']} size="3x" transform="left-2" color="#1565c0"/>
   </div>
 )
 
@@ -191,7 +199,7 @@ export const Map = () => (
 
 export const Web = () => (
   <div>
-    <FontAwesomeIcon icon={['fas', 'globe']} size="3x" color="#1565c0"/>
+    <FontAwesomeIcon icon={['fas', 'globe']} size="3x" transform="left-2" color="#1565c0"/>
   </div>
 )
 
@@ -217,6 +225,8 @@ export default class Presentation extends Component {
     {/* Create the Deck of slides with no controls and no progress bars */}
     return (
       <Deck
+        contentHeight={700}
+        contentWidth={1024}
         transition={['slide']}
         transitionDuration={500}
         theme={theme}
@@ -225,15 +235,19 @@ export default class Presentation extends Component {
       >
 
         {/* Slide { */}
-        <Slide bgColor="primary">
+        <Slide transition={['slide', 'spin']} bgColor="primary">
 
-          <Text textSize="3.25em" textColor="darktext" bold>
-            A Hands-On Guide to Teaching Programming with
-          </Text>
+          <Heading size={1} fit lineHeight={1.2} bold textColor="darktext">
+            A Hands-On Guide to
+          </Heading>
 
-          <Text textSize="2.1em" textColor="secondary" bold>
+          <Heading size={1} fit lineHeight={1.4} bold textColor="darktext">
+            Teaching Programming with
+          </Heading>
+
+          <Heading size={1} fit lineHeight={1.2} bold textColor="secondary">
             GitHub, Travis CI, and Python
-          </Text>
+          </Heading>
 
           <Layout>
             <Text height="20px">
@@ -241,11 +255,11 @@ export default class Presentation extends Component {
             </Text>
           </Layout>
 
-          <Text bold caps textColor="tertiary">
+          <Text fit bold textColor="tertiary">
             Gregory M. Kapfhammer
           </Text>
 
-          <Text bold textColor="tertiary">
+          <Text bold textSize="1.5em" textColor="tertiary">
             July 28 at PyOhio 2018
           </Text>
 
@@ -282,7 +296,7 @@ export default class Presentation extends Component {
               <Twitter/>
             </Fit>
             <Fit>
-              <Text bold margin="10px 0px 0px 25px" textSize="2em" textColor="tertiary">
+              <Text fill bold textSize="2em" textColor="tertiary">
                 @GregKapfhammer
               </Text>
             </Fit>
@@ -299,7 +313,7 @@ export default class Presentation extends Component {
               <Web/>
             </Fit>
             <Fit>
-              <Text bold margin="10px 0px 0px 25px" textSize="2em" textColor="tertiary">
+              <Text fill bold textSize="2em" textColor="tertiary">
                 www.gregorykapfhammer.com
               </Text>
             </Fit>
@@ -338,73 +352,94 @@ export default class Presentation extends Component {
             </Appear>
           </Layout>
 
+        </Slide>
+        {/* Slide } */}
+
+        {/* Slide { */}
+        <Slide transition={['']} bgColor="primary">
+          <Heading fit textColor="darktext">
+            Exploring Technologies
+          </Heading>
+
           <Layout>
-            <Text height="20px">
+            <Text height={standardHorizontalPadding*2}>
               &nbsp;
             </Text>
           </Layout>
 
           <Layout>
-            <Appear transitionDuration={100}>
-              <Fill>
-                <Text bold textSize="2em" textColor="tertiary">
-                  Like, "How can I automatically grade student submissions?"
-                </Text>
-              </Fill>
-            </Appear>
+            <Fill>
+              <Heading size={1} textColor="secondary" margin={standardMargin}>
+                <GitHub/>
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading size={1} textColor="secondary" margin={standardMargin}>
+                <Travis/>
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading size={1} textColor="secondary" margin={standardMargin}>
+                <Python/>
+              </Heading>
+            </Fill>
+          </Layout>
+
+          <Layout>
+            <Fill>
+              <Heading size={4} textColor="secondary" margin={standardMargin}>
+                GitHub
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading size={4} textColor="secondary" margin={standardMargin}>
+                Travis
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading size={4} textColor="secondary" margin={standardMargin}>
+                Python
+              </Heading>
+            </Fill>
           </Layout>
 
         </Slide>
         {/* Slide } */}
 
         {/* Slide { */}
-        <Slide transitionDuration={0} transition={['']} bgColor="primary">
-
-          <Layout>
-            <Appear transitionDuration={100}>
-              <Fill>
-                <Text bold textSize="3em" textColor="darktext">
-                  Exploring these Technologies
-                </Text>
-              </Fill>
-            </Appear>
-          </Layout>
-
-          <Layout>
-            <Text height="50px">
-              &nbsp;
-            </Text>
-          </Layout>
+        <Slide transitionDuration={0} transition={['']} align="center center" bgColor="primary">
 
         <Layout>
+          <Fill>
+            <Heading margin={standardMargin} size={1}><GitHub/></Heading>
+            <Heading fit size={1} textColor="secondary">GitHub</Heading>
+          </Fill>
+        </Layout>
 
-          <Appear order={2} transitionDuration={100}>
-            <LeftShiftPaddedFill>
-              <Text textSize="2em" bold>
-                <Travis/>
-              </Text>
-              <Heading size={2}>Travis</Heading>
-            </LeftShiftPaddedFill>
-          </Appear>
+        </Slide>
+        {/* Slide } */}
 
-          <Appear order={1} transitionDuration={100}>
-            <PaddedFill>
-              <Text textSize="2em" bold>
-                <GitHub/>
-              </Text>
-              <Heading size={2}>GitHub</Heading>
-            </PaddedFill>
-          </Appear>
+        {/* Slide { */}
+        <Slide transitionDuration={0} transition={['']} align="center center" bgColor="primary">
 
-          <Appear order={3} transitionduration={100}>
-            <PaddedFill>
-              <Text textSize="2em" bold>
-                <Python/>
-              </Text>
-              <Heading size={2}>Python</Heading>
-            </PaddedFill>
-          </Appear>
+        <Layout>
+          <Fill>
+            <Heading size={1}><Travis/></Heading>
+            <Heading fit size={1} textColor="secondary">Travis</Heading>
+          </Fill>
+        </Layout>
 
+        </Slide>
+        {/* Slide } */}
+
+        {/* Slide { */}
+        <Slide transitionDuration={0} transition={['']} align="center center" bgColor="primary">
+
+        <Layout>
+          <Fill>
+            <Heading margin={standardMargin} size={1}><Python/></Heading>
+            <Heading fit size={1} textColor="secondary">Python</Heading>
+          </Fill>
         </Layout>
 
         </Slide>
@@ -413,25 +448,22 @@ export default class Presentation extends Component {
         {/* SECTION: Motivation { */}
 
         {/* Slide { */}
-        <Slide transitionDuration={0} transition={['']} bgColor="primary">
-
+        <Slide transitionDuration={0} transition={['slide']} bgColor="primary">
           <Layout>
-            <Text  textSize="2em" margin={-2} fill textColor="darktext" bold textAlign="left">
-            <CommentsShiftUp/>
-            </Text>
-            <Text textSize="4.25em" margin={-8} fill textColor="darktext" bold textAlign="left">
-              Why would I
+            <Heading fit size={1} textColor="darktext">
+              <CommentsShiftUp/> Why would I
+            </Heading>
+          </Layout>
+          <Layout>
+            <Text height={standardHorizontalPadding}>
+              &nbsp;
             </Text>
           </Layout>
-
           <Layout>
-            <Appear transitionDuration={100}>
-              <Text bold textFont={questionFont} textSize="4.25em" fill textColor="secondary" textAlign="left">
+              <Heading caps fill size={1} lineHeight={1.2} textAlign="left" textColor="secondary">
                 decide to use GitHub and Travis CI?
-              </Text>
-            </Appear>
+              </Heading>
           </Layout>
-
         </Slide>
         {/* Slide } */}
 
@@ -440,171 +472,185 @@ export default class Presentation extends Component {
         {/* SECTION: Configure { */}
 
         {/* Slide { */}
-        <Slide transitionDuration={0} transition={['']} bgColor="primary">
-
+        <Slide transition={['slide']} bgColor="primary">
           <Layout>
-            <Text textSize="2em" margin={-2} fill textColor="darktext" bold textAlign="left">
-            <Comments/>
-            </Text>
-            <Text textSize="5em" margin={-8} fill textColor="darktext" bold textAlign="left">
-              How do I
+            <Heading fit size={1} textColor="darktext">
+              <CommentsShiftUp/> How should I
+            </Heading>
+          </Layout>
+          <Layout>
+            <Text height={standardHorizontalPadding}>
+              &nbsp;
             </Text>
           </Layout>
-
           <Layout>
-            <Appear transitionDuration={100}>
-              <Text bold textFont={questionFont} textSize="4em" fill textColor="secondary" textAlign="left">
+              <Heading caps fill size={1} lineHeight={1.2} textAlign="left" textColor="secondary">
                 configure and use GitHub Classroom?
-              </Text>
-            </Appear>
+              </Heading>
+          </Layout>
+        </Slide>
+        {/* Slide } */}
+
+        {/* Slide { */}
+        <Slide transitionIn={['slide', 'spin']} transitionOut={['slide']}>
+          <Heading fit size={1} textColor="darktext">Create a GitHub organization for your course</Heading>
+          <Layout>
+            <Text height={standardHorizontalPadding}>
+              &nbsp;
+            </Text>
+          </Layout>
+          <Image src={images.CreateOrganization}/>
+        </Slide>
+        {/* Slide } */}
+
+        {/* Slide { */}
+        <Slide>
+          <Heading fit size={1} textColor="darktext">
+            Now you have an empty organization
+          </Heading>
+          <Layout>
+            <Text height={standardHorizontalPadding}>
+              &nbsp;
+            </Text>
+          </Layout>
+          <Image src={images.StartingOrganization}/>
+        </Slide>
+        {/* Slide } */}
+
+        {/* Slide { */}
+        <Slide>
+          <Heading fit size={1} textColor="darktext">
+            Let GitHub Classroom access the organization
+          </Heading>
+          <Layout>
+            <Text height={standardHorizontalPadding}>
+              &nbsp;
+            </Text>
+          </Layout>
+          <Image src={images.GrantAccess}/>
+        </Slide>
+        {/* Slide } */}
+
+        {/* Slide { */}
+        <Slide>
+          <Heading fit size={1} textColor="darktext">
+            Create a student roster for the Classroom
+          </Heading>
+          <Layout>
+            <Text height={standardHorizontalPadding}>
+              &nbsp;
+            </Text>
+          </Layout>
+          <Image src={images.CreateRoster}/>
+        </Slide>
+        {/* Slide } */}
+
+        {/* Slide { */}
+        <Slide>
+          <Heading fit size={1} textColor="darktext">
+            Create an assignment for your course
+          </Heading>
+          <Layout>
+            <Text height={standardHorizontalPadding}>
+              &nbsp;
+            </Text>
+          </Layout>
+          <Image src={images.StartCreatingAssignments}/>
+        </Slide>
+        {/* Slide } */}
+
+        {/* Slide { */}
+        <Slide bgColor="primary">
+          <Heading fill bold caps size={1} lineHeight={1.1} textColor="tertiary">
+            Create two repositories for each assignment
+          </Heading>
+        </Slide>
+        {/* Slide { */}
+
+        {/* Slide { */}
+        <Slide transition={['']} bgColor="primary">
+          <Heading fit textColor="darktext">
+            Using Travis CI
+          </Heading>
+
+          <Layout>
+            <Text height={standardHorizontalPadding*2}>
+              &nbsp;
+            </Text>
           </Layout>
 
-        </Slide>
-        {/* Slide } */}
+          <Layout>
+            <Fill>
+              <Heading size={1} textColor="secondary" margin={standardMargin}>
+                <RepoFull/>
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading size={1} textColor="secondary" margin={standardMargin}>
+                <RepoMinus/>
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading size={1} textColor="secondary" margin={standardMargin}>
+                <Toggle/>
+              </Heading>
+            </Fill>
+          </Layout>
 
-        {/* Slide { */}
-        <Slide transitionOut={['slide']} transitionIn={['slide', 'spin']}>
-
-          <UpHeading size={1} lineHeight={2} fit textColor="darktext" bold>
-            Create a GitHub organization for your course
-          </UpHeading>
-          <BigImage src={images.CreateOrganization}/>
-
-        </Slide>
-        {/* Slide } */}
-
-        {/* Slide { */}
-        <Slide>
-
-          <UpHeading size={1} lineHeight={2} fit textColor="darktext" bold>
-            Now we have an empty GitHub organization!
-          </UpHeading>
-          <BigImage src={images.StartingOrganization}/>
-
-        </Slide>
-        {/* Slide } */}
-
-        {/* Slide { */}
-        <Slide>
-
-          <UpHeading size={1} lineHeight={2} fit textColor="darktext" bold>
-            Let GitHub Classroom access the organization
-          </UpHeading>
-          <BigImage src={images.GrantAccess}/>
-
-        </Slide>
-        {/* Slide } */}
-
-        {/* Slide { */}
-        <Slide>
-
-          <UpHeading size={1} lineHeight={2} fit textColor="darktext" bold>
-            Create a student roster for the Classroom
-          </UpHeading>
-          <BigImage src={images.CreateRoster}/>
-
-        </Slide>
-        {/* Slide } */}
-
-        {/* Slide { */}
-        <Slide transitionIn={['spin']} transitionOut={['spin','slide']}>
-
-          <UpHeading size={1} lineHeight={2} fit textColor="darktext" bold>
-            Create an assignment for your course!
-          </UpHeading>
-          <BigImage src={images.StartCreatingAssignments}/>
+          <Layout>
+            <Fill>
+              <Heading size={4} textColor="secondary" margin={standardMargin}>
+                Starter
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading size={4} textColor="secondary" margin={standardMargin}>
+                Solution
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading size={4} textColor="secondary" margin={standardMargin}>
+                Check
+              </Heading>
+            </Fill>
+          </Layout>
 
         </Slide>
         {/* Slide } */}
 
         {/* Slide { */}
         <Slide bgColor="primary">
+          <Heading fill bold caps size={1} lineHeight={1.1} textColor="tertiary">
+            The starter repository should <em>not</em> pass the tests
+          </Heading>
+        </Slide>
+        {/* Slide { */}
 
+        {/* Slide { */}
+        <Slide transition={['spin']}>
+          <Heading fit size={1} textColor="darktext">
+            Create an assignment using the solution
+          </Heading>
           <Layout>
-            <Appear transitionDuration={100}>
-              <Fill>
-                <Text bold margin={-2} textSize="2.5em" textColor="darktext">
-                  Two Repositories for Each Assignment
-                </Text>
-              </Fill>
-            </Appear>
-          </Layout>
-
-          <Layout>
-            <Text height="50px">
+            <Text height={standardHorizontalPadding}>
               &nbsp;
             </Text>
           </Layout>
-
-        <Layout>
-
-          <Appear order={1} transitionDuration={100}>
-            <BigLeftShiftPaddedFill>
-              <Text textSize="2em" bold>
-                <RepoFull/>
-              </Text>
-              <Heading size={2}>Starter</Heading>
-            </BigLeftShiftPaddedFill>
-          </Appear>
-
-          <Appear order={2} transitionDuration={100}>
-            <PaddedFill>
-              <Text textSize="2em" bold>
-                <RepoMinus/>
-              </Text>
-              <Heading size={2}>Solution</Heading>
-            </PaddedFill>
-          </Appear>
-
-          <Appear order={3} transitionduration={100}>
-            <PaddedFill>
-              <Text textSize="2em" bold>
-                <Toggle/>
-              </Text>
-              <Heading size={2}>Check</Heading>
-            </PaddedFill>
-          </Appear>
-
-        </Layout>
-
-        <Layout>
-          <Text height="40px">
-            &nbsp;
-          </Text>
-        </Layout>
-
-        <Layout>
-          <Appear order={4} transitionDuration={100}>
-            <Fill>
-              <Text bold textSize="1.5em" textColor="darktext">
-                Solution's build should pass and starter's should fail
-              </Text>
-            </Fill>
-          </Appear>
-        </Layout>
-
+          <Image src={images.CreateAssignment}/>
         </Slide>
         {/* Slide } */}
 
         {/* Slide { */}
         <Slide transition={['spin']}>
-
-          <UpHeading size={1} lineHeight={2} fit textColor="darktext" bold>
-            Create an assignment using the solution
-          </UpHeading>
-          <BigImage src={images.CreateAssignment}/>
-
-        </Slide>
-        {/* Slide } */}
-
-        {/* Slide { */}
-        <Slide transition={['slide']}>
-
-          <UpHeading size={1} lineHeight={2} fit textColor="darktext" bold>
+          <Heading fit size={1} textColor="darktext">
             A classroom will contain many assignments
-          </UpHeading>
-          <BigImage src={images.ExampleAssignments}/>
-
+          </Heading>
+          <Layout>
+            <Text height={standardHorizontalPadding}>
+              &nbsp;
+            </Text>
+          </Layout>
+          <Image src={images.ExampleAssignments}/>
         </Slide>
         {/* Slide } */}
 
@@ -613,58 +659,50 @@ export default class Presentation extends Component {
         {/* SECTION: Check { */}
 
         {/* Slide { */}
-        <Slide bgColor="primary">
-
+        <Slide transition={['slide']} bgColor="primary">
           <Layout>
-            <Text textSize="2em" margin={-2} fill textColor="darktext" bold textAlign="left">
-            <Comments/>
-            </Text>
-            <Text textSize="5em" margin={-8} fill textColor="darktext" bold textAlign="left">
-              How do I
+            <Heading fit size={1} textColor="darktext">
+              <CommentsShiftUp/> How do you
+            </Heading>
+          </Layout>
+          <Layout>
+            <Text height={standardHorizontalPadding}>
+              &nbsp;
             </Text>
           </Layout>
-
           <Layout>
-            <Appear transitionDuration={100}>
-              <Text bold textFont={questionFont} textSize="4em" fill textColor="secondary" textAlign="left">
-                automatically check student submissions?
-              </Text>
-            </Appear>
+              <Heading fill caps size={1} lineHeight={1.2} textAlign="left" textColor="secondary">
+               automatically check student submissions?
+              </Heading>
           </Layout>
-
         </Slide>
         {/* Slide } */}
 
         {/* SECTION: Feedback { */}
 
         {/* Slide { */}
-        <Slide bgColor="primary">
-
+        <Slide transition={['slide']} bgColor="primary">
           <Layout>
-            <Text  textSize="2em" margin={-2} fill textColor="darktext" bold textAlign="left">
-              <CommentsShiftUp/>
-            </Text>
-            <Text textSize="4.25em" margin={-8} fill textColor="darktext" bold textAlign="left">
-              What do the
+            <Heading fit size={1} textColor="darktext">
+              <CommentsShiftUp/> What do the
+            </Heading>
+          </Layout>
+          <Layout>
+            <Text height={standardHorizontalPadding}>
+              &nbsp;
             </Text>
           </Layout>
-
           <Layout>
-            <Appear transitionDuration={100}>
-              <Text bold textFont={questionFont} textSize="4.5em" fill textColor="secondary" textAlign="left">
-                people think about this approach?
-              </Text>
-            </Appear>
+              <Heading caps fill size={1} lineHeight={1.2} textAlign="left" textColor="secondary">
+               students think about this idea?
+              </Heading>
           </Layout>
-
         </Slide>
         {/* Slide } */}
 
         {/* Slide { */}
-        <Slide transition={['spin']}bgColor="primary">
-
+        <Slide transition={['spin']} bgColor="primary">
           <BlockQuote>
-
             <SpacedQuote textSize="2em" textColor="darktext">
 
               This approach ensures that the source code and GitHub
@@ -672,8 +710,9 @@ export default class Presentation extends Component {
               students who are struggling in an introductory course.
 
             </SpacedQuote>
-
-            <PlainCite bold caps textSize="2em">Saejin Mahlau-Heinert</PlainCite>
+            <PlainCite bold caps textSize="2em">
+              Saejin Mahlau-Heinert
+            </PlainCite>
           </BlockQuote>
 
         </Slide>
@@ -684,25 +723,22 @@ export default class Presentation extends Component {
         {/* SECTION: Conclusion { */}
 
         {/* Slide { */}
-        <Slide bgColor="primary">
-
+        <Slide transition={['slide']} bgColor="primary">
           <Layout>
-            <Text  textSize="2em" margin={-2} fill textColor="darktext" bold textAlign="left">
-            <CommentsShiftUp/>
-            </Text>
-            <Text textSize="4.25em" margin={-8} fill textColor="darktext" bold textAlign="left">
-              How can we
+            <Heading fit size={1} textColor="darktext">
+              <CommentsShiftUp/> How can we
+            </Heading>
+          </Layout>
+          <Layout>
+            <Text height={standardHorizontalPadding}>
+              &nbsp;
             </Text>
           </Layout>
-
           <Layout>
-            <Appear transitionDuration={0}>
-              <Text bold textFont={questionFont} textSize="4.5em" fill textColor="secondary" textAlign="left">
-                improve and study this approach?
-              </Text>
-            </Appear>
+            <Heading caps fill size={1} lineHeight={1.2} textAlign="left" textColor="secondary">
+              improve and study this approach?
+            </Heading>
           </Layout>
-
         </Slide>
         {/* Slide } */}
 
