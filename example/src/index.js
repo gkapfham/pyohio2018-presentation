@@ -89,7 +89,7 @@ const PlainCite = styled(Cite)`
 
 {/* Create a emotion-styled SpacedBlockQuote that breathes */}
 const SpacedQuote = styled(Quote)`
-  line-height: 1.2;
+  line-height: 1.1;
 `;
 
 {/* Create a emotion-styled UpHeading that shifts up */}
@@ -449,25 +449,21 @@ export default class Presentation extends Component {
 
         {/* Slide { */}
         <Slide transitionDuration={0} transition={['slide']} bgColor="primary">
-
           <Layout>
             <Heading fit size={1} textColor="darktext">
               <CommentsShiftUp/> Why would I
             </Heading>
           </Layout>
-
           <Layout>
             <Text height={standardHorizontalPadding}>
               &nbsp;
             </Text>
           </Layout>
-
           <Layout>
-              <Heading fill size={1} lineHeight={1.2} textAlign="left" textColor="secondary">
+              <Heading caps fill size={1} lineHeight={1.2} textAlign="left" textColor="secondary">
                 decide to use GitHub and Travis CI?
               </Heading>
           </Layout>
-
         </Slide>
         {/* Slide } */}
 
@@ -477,25 +473,21 @@ export default class Presentation extends Component {
 
         {/* Slide { */}
         <Slide transition={['slide']} bgColor="primary">
-
           <Layout>
             <Heading fit size={1} textColor="darktext">
               <CommentsShiftUp/> How should I
             </Heading>
           </Layout>
-
           <Layout>
             <Text height={standardHorizontalPadding}>
               &nbsp;
             </Text>
           </Layout>
-
           <Layout>
-              <Heading fill size={1} lineHeight={1.2} textAlign="left" textColor="secondary">
+              <Heading caps fill size={1} lineHeight={1.2} textAlign="left" textColor="secondary">
                 configure and use GitHub Classroom?
               </Heading>
           </Layout>
-
         </Slide>
         {/* Slide } */}
 
@@ -667,58 +659,50 @@ export default class Presentation extends Component {
         {/* SECTION: Check { */}
 
         {/* Slide { */}
-        <Slide bgColor="primary">
-
+        <Slide transition={['slide']} bgColor="primary">
           <Layout>
-            <Text textSize="2em" margin={-2} fill textColor="darktext" bold textAlign="left">
-            <Comments/>
-            </Text>
-            <Text textSize="5em" margin={-8} fill textColor="darktext" bold textAlign="left">
-              How do I
+            <Heading fit size={1} textColor="darktext">
+              <CommentsShiftUp/> How do you
+            </Heading>
+          </Layout>
+          <Layout>
+            <Text height={standardHorizontalPadding}>
+              &nbsp;
             </Text>
           </Layout>
-
           <Layout>
-            <Appear transitionDuration={100}>
-              <Text bold textFont={questionFont} textSize="4em" fill textColor="secondary" textAlign="left">
-                automatically check student submissions?
-              </Text>
-            </Appear>
+              <Heading fill caps size={1} lineHeight={1.2} textAlign="left" textColor="secondary">
+               automatically check student submissions?
+              </Heading>
           </Layout>
-
         </Slide>
         {/* Slide } */}
 
         {/* SECTION: Feedback { */}
 
         {/* Slide { */}
-        <Slide bgColor="primary">
-
+        <Slide transition={['slide']} bgColor="primary">
           <Layout>
-            <Text  textSize="2em" margin={-2} fill textColor="darktext" bold textAlign="left">
-              <CommentsShiftUp/>
-            </Text>
-            <Text textSize="4.25em" margin={-8} fill textColor="darktext" bold textAlign="left">
-              What do the
+            <Heading fit size={1} textColor="darktext">
+              <CommentsShiftUp/> What do the
+            </Heading>
+          </Layout>
+          <Layout>
+            <Text height={standardHorizontalPadding}>
+              &nbsp;
             </Text>
           </Layout>
-
           <Layout>
-            <Appear transitionDuration={100}>
-              <Text bold textFont={questionFont} textSize="4.5em" fill textColor="secondary" textAlign="left">
-                people think about this approach?
-              </Text>
-            </Appear>
+              <Heading caps fill size={1} lineHeight={1.2} textAlign="left" textColor="secondary">
+               students think about this approach?
+              </Heading>
           </Layout>
-
         </Slide>
         {/* Slide } */}
 
         {/* Slide { */}
-        <Slide transition={['spin']}bgColor="primary">
-
+        <Slide transition={['spin']} bgColor="primary">
           <BlockQuote>
-
             <SpacedQuote textSize="2em" textColor="darktext">
 
               This approach ensures that the source code and GitHub
@@ -726,8 +710,9 @@ export default class Presentation extends Component {
               students who are struggling in an introductory course.
 
             </SpacedQuote>
-
-            <PlainCite bold caps textSize="2em">Saejin Mahlau-Heinert</PlainCite>
+            <PlainCite bold caps textSize="2em">
+              Saejin Mahlau-Heinert
+            </PlainCite>
           </BlockQuote>
 
         </Slide>
@@ -738,25 +723,22 @@ export default class Presentation extends Component {
         {/* SECTION: Conclusion { */}
 
         {/* Slide { */}
-        <Slide bgColor="primary">
-
+        <Slide transition={['slide']} bgColor="primary">
           <Layout>
-            <Text  textSize="2em" margin={-2} fill textColor="darktext" bold textAlign="left">
-            <CommentsShiftUp/>
-            </Text>
-            <Text textSize="4.25em" margin={-8} fill textColor="darktext" bold textAlign="left">
-              How can we
+            <Heading fit size={1} textColor="darktext">
+              <CommentsShiftUp/> How can we
+            </Heading>
+          </Layout>
+          <Layout>
+            <Text height={standardHorizontalPadding}>
+              &nbsp;
             </Text>
           </Layout>
-
           <Layout>
-            <Appear transitionDuration={0}>
-              <Text bold textFont={questionFont} textSize="4.5em" fill textColor="secondary" textAlign="left">
-                improve and study this approach?
-              </Text>
-            </Appear>
+            <Heading caps fill size={1} lineHeight={1.2} textAlign="left" textColor="secondary">
+              improve and study this approach?
+            </Heading>
           </Layout>
-
         </Slide>
         {/* Slide } */}
 
