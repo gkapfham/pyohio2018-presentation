@@ -627,7 +627,7 @@ export default class Presentation extends Component {
         {/* Slide { */}
 
         {/* Slide { */}
-        <Slide transition={['spin']}>
+        <Slide transition={['slide', 'spin']}>
           <Heading fit size={1} textColor="darktext">
             Create an assignment using the solution
           </Heading>
@@ -641,7 +641,7 @@ export default class Presentation extends Component {
         {/* Slide } */}
 
         {/* Slide { */}
-        <Slide transition={['spin']}>
+        <Slide transition={['slide']}>
           <Heading fit size={1} textColor="darktext">
             A classroom will contain many assignments
           </Heading>
