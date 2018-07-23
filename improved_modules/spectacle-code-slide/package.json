@@ -1,0 +1,112 @@
+{
+  "_args": [
+    [
+      {
+        "name": "spectacle-code-slide",
+        "raw": "spectacle-code-slide",
+        "rawSpec": "",
+        "scope": null,
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/home/gkapfham/temp/spectacle-boilerplate"
+    ]
+  ],
+  "_from": "spectacle-code-slide@latest",
+  "_id": "spectacle-code-slide@0.5.2",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/spectacle-code-slide",
+  "_nodeVersion": "6.9.1",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/spectacle-code-slide-0.5.2.tgz_1515533196665_0.577961997827515"
+  },
+  "_npmUser": {
+    "email": "ken_wheeler@me.com",
+    "name": "thekenwheeler"
+  },
+  "_npmVersion": "5.2.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "spectacle-code-slide",
+    "raw": "spectacle-code-slide",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/spectacle-code-slide/-/spectacle-code-slide-0.5.2.tgz",
+  "_shasum": "64dee35af936da732eaa56da5002705b1d9ea92c",
+  "_shrinkwrap": null,
+  "_spec": "spectacle-code-slide",
+  "_where": "/home/gkapfham/temp/spectacle-boilerplate",
+  "author": {
+    "email": "me@thejameskyle.com",
+    "name": "James Kyle"
+  },
+  "bugs": {
+    "url": "https://github.com/thejameskyle/spectacle-code-slide/issues"
+  },
+  "dependencies": {
+    "component-raf": "^1.2.0",
+    "component-tween": "^1.2.0",
+    "lodash.clamp": "^4.0.1",
+    "lodash.memoize": "^4.0.1",
+    "lodash.padstart": "^4.2.0",
+    "prop-types": "^15.6.0"
+  },
+  "description": "Present code with style.",
+  "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-preset-es2015": "^6.11.4",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-1": "^6.11.4",
+    "react": "^0.14.0 || ^15.0.0",
+    "react-dom": "^0.14.0 || ^15.0.0",
+    "spectacle": "^1.2.5"
+  },
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-BgTNKw17cn2DmXf/Az2lglrahqHdg7L0lQC/aD3oaHj7GnJnH91YSVDXBLuoA4zIbCSyc1G4Q3khlTsNVAEISQ==",
+    "shasum": "64dee35af936da732eaa56da5002705b1d9ea92c",
+    "tarball": "https://registry.npmjs.org/spectacle-code-slide/-/spectacle-code-slide-0.5.2.tgz"
+  },
+  "gitHead": "978dffec405d14d135057f99b6306ed2717b46a0",
+  "homepage": "https://github.com/thejameskyle/spectacle-code-slide#readme",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "maintainers": [
+    {
+      "email": "ken_wheeler@me.com",
+      "name": "thekenwheeler"
+    },
+    {
+      "email": "paul@oshannessy.com",
+      "name": "zpao"
+    },
+    {
+      "email": "me@thejameskyle.com",
+      "name": "thejameskyle"
+    }
+  ],
+  "name": "spectacle-code-slide",
+  "optionalDependencies": {},
+  "peerDependencies": {
+    "react": "^0.14.0 || ^15.0.0",
+    "spectacle": "^1.0.4"
+  },
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thejameskyle/spectacle-code-slide.git"
+  },
+  "scripts": {
+    "build": "babel src -d lib",
+    "prepublish": "npm run build"
+  },
+  "version": "0.5.2"
+}
