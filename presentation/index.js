@@ -36,9 +36,11 @@ import {
   GoToAction
 } from 'spectacle';
 
-{/* Load in the external plugins */}
+{/* Load in an external plugin */}
 import Terminal from "spectacle-terminal";
-import CodeSlide from 'spectacle-code-slide';
+
+{/* Load in a modified external plugin */}
+import CodeSlide from '../improved_modules/spectacle-code-slide';
 
 {/* Use the preloader for the images */}
 import preloader from 'spectacle/lib/utils/preloader';
