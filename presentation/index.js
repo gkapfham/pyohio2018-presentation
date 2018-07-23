@@ -717,13 +717,15 @@ export default class Presentation extends Component {
           lang="js"
           code={require("raw-loader!../assets/code/travis.yml")}
           ranges={[
-            { loc: [0, 270], title: "Configure Travis CI" },
+            { loc: [0, 270], title: "Let's Configure Travis CI" },
             { loc: [0, 8], title: "Use Java and Python",
               note: "Java is the main language for this course" },
             { loc: [9, 15], title: "Download Gradle",
               note: "Students use Gradle to build projects" },
             { loc: [16, 21], title: "Install Linters",
               note: "Ensure that technical writing is acceptacle" },
+            { loc: [22, 29], title: "Install GatorGrader",
+              note: "GatorGrader is a sub-module in the repository" },
           ]}/>
         {/* Slide } */}
 
