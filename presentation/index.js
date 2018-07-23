@@ -251,7 +251,7 @@ export default class Presentation extends Component {
         <Slide transition={['slide', 'spin']} bgColor="primary">
 
           <Heading size={1} fit lineHeight={1.2} bold textColor="darktext">
-            A Hands-On Guide to!
+            A Hands-On Guide to
           </Heading>
 
           <Heading size={1} fit lineHeight={1.4} bold textColor="darktext">
