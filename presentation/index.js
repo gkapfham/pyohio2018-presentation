@@ -750,7 +750,7 @@ export default class Presentation extends Component {
         {/* Slide } */}
 
         {/* Slide { */}
-        <Slide transition={['spin']} bgColor="primary">
+        <Slide transition={['slide', 'spin']} bgColor="primary">
           <BlockQuote>
             <SpacedQuote textSize="2em" textColor="darktext">
 
@@ -766,6 +766,25 @@ export default class Presentation extends Component {
 
         </Slide>
         {/* Slide } */}
+
+        {/* Slide { */}
+        <Slide transition={['slide']} bgColor="primary">
+          <BlockQuote>
+            <SpacedQuote textSize="2em" textColor="darktext">
+
+              This tool suite made it easier for me to talk with students about
+              technical requirements. It helped me to make complex assignments
+              more accessible to students.
+
+            </SpacedQuote>
+            <PlainCite bold caps textSize="2em">
+              Maria Kim
+            </PlainCite>
+          </BlockQuote>
+
+        </Slide>
+        {/* Slide } */}
+
 
         {/* SECTION: Feedback } */}
 
