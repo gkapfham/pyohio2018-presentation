@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 
+{/* Support style modification with emotion */}
 import styled from 'react-emotion';
 
+{/* Load in the components provided by spectacle */}
 import {
   Anim,
   Appear,
@@ -34,12 +36,14 @@ import {
   GoToAction
 } from 'spectacle';
 
+{/* Load in the external plugins */}
 import Terminal from "spectacle-terminal";
 import CodeSlide from 'spectacle-code-slide';
 
+{/* Use the preloader for the images */}
 import preloader from 'spectacle/lib/utils/preloader';
 
-// Import theme
+{/* Import the theme */}
 import createTheme from "../default";
 
 require('normalize.css');
