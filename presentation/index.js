@@ -59,6 +59,7 @@ const images = {
   ExampleAssignments: require('../assets/images/ExampleAssignments.png'),
   ClassroomDefect: require('../assets/images/ClassroomDefect.png'),
   SpeakerDeck: require('../assets/images/SpeakerDeck.png'),
+  PresentationRepo: require('../assets/images/PresentationRepo.png'),
 };
 preloader(images);
 
@@ -793,7 +794,7 @@ export default class Presentation extends Component {
         {/* Slide { */}
         <Slide transition={['slide']}>
           <Heading fit size={1} textColor="darktext">
-            The GitHub Classroom developers are outstanding!
+            GitHub Classroom developers are great!
           </Heading>
           <Layout>
             <Text height={standardHorizontalPadding}>
@@ -817,6 +818,21 @@ export default class Presentation extends Component {
           <Image src={images.SpeakerDeck}/>
         </Slide>
         {/* Slide } */}
+
+        {/* Slide { */}
+        <Slide transition={['slide']}>
+          <Heading fit size={1} textColor="darktext">
+            See slide source code on GitHub
+          </Heading>
+          <Layout>
+            <Text height={standardHorizontalPadding}>
+              &nbsp;
+            </Text>
+          </Layout>
+          <Image src={images.PresentationRepo}/>
+        </Slide>
+        {/* Slide } */}
+
 
         {/* SECTION: Conclusion } */}
 
