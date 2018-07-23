@@ -57,6 +57,7 @@ const images = {
   StartCreatingAssignments: require('../assets/images/StartCreatingAssignments.png'),
   CreateAssignment: require('../assets/images/CreateAssignment.png'),
   ExampleAssignments: require('../assets/images/ExampleAssignments.png'),
+  ClassroomDefect: require('../assets/images/ClassroomDefect.png'),
 };
 preloader(images);
 
@@ -788,6 +789,19 @@ export default class Presentation extends Component {
         </Slide>
         {/* Slide } */}
 
+        {/* Slide { */}
+        <Slide transition={['slide']}>
+          <Heading fit size={1} textColor="darktext">
+            The GitHub Classroom developers are outstanding!
+          </Heading>
+          <Layout>
+            <Text height={standardHorizontalPadding}>
+              &nbsp;
+            </Text>
+          </Layout>
+          <Image src={images.ClassroomDefect}/>
+        </Slide>
+        {/* Slide } */}
 
         {/* SECTION: Conclusion } */}
 
