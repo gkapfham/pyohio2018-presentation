@@ -8,6 +8,7 @@ edition of the PyOhio conference. The presentation's source code uses the
 the display of each slide. I have developed a custom theme for the slides that
 manages the formatting, color scheme, and the use of photographs and icons. All
 of the colors in the presentation come from the Material Design color palette.
+Finally, all of the icons in the presentation come from Font Awesome 5.0.
 
 ## Installation Instructions
 
