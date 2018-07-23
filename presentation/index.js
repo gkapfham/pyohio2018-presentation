@@ -753,19 +753,6 @@ export default class Presentation extends Component {
         transitionOut={['slide', 'fade']}
         bgColor="primary"
       >
-        <CodePane
-          source={require('raw-loader!../assets/code/travis.yml')}
-          margin="20px auto"
-          overflow="overflow"
-          theme="light"
-        />
-      </Slide>
-
-      <Slide
-        transitionIn={['zoom', 'fade']}
-        transitionOut={['slide', 'fade']}
-        bgColor="primary"
-      >
         <Code textAlign="left">
           # use the Java language
           language: java
@@ -774,35 +761,35 @@ export default class Presentation extends Component {
         </Code>
       </Slide>
 
-<Slide transition={[ "spin", "slide" ]} bgColor="primary">
-            <Heading size={ 2 } caps fit textColor="tertiary">Terminal</Heading>
-            <Terminal title="1. gkapfham: ~(zsh)" output={[
-              "npm test",
-              <div style={{ color: "#33B969"}}>TOTAL: 174 SUCCESS</div>,
-              <div>
-                <div>=============================== Coverage summary ===============================</div>
-                <div style={{ color: "#DEC612"}}>Statements   : 51.29% ( 278/542 )</div>
-                <div style={{ color: "#EE5057"}}>Branches     : 38.78% ( 95/245 )</div>
-                <div style={{ color: "#EE5057"}}>Functions    : 46.21% ( 61/132 )</div>
-                <div style={{ color: "#DEC612"}}>Lines        : 52.69% ( 274/520 )</div>
-                <div>================================================================================</div>
-              </div>]}
-            />
-          </Slide>
+      <Slide transition={[ "spin", "slide" ]} bgColor="primary">
+        <Heading size={ 2 } caps fit textColor="tertiary">Terminal</Heading>
+        <Terminal title="1. gkapfham: ~(zsh)" output={[
+          "npm test",
+          <div style={{ color: "#33B969"}}>TOTAL: 174 SUCCESS</div>,
+          <div>
+            <div>=============================== Coverage summary ===============================</div>
+            <div style={{ color: "#DEC612"}}>Statements   : 51.29% ( 278/542 )</div>
+            <div style={{ color: "#EE5057"}}>Branches     : 38.78% ( 95/245 )</div>
+            <div style={{ color: "#EE5057"}}>Functions    : 46.21% ( 61/132 )</div>
+            <div style={{ color: "#DEC612"}}>Lines        : 52.69% ( 274/520 )</div>
+            <div>================================================================================</div>
+          </div>]}
+        />
+      </Slide>
 
-<CodeSlide
-            transition={[]}
-            lang="js"
-            code={require("raw-loader!../assets/code/travis.yml")}
-            ranges={[
-              { loc: [0, 270], title: "Walking through some code" },
-              { loc: [0, 1], title: "The Beginning" },
-              { loc: [1, 2] },
-              { loc: [1, 2], note: "Heres a note!" },
-              { loc: [2, 3] },
-              { loc: [7, 11] },
-              { loc: [12, 16] },
-            ]}/>
+      <CodeSlide
+        transition={[]}
+        lang="js"
+        code={require("raw-loader!../assets/code/travis.yml")}
+        ranges={[
+          { loc: [0, 270], title: "Walking through some code" },
+          { loc: [0, 1], title: "The Beginning" },
+          { loc: [1, 2] },
+          { loc: [1, 2], note: "Heres a note!" },
+          { loc: [2, 3] },
+          { loc: [7, 11] },
+          { loc: [12, 16] },
+        ]}/>
 
         {/* SECTION: Conclusion } */}
 
