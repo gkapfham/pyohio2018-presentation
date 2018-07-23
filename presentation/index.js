@@ -424,7 +424,7 @@ export default class Presentation extends Component {
 
         <Layout>
           <Fill>
-            <Heading margin={standardMargin} size={1}><GitHub/></Heading>
+            <Heading margin={standardMargin*2} size={1}><GitHub/></Heading>
             <Heading fit size={1} textColor="secondary">GitHub</Heading>
           </Fill>
         </Layout>
@@ -437,7 +437,7 @@ export default class Presentation extends Component {
 
         <Layout>
           <Fill>
-            <Heading size={1}><Travis/></Heading>
+            <Heading margin={standardMargin*2} size={1}><Travis/></Heading>
             <Heading fit size={1} textColor="secondary">Travis</Heading>
           </Fill>
         </Layout>
@@ -450,7 +450,7 @@ export default class Presentation extends Component {
 
         <Layout>
           <Fill>
-            <Heading margin={standardMargin} size={1}><Python/></Heading>
+            <Heading margin={standardMargin*2} size={1}><Python/></Heading>
             <Heading fit size={1} textColor="secondary">Python</Heading>
           </Fill>
         </Layout>
@@ -473,7 +473,7 @@ export default class Presentation extends Component {
             </Text>
           </Layout>
           <Layout>
-              <Heading caps fill size={1} lineHeight={1.2} textFont={questionFont} textAlign="left" textColor="secondary">
+              <Heading caps fill size={1} lineHeight={1.2} textFont={questionFont} textAlign="left" textColor="tertiary">
                 decide to use GitHub and Travis CI?
               </Heading>
           </Layout>
@@ -497,7 +497,7 @@ export default class Presentation extends Component {
             </Text>
           </Layout>
           <Layout>
-              <Heading caps fill size={1} lineHeight={1.2} textFont={questionFont} textAlign="left" textColor="secondary">
+              <Heading caps fill size={1} lineHeight={1.2} textFont={questionFont} textAlign="left" textColor="tertiary">
                 setup and use GitHub Classroom?
               </Heading>
           </Layout>
@@ -684,7 +684,7 @@ export default class Presentation extends Component {
             </Text>
           </Layout>
           <Layout>
-              <Heading fill caps size={1} lineHeight={1.2} textFont={questionFont} textAlign="left" textColor="secondary">
+              <Heading fill caps size={1} lineHeight={1.2} textFont={questionFont} textAlign="left" textColor="tertiary">
                automatically check student submissions?
               </Heading>
           </Layout>
@@ -742,7 +742,7 @@ export default class Presentation extends Component {
             </Text>
           </Layout>
           <Layout>
-              <Heading caps fill size={1} lineHeight={1.2} textFont={questionFont} textAlign="left" textColor="secondary">
+              <Heading caps fill size={1} lineHeight={1.2} textFont={questionFont} textAlign="left" textColor="tertiary">
                students think about this idea?
               </Heading>
           </Layout>
@@ -784,7 +784,7 @@ export default class Presentation extends Component {
             </Text>
           </Layout>
           <Layout>
-            <Heading caps fill size={1} lineHeight={1.2} textFont={questionFont} textAlign="left" textColor="secondary">
+            <Heading caps fill size={1} lineHeight={1.2} textFont={questionFont} textAlign="left" textColor="tertiary">
               improve and study this approach?
             </Heading>
           </Layout>
