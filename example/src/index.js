@@ -742,13 +742,6 @@ export default class Presentation extends Component {
         </Slide>
         {/* Slide } */}
 
-        {/* SECTION: Conclusion } */}
-
-        {/* Slide { */}
-        <Slide bgColor="primary">
-        </Slide>
-        {/* Slide } */}
-
       </Deck>
     );
   }
