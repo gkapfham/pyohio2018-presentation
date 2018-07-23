@@ -3,33 +3,32 @@ sudo: required
 dist: trusty
 language: python
 python:
-  - '3.5'
+  - '3.6'
 before_install:
   - jdk_switcher use oraclejdk8
 
-# ensure the use of the latest version of gradle
+# download gradle
 before_script:
   - wget https://services.gradle.org/distributions/gradle-4.6-bin.zip
   - unzip -d $HOME gradle-4.6-bin.zip
   - rm -rf gradle-4.6-bin.zip
   - export PATH="$HOME/gradle-4.6/bin:$PATH"
 
-# install Python3 for GatorGrader in this Java project
+# install linting tools
 before_install:
-- sudo apt-get update
-- gem install mdl
-
-# command to install dependencies of gatorgrader
-install:
+  - sudo apt-get update
+  - gem install mdl
   - pip install proselint
+
+# install GatorGrader
+install:
   - ./gatorgrader.sh --start
   - cd gatorgrader
   - pip3 install --upgrade pip
   - pip3 install -r requirements.txt --cache-dir $HOME/.pip-cache
-  - python3 -m nltk.downloader punkt
   - cd ..
 
-# cache to improve build speed
+# improve build speed
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
   - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
@@ -39,8 +38,7 @@ cache:
     - $HOME/.gradle/caches/
     - $HOME/.gradle/wrapper/
 
-# run checks on Java code through gradle and gatorgrader
-# run checks on Markdown writing through mdl and proselint
+# run checks
 script:
   # Java
   - gradle --version
