@@ -722,7 +722,8 @@ export default class Presentation extends Component {
               note: "Java is the main language for this course" },
             { loc: [9, 15], title: "Download Gradle",
               note: "Students use Gradle to build projects" },
-            { loc: [12, 16] },
+            { loc: [16, 21], title: "Install Linters",
+              note: "Ensure that technical writing is acceptacle" },
           ]}/>
         {/* Slide } */}
 
