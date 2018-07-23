@@ -1,4 +1,4 @@
-# use Python 3.5 for gatorgrader and switch to Java
+# use both Python and Java
 sudo: required
 dist: trusty
 language: python
