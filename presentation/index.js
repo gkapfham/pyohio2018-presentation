@@ -803,8 +803,23 @@ export default class Presentation extends Component {
         </Slide>
         {/* Slide } */}
 
+        {/* Slide { */}
+        <Slide transition={['slide']} bgColor="primary">
+          <BlockQuote>
+            <SpacedQuote textSize="2em" textColor="darktext">
 
+              GatorGrader is like having a constant coach! I liked receiving
+              feedback on the quality of my source code and writing before
+              turning in the final version of my lab.
 
+            </SpacedQuote>
+            <PlainCite bold caps textSize="2em">
+              Anna Yeager
+            </PlainCite>
+          </BlockQuote>
+
+        </Slide>
+        {/* Slide } */}
 
         {/* SECTION: Feedback } */}
 
