@@ -36,9 +36,11 @@ import {
   GoToAction
 } from 'spectacle';
 
-{/* Load in the external plugins */}
+{/* Load in an external plugin */}
 import Terminal from "spectacle-terminal";
-import CodeSlide from 'spectacle-code-slide';
+
+{/* Load in a modified external plugin */}
+import CodeSlide from '../improved_modules/spectacle-code-slide';
 
 {/* Use the preloader for the images */}
 import preloader from 'spectacle/lib/utils/preloader';
@@ -715,13 +717,47 @@ export default class Presentation extends Component {
           lang="js"
           code={require("raw-loader!../assets/code/travis.yml")}
           ranges={[
-            { loc: [0, 270], title: "Walking through some code" },
-            { loc: [0, 1], title: "The Beginning" },
-            { loc: [1, 2] },
-            { loc: [1, 2], note: "Heres a note!" },
-            { loc: [2, 3] },
-            { loc: [7, 11] },
-            { loc: [12, 16] },
+            { loc: [0, 270], title: "Let's Configure Travis CI",
+              note: "Travis CI runs private builds for students" },
+            { loc: [0, 8], title: "Use Java and Python",
+              note: "Java is the main language for this course" },
+            { loc: [9, 15], title: "Download Gradle",
+              note: "Students use Gradle to build projects" },
+            { loc: [16, 21], title: "Install Linters",
+              note: "Ensure that technical writing is acceptacle" },
+            { loc: [22, 29], title: "Install GatorGrader",
+              note: "GatorGrader is a sub-module in the repository" },
+            { loc: [40, 46], title: "Run Gradle",
+              note: "Use Gradle to build program and run tests" },
+            { loc: [46, 48], title: "Run GatorGrader",
+              note: "This script will repeatedly invoke GatorGrader" },
+            { loc: [48, 51], title: "Run Linters",
+              note: "Identify obvious technical writing mistakes" },
+          ]}/>
+        {/* Slide } */}
+
+        {/* Slide { */}
+        <CodeSlide
+          transition={[]}
+          lang="js"
+          code={require("raw-loader!../assets/code/gatorgrader.sh")}
+          ranges={[
+            { loc: [0, 270], title: "Let's Run GatorGrader",
+              note: "Create a script for local use or on Travis" },
+            { loc: [9, 16], title: "Decide if Check Passes",
+              note: "The build should pass if all checks pass" },
+            { loc: [53, 60], title: "Define the Command Line",
+              note: "Use getopt to parse the command-line arguments" },
+            { loc: [164, 169], title: "Check that a File Exists",
+              note: "GatorGrader ensures the existence of writing" },
+            { loc: [169, 175], title: "Check for Comments",
+              note: "GatorGrader ensures that students comment code" },
+            { loc: [179, 184], title: "Check the Output",
+              note: "GatorGrader checks the number of output lines" },
+            { loc: [189, 194], title: "Inpsect the Output",
+              note: "GatorGrader inspects the output for patterns" },
+            { loc: [197, 201], title: "Count the Commits",
+              note: "GatorGrader ensures a minimal commit count" },
           ]}/>
         {/* Slide } */}
 

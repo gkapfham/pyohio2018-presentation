@@ -4,13 +4,16 @@
 
 This repository contains the HTML source code and additional resources for a
 presentation that I, [Gregory M.
-Kapfhammer](https://www.gregorykapfhammer.com/), gave during a panel at the 2018
-edition of the PyOhio conference. The presentation's source code uses the
+Kapfhammer](https://www.gregorykapfhammer.com/), gave during at the 2018 edition
+of the PyOhio conference. The presentation's source code uses the
 [Spectacle](https://github.com/FormidableLabs/spectacle) framework to control
 the display of each slide. I have developed a custom theme for the slides that
-manages the formatting, color scheme, and the use of photographs and icons. All
-of the colors in the presentation come from the Material Design color palette.
-Finally, all of the icons in the presentation come from Font Awesome 5.0.
+manages the formatting, color scheme, and the use of icons. All of the colors in
+the presentation come from the Material Design color palette. Finally, the
+presentation uses icons from [Font Awesome](https://fontawesome.com/) and
+customized versions of the [Spectacle
+Code](https://github.com/jamiebuilds/spectacle-code-slide) and [Spectacle
+Terminal](https://github.com/elijahmanor/spectacle-terminal) plugins.
 
 ## Installation Instructions
 
