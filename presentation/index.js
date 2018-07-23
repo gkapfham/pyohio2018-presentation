@@ -717,12 +717,11 @@ export default class Presentation extends Component {
           lang="js"
           code={require("raw-loader!../assets/code/travis.yml")}
           ranges={[
-            { loc: [0, 270], title: "Walking through some code" },
-            { loc: [0, 1], title: "The Beginning" },
-            { loc: [1, 2] },
-            { loc: [1, 2], note: "Heres a note!" },
-            { loc: [2, 3] },
-            { loc: [7, 11] },
+            { loc: [0, 270], title: "Configure Travis CI" },
+            { loc: [0, 8], title: "Use Java and Python",
+              note: "Java is the main language for this course" },
+            { loc: [9, 15], title: "Download Gradle",
+              note: "Students use Gradle to build projects" },
             { loc: [12, 16] },
           ]}/>
         {/* Slide } */}
