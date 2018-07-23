@@ -717,7 +717,8 @@ export default class Presentation extends Component {
           lang="js"
           code={require("raw-loader!../assets/code/travis.yml")}
           ranges={[
-            { loc: [0, 270], title: "Let's Configure Travis CI" },
+            { loc: [0, 270], title: "Let's Configure Travis CI",
+              note: "Travis CI runs private builds for students" },
             { loc: [0, 8], title: "Use Java and Python",
               note: "Java is the main language for this course" },
             { loc: [9, 15], title: "Download Gradle",
@@ -741,7 +742,8 @@ export default class Presentation extends Component {
           lang="js"
           code={require("raw-loader!../assets/code/gatorgrader.sh")}
           ranges={[
-            { loc: [0, 270], title: "Let's Run GatorGrader" },
+            { loc: [0, 270], title: "Let's Run GatorGrader",
+              note: "Create a script for local use or on Travis" },
             { loc: [9, 16], title: "Decide if Check Passes",
               note: "The build should pass if all checks pass" },
             { loc: [53, 60], title: "Define the Command Line",
@@ -754,7 +756,7 @@ export default class Presentation extends Component {
               note: "GatorGrader checks the number of output lines" },
             { loc: [189, 194], title: "Inpsect the Output",
               note: "GatorGrader inspects the output for patterns" },
-            { loc: [197, 201], title: "Check the Commits",
+            { loc: [197, 201], title: "Count the Commits",
               note: "GatorGrader ensures a minimal commit count" },
           ]}/>
         {/* Slide } */}
