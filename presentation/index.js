@@ -746,8 +746,14 @@ export default class Presentation extends Component {
               note: "The build should pass if all checks pass" },
             { loc: [53, 60], title: "Define the Command Line",
               note: "Use getopt to parse the command-line arguments" },
-            { loc: [165, 167], title: "Check that a File Exists",
+            { loc: [164, 169], title: "Check that a File Exists",
               note: "GatorGrader ensures the existence of writing" },
+            { loc: [169, 175], title: "Check for Comments",
+              note: "GatorGrader ensures that students comment code" },
+            { loc: [179, 184], title: "Check the Output",
+              note: "GatorGrader checks the number of output lines" },
+            { loc: [189, 194], title: "Inpsect the Output",
+              note: "GatorGrader inspects the output for patterns" },
           ]}/>
         {/* Slide } */}
 
