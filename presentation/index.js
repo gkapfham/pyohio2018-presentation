@@ -70,7 +70,7 @@ var standardHorizontalPadding = 40;
 var standardMargin = 40;
 
 {/* Font used for all questions in section slides */}
-var questionFont = "Noto Sans";
+var questionFont = "Roboto Slab";
 
 {/* FontAwesome: Define the colors for the theme */}
 var primary = '#bdbdbd';
@@ -470,7 +470,7 @@ export default class Presentation extends Component {
             </Text>
           </Layout>
           <Layout>
-              <Heading caps fill size={1} lineHeight={1.2} textAlign="left" textColor="secondary">
+              <Heading caps fill size={1} lineHeight={1.2} textFont={questionFont} textAlign="left" textColor="secondary">
                 decide to use GitHub and Travis CI?
               </Heading>
           </Layout>
@@ -494,7 +494,7 @@ export default class Presentation extends Component {
             </Text>
           </Layout>
           <Layout>
-              <Heading caps fill size={1} lineHeight={1.2} textAlign="left" textColor="secondary">
+              <Heading caps fill size={1} lineHeight={1.2} textFont={questionFont} textAlign="left" textColor="secondary">
                 setup and use GitHub Classroom?
               </Heading>
           </Layout>
@@ -681,7 +681,7 @@ export default class Presentation extends Component {
             </Text>
           </Layout>
           <Layout>
-              <Heading fill caps size={1} lineHeight={1.2} textAlign="left" textColor="secondary">
+              <Heading fill caps size={1} lineHeight={1.2} textFont={questionFont} textAlign="left" textColor="secondary">
                automatically check student submissions?
               </Heading>
           </Layout>
@@ -703,7 +703,7 @@ export default class Presentation extends Component {
             </Text>
           </Layout>
           <Layout>
-              <Heading caps fill size={1} lineHeight={1.2} textAlign="left" textColor="secondary">
+              <Heading caps fill size={1} lineHeight={1.2} textFont={questionFont} textAlign="left" textColor="secondary">
                students think about this idea?
               </Heading>
           </Layout>
