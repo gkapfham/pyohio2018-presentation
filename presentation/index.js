@@ -58,6 +58,7 @@ const images = {
   CreateAssignment: require('../assets/images/CreateAssignment.png'),
   ExampleAssignments: require('../assets/images/ExampleAssignments.png'),
   ClassroomDefect: require('../assets/images/ClassroomDefect.png'),
+  SpeakerDeck: require('../assets/images/SpeakerDeck.png'),
 };
 preloader(images);
 
@@ -800,6 +801,20 @@ export default class Presentation extends Component {
             </Text>
           </Layout>
           <Image src={images.ClassroomDefect}/>
+        </Slide>
+        {/* Slide } */}
+
+        {/* Slide { */}
+        <Slide transition={['slide']}>
+          <Heading fit size={1} textColor="darktext">
+            Review these slides on SpeakerDeck
+          </Heading>
+          <Layout>
+            <Text height={standardHorizontalPadding}>
+              &nbsp;
+            </Text>
+          </Layout>
+          <Image src={images.SpeakerDeck}/>
         </Slide>
         {/* Slide } */}
 
