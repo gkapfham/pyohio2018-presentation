@@ -785,6 +785,26 @@ export default class Presentation extends Component {
         </Slide>
         {/* Slide } */}
 
+        {/* Slide { */}
+        <Slide transition={['slide']} bgColor="primary">
+          <BlockQuote>
+            <SpacedQuote textSize="2em" textColor="darktext">
+
+              GatorGrader encouraged me to add better code comments and try out
+              language constructs that I would not have otherwise investigated.
+              The tool was a big help this semester!
+
+            </SpacedQuote>
+            <PlainCite bold caps textSize="2em">
+              Samatha Darris
+            </PlainCite>
+          </BlockQuote>
+
+        </Slide>
+        {/* Slide } */}
+
+
+
 
         {/* SECTION: Feedback } */}
 
