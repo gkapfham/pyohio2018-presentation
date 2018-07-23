@@ -784,7 +784,7 @@ export default class Presentation extends Component {
             </Text>
           </Layout>
           <Layout>
-            <Heading caps fill size={1} lineHeight={1.2} textAlign="left" textColor="secondary">
+            <Heading caps fill size={1} lineHeight={1.2} textFont={questionFont} textAlign="left" textColor="secondary">
               improve and study this approach?
             </Heading>
           </Layout>
