@@ -754,6 +754,8 @@ export default class Presentation extends Component {
               note: "GatorGrader checks the number of output lines" },
             { loc: [189, 194], title: "Inpsect the Output",
               note: "GatorGrader inspects the output for patterns" },
+            { loc: [197, 201], title: "Check the Commits",
+              note: "GatorGrader ensures a minimal commit count" },
           ]}/>
         {/* Slide } */}
 
