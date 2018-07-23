@@ -57,6 +57,9 @@ const images = {
   StartCreatingAssignments: require('../assets/images/StartCreatingAssignments.png'),
   CreateAssignment: require('../assets/images/CreateAssignment.png'),
   ExampleAssignments: require('../assets/images/ExampleAssignments.png'),
+  ClassroomDefect: require('../assets/images/ClassroomDefect.png'),
+  SpeakerDeck: require('../assets/images/SpeakerDeck.png'),
+  PresentationRepo: require('../assets/images/PresentationRepo.png'),
 };
 preloader(images);
 
@@ -688,6 +691,42 @@ export default class Presentation extends Component {
         </Slide>
         {/* Slide } */}
 
+        {/* Slide { */}
+        <Slide transition={[ "spin", "slide" ]} bgColor="primary">
+          <Heading size={ 2 } caps fit textColor="tertiary">Terminal</Heading>
+          <Terminal title="1. gkapfham: ~(zsh)" output={[
+            "npm test",
+            <div style={{ color: "#33B969"}}>TOTAL: 174 SUCCESS</div>,
+            <div>
+              <div>=============================== Coverage summary ===============================</div>
+              <div style={{ color: "#DEC612"}}>Statements   : 51.29% ( 278/542 )</div>
+              <div style={{ color: "#EE5057"}}>Branches     : 38.78% ( 95/245 )</div>
+              <div style={{ color: "#EE5057"}}>Functions    : 46.21% ( 61/132 )</div>
+              <div style={{ color: "#DEC612"}}>Lines        : 52.69% ( 274/520 )</div>
+              <div>================================================================================</div>
+            </div>]}
+          />
+        </Slide>
+        {/* Slide } */}
+
+        {/* Slide { */}
+        <CodeSlide
+          transition={[]}
+          lang="js"
+          code={require("raw-loader!../assets/code/travis.yml")}
+          ranges={[
+            { loc: [0, 270], title: "Walking through some code" },
+            { loc: [0, 1], title: "The Beginning" },
+            { loc: [1, 2] },
+            { loc: [1, 2], note: "Heres a note!" },
+            { loc: [2, 3] },
+            { loc: [7, 11] },
+            { loc: [12, 16] },
+          ]}/>
+        {/* Slide } */}
+
+        {/* SECTION: Check } */}
+
         {/* SECTION: Feedback { */}
 
         {/* Slide { */}
@@ -753,38 +792,47 @@ export default class Presentation extends Component {
         {/* Slide } */}
 
         {/* Slide { */}
-        <Slide transition={[ "spin", "slide" ]} bgColor="primary">
-          <Heading size={ 2 } caps fit textColor="tertiary">Terminal</Heading>
-          <Terminal title="1. gkapfham: ~(zsh)" output={[
-            "npm test",
-            <div style={{ color: "#33B969"}}>TOTAL: 174 SUCCESS</div>,
-            <div>
-              <div>=============================== Coverage summary ===============================</div>
-              <div style={{ color: "#DEC612"}}>Statements   : 51.29% ( 278/542 )</div>
-              <div style={{ color: "#EE5057"}}>Branches     : 38.78% ( 95/245 )</div>
-              <div style={{ color: "#EE5057"}}>Functions    : 46.21% ( 61/132 )</div>
-              <div style={{ color: "#DEC612"}}>Lines        : 52.69% ( 274/520 )</div>
-              <div>================================================================================</div>
-            </div>]}
-          />
+        <Slide transition={['slide']}>
+          <Heading fit size={1} textColor="darktext">
+            GitHub Classroom developers are great!
+          </Heading>
+          <Layout>
+            <Text height={standardHorizontalPadding}>
+              &nbsp;
+            </Text>
+          </Layout>
+          <Image src={images.ClassroomDefect}/>
         </Slide>
         {/* Slide } */}
 
         {/* Slide { */}
-        <CodeSlide
-          transition={[]}
-          lang="js"
-          code={require("raw-loader!../assets/code/travis.yml")}
-          ranges={[
-            { loc: [0, 270], title: "Walking through some code" },
-            { loc: [0, 1], title: "The Beginning" },
-            { loc: [1, 2] },
-            { loc: [1, 2], note: "Heres a note!" },
-            { loc: [2, 3] },
-            { loc: [7, 11] },
-            { loc: [12, 16] },
-          ]}/>
+        <Slide transition={['slide']}>
+          <Heading fit size={1} textColor="darktext">
+            Review these slides on SpeakerDeck
+          </Heading>
+          <Layout>
+            <Text height={standardHorizontalPadding}>
+              &nbsp;
+            </Text>
+          </Layout>
+          <Image src={images.SpeakerDeck}/>
+        </Slide>
         {/* Slide } */}
+
+        {/* Slide { */}
+        <Slide transition={['slide']}>
+          <Heading fit size={1} textColor="darktext">
+            See slide source code on GitHub
+          </Heading>
+          <Layout>
+            <Text height={standardHorizontalPadding}>
+              &nbsp;
+            </Text>
+          </Layout>
+          <Image src={images.PresentationRepo}/>
+        </Slide>
+        {/* Slide } */}
+
 
         {/* SECTION: Conclusion } */}
 
