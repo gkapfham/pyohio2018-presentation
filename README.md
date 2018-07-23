@@ -26,9 +26,11 @@ Now you should install of all of the packages needed for the presentation:
 npm install
 ```
 
-Finally, please ensure the correct version of the Babel loader. This command was
-suggested in the issue tracker for Spectacle; it resolves a problem that I was
-experiencing when I tried to build and display the presentation.
+Finally, you may need to ensure the correct version of the Babel loader. This
+command was suggested in the issue tracker for Spectacle; it sometimes resolved
+a problem that I was experiencing when I tried to build and display the
+presentation. Please consider trying this command if the presentation does not
+build and display correctly.
 
 ```shell
 npm install babel-loader@next
