@@ -735,6 +735,22 @@ export default class Presentation extends Component {
           ]}/>
         {/* Slide } */}
 
+        {/* Slide { */}
+        <CodeSlide
+          transition={[]}
+          lang="js"
+          code={require("raw-loader!../assets/code/gatorgrader.sh")}
+          ranges={[
+            { loc: [0, 270], title: "Let's Run GatorGrader" },
+            { loc: [9, 16], title: "Decide if Check Passes",
+              note: "The build should pass if all checks pass" },
+            { loc: [53, 60], title: "Define the Command Line",
+              note: "Use getopt to parse the command-line arguments" },
+            { loc: [165, 167], title: "Check that a File Exists",
+              note: "GatorGrader ensures the existence of writing" },
+          ]}/>
+        {/* Slide } */}
+
         {/* SECTION: Check } */}
 
         {/* SECTION: Feedback { */}
