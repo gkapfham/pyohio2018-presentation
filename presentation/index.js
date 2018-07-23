@@ -46,13 +46,13 @@ require('normalize.css');
 
 {/* Load all of the images */}
 const images = {
-  CreateOrganization: require('../assets/CreateOrganization.png'),
-  StartingOrganization: require('../assets/StartingOrganization.png'),
-  GrantAccess: require('../assets/GrantAccess.png'),
-  CreateRoster: require('../assets/CreateRoster.png'),
-  StartCreatingAssignments: require('../assets/StartCreatingAssignments.png'),
-  CreateAssignment: require('../assets/CreateAssignment.png'),
-  ExampleAssignments: require('../assets/ExampleAssignments.png'),
+  CreateOrganization: require('../assets/images/CreateOrganization.png'),
+  StartingOrganization: require('../assets/images/StartingOrganization.png'),
+  GrantAccess: require('../assets/images/GrantAccess.png'),
+  CreateRoster: require('../assets/images/CreateRoster.png'),
+  StartCreatingAssignments: require('../assets/images/StartCreatingAssignments.png'),
+  CreateAssignment: require('../assets/images/CreateAssignment.png'),
+  ExampleAssignments: require('../assets/images/ExampleAssignments.png'),
 };
 preloader(images);
 
