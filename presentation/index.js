@@ -726,6 +726,12 @@ export default class Presentation extends Component {
               note: "Ensure that technical writing is acceptacle" },
             { loc: [22, 29], title: "Install GatorGrader",
               note: "GatorGrader is a sub-module in the repository" },
+            { loc: [40, 46], title: "Run Gradle",
+              note: "Use Gradle to build program and run tests" },
+            { loc: [46, 48], title: "Run GatorGrader",
+              note: "This script will repeatedly invoke GatorGrader" },
+            { loc: [48, 51], title: "Run Linters",
+              note: "Identify obvious technical writing mistakes" },
           ]}/>
         {/* Slide } */}
 
