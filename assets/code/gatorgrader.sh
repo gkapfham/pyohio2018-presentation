@@ -162,26 +162,35 @@ if [ "$CHECK" = true ]; then
   # run the gatorgrader.py program to run the checks
   printf "%s\n" "${blu}Starting to check with GatorGrader...${end}"
   # ADD ADDITIONAL CALLS TO BOTH gatorgrader.py and determine_exit_code HERE
-  # --> GatorGrader CHECK: the existence of files in directories
-  python3 gatorgrader/gatorgrader.py --directories writing . --checkfiles reflection.md README.md
+  # --> GatorGrader: check files
+  python3 gatorgrader/gatorgrader.py \
+  --directories writing . \
+  --checkfiles reflection.md README.md
   determine_exit_code $?
-  # --> GatorGrader CHECK: the correct number of comments in the Java code
-  python3 gatorgrader/gatorgrader.py --nowelcome --directories src/main/java/labone/ \
-                                     --checkfiles CreditCard.java --multicomments 12 --language Java
+  # --> GatorGrader: check code comments
+  python3 gatorgrader/gatorgrader.py \
+  --directories src/main/java/labone/ \
+  --checkfiles CreditCard.java \
+  --multicomments 12 --language Java
   determine_exit_code $?
   # --> GatorGrader CHECK: at least 9 "println()" fragment exists in the code
   python3 gatorgrader/gatorgrader.py --nowelcome --directories src/main/java/labone \
                                      --checkfiles CreditCard.java --fragments "println(" --fragmentcounts 6
   determine_exit_code $?
-  # --> GatorGrader CHECK: running the program produces exactly 20 lines of output
-  python3 gatorgrader/gatorgrader.py --nowelcome --commands "gradle -q --console plain run" --outputlines 20
+  # --> GatorGrader: count output
+  python3 gatorgrader/gatorgrader.py \
+  --commands "gradle -q --console plain run" \
+  --outputlines 20
   determine_exit_code $?
   # --> GatorGrader CHECK: running the program produces the correct output
   python3 gatorgrader/gatorgrader.py --nowelcome --commands "gradle -q --console plain run" --fragments "Bowman"
   determine_exit_code $?
   python3 gatorgrader/gatorgrader.py --nowelcome --commands "gradle -q --console plain run" --fragments "272.0"
   determine_exit_code $?
-  python3 gatorgrader/gatorgrader.py --nowelcome --commands "gradle -q --console plain run" --fragments "436.0"
+  # --> GatorGrader: inspect output
+  python3 gatorgrader/gatorgrader.py \
+  --commands "gradle -q --console plain run" \
+  --fragments "436.0"
   determine_exit_code $?
   # --> GatorGrader CHECK: the reflection contains at least 2 paragraphs
   python3 gatorgrader/gatorgrader.py --nowelcome --directories writing --checkfiles reflection.md --paragraphs 6 --sentences 3
