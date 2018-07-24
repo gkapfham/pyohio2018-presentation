@@ -1,4 +1,6 @@
+/* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
+/* eslint-enable no-unused-vars */
 
 {/* Support style modification with emotion */}
 import styled from 'react-emotion';
@@ -62,6 +64,7 @@ const images = {
   ClassroomDefect: require('../assets/images/ClassroomDefect.png'),
   SpeakerDeck: require('../assets/images/SpeakerDeck.png'),
   PresentationRepo: require('../assets/images/PresentationRepo.png'),
+  GatorGrader: require('../assets/images/GatorGrader.png'),
 };
 preloader(images);
 
@@ -170,8 +173,12 @@ export const Archive = () => (
   </div>
 )
 
-export const GitHub = () => (
-    <FontAwesomeIcon icon={['fab', 'github']} transform="grow-20" color={darktext}/>
+export const DefectReports = () => (
+    <FontAwesomeIcon icon={['fas', 'bug']} transform="grow-20" color={darktext}/>
+)
+
+export const Deliverables = () => (
+    <FontAwesomeIcon icon={['fas', 'code']} transform="grow-20" color={darktext}/>
 )
 
 export const Comments = () => (
@@ -182,12 +189,36 @@ export const CommentsShiftUp = () => (
   <FontAwesomeIcon icon={['fas', 'comments']} transform="grow-8, left-2" color={darktext}/>
 )
 
+export const Evaluation = () => (
+    <FontAwesomeIcon icon={['fas', 'arrows-alt']} transform="grow-18" color={darktext}/>
+)
+
+export const GitHub = () => (
+    <FontAwesomeIcon icon={['fab', 'github']} transform="grow-20" color={darktext}/>
+)
+
+export const Globe = () => (
+    <FontAwesomeIcon icon={['fas', 'globe']} transform="grow-18" color={darktext}/>
+)
+
 export const Gradle = () => (
     <FontAwesomeIcon icon={['fas', 'th-large']} transform="grow-20" color={darktext}/>
 )
 
+export const Insights = () => (
+    <FontAwesomeIcon icon={['fas', 'lightbulb']} transform="grow-20" color={darktext}/>
+)
+
+export const Key = () => (
+    <FontAwesomeIcon icon={['fas', 'key']} transform="grow-18" color={darktext}/>
+)
+
 export const Prompt = () => (
     <FontAwesomeIcon icon={['fas', 'terminal']} transform="grow-20" color={darktext}/>
+)
+
+export const PullRequests = () => (
+    <FontAwesomeIcon icon={['fas', 'code-branch']} transform="grow-20" color={darktext}/>
 )
 
 export const Python = () => (
@@ -758,7 +789,7 @@ export default class Presentation extends Component {
             { loc: [9, 15], title: "Download Gradle",
               note: "Students use Gradle to build projects" },
             { loc: [16, 21], title: "Install Linters",
-              note: "Ensure that technical writing is acceptacle" },
+              note: "Ensure that technical writing is acceptable" },
             { loc: [22, 29], title: "Install GatorGrader",
               note: "GatorGrader is a sub-module in the repository" },
             { loc: [40, 46], title: "Run Gradle",
@@ -787,7 +818,7 @@ export default class Presentation extends Component {
               note: "GatorGrader ensures that students comment code" },
             { loc: [179, 184], title: "Check the Output",
               note: "GatorGrader checks the number of output lines" },
-            { loc: [189, 194], title: "Inpsect the Output",
+            { loc: [189, 194], title: "Inspect the Output",
               note: "GatorGrader inspects the output for patterns" },
             { loc: [197, 201], title: "Count the Commits",
               note: "GatorGrader ensures a minimal commit count" },
@@ -1034,6 +1065,96 @@ export default class Presentation extends Component {
         {/* Slide } */}
 
         {/* Slide { */}
+        <Slide transitionDuration={0} transition={['']} bgColor="primary">
+          <Heading fit textColor="darktext">
+            Ideas for Experiments
+          </Heading>
+
+          <Layout>
+            <Text height={standardHorizontalPadding*2}>
+              &nbsp;
+            </Text>
+          </Layout>
+
+          <Layout>
+            <Fill>
+              <Heading size={1} textColor="secondary" margin={standardMargin}>
+                <Deliverables/>
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading size={1} textColor="secondary" margin={standardMargin}>
+                <Insights/>
+              </Heading>
+            </Fill>
+          </Layout>
+
+          <Layout>
+            <Fill>
+              <Heading size={4} textColor="secondary" margin={standardMargin}>
+                Deliverables
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading size={4} textColor="secondary" margin={standardMargin}>
+                Insights
+              </Heading>
+            </Fill>
+          </Layout>
+
+        </Slide>
+        {/* Slide } */}
+
+        {/* Slide { */}
+        <Slide transitionDuration={0} transition={['']} bgColor="primary">
+          <Heading fill bold caps size={1} lineHeight={1.1} textColor="tertiary">
+            What code and concepts cause student frustration?
+          </Heading>
+        </Slide>
+        {/* Slide { */}
+
+        {/* Slide { */}
+        <Slide transitionDuration={0} transition={['']} bgColor="primary">
+          <Heading fit textColor="darktext">
+            Let's Collaborate
+          </Heading>
+
+          <Layout>
+            <Text height={standardHorizontalPadding*2}>
+              &nbsp;
+            </Text>
+          </Layout>
+
+          <Layout>
+            <Fill>
+              <Heading size={1} textColor="secondary" margin={standardMargin}>
+                <PullRequests/>
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading size={1} textColor="secondary" margin={standardMargin}>
+                <DefectReports/>
+              </Heading>
+            </Fill>
+          </Layout>
+
+          <Layout>
+            <Fill>
+              <Heading size={4} textColor="secondary" margin={standardMargin}>
+                Pull Requests
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading size={4} textColor="secondary" margin={standardMargin}>
+                Defect Reports
+              </Heading>
+            </Fill>
+          </Layout>
+
+        </Slide>
+        {/* Slide } */}
+
+        {/* Slide { */}
         <Slide transition={['slide']}>
           <Heading fit size={1} textColor="darktext">
             GitHub Classroom developers are great!
@@ -1075,6 +1196,71 @@ export default class Presentation extends Component {
         </Slide>
         {/* Slide } */}
 
+        {/* Slide { */}
+        <Slide bgColor="primary">
+          <Heading fit textColor="darktext">
+            Main Contributions
+          </Heading>
+
+          <Layout>
+            <Text height={standardHorizontalPadding*2}>
+              &nbsp;
+            </Text>
+          </Layout>
+
+          <Layout>
+            <Fill>
+              <Heading size={1} textColor="secondary" margin={standardMargin}>
+                <Globe/>
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading size={1} textColor="secondary" margin={standardMargin}>
+                <Key/>
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading size={1} textColor="secondary" margin={standardMargin}>
+                <Evaluation/>
+              </Heading>
+            </Fill>
+          </Layout>
+
+          <Layout>
+            <Fill>
+              <Heading size={4} textColor="secondary" margin={standardMargin}>
+                Clear Status
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading size={4} textColor="secondary" margin={standardMargin}>
+                Key Ideas
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading size={4} textColor="secondary" margin={standardMargin}>
+                Fast Grading
+              </Heading>
+            </Fill>
+          </Layout>
+
+        </Slide>
+        {/* Slide } */}
+
+        {/* Slide { */}
+        <Slide transition={['slide']}>
+          <Heading fit size={1} textColor="darktext">
+            Checkout GatorGrader on GitHub!
+          </Heading>
+          <Layout>
+            <Text height={standardHorizontalPadding}>
+              &nbsp;
+            </Text>
+          </Layout>
+          {/* TODO: Update the image when it is moved */}
+          <Image src={images.GatorGrader}/>
+        </Slide>
+        {/* Slide } */}
 
         {/* SECTION: Conclusion } */}
 
