@@ -723,7 +723,7 @@ export default class Presentation extends Component {
           lang="js"
           code={require("raw-loader!../assets/code/gatorgrader.sh")}
           ranges={[
-            { loc: [0, 270], title: "Let's Run GatorGrader",
+            { loc: [0, 270], title: "Let's Call GatorGrader",
               note: "Create a script for local use or on Travis" },
             { loc: [9, 16], title: "Decide if Check Passes",
               note: "The build should pass if all checks pass" },
@@ -763,9 +763,19 @@ export default class Presentation extends Component {
             "Balance = 408.0",
             "Limit = 5000",
             "New balance = 208.0",
-            "... additionl output from program run ...",
-
-
+            "... additional output from program run ...",
+            "> Task :lint",
+            "mdl README.md PASSED",
+            "mdl reflection.md PASSED",
+            "proselint README.md PASSED",
+            "proselint reflection.md PASSED",
+            "> Task :check",
+            "Did CreditCard.java have at least 12 multiple-line comments? Yes",
+            "Did the running the program produce 20 lines of output? Yes",
+            "Did the the program's output contain the fragment 'Bowman'? Yes",
+            "Did the repository have at least additional 5 commits? Yes",
+            "... additional output from program checks ...",
+            "Overall, are there any mistakes in the assignment? No",
           ]}
           />
         </Slide>
