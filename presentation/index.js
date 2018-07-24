@@ -189,7 +189,7 @@ export const CommentsShiftUp = () => (
 )
 
 export const Evaluation = () => (
-    <FontAwesomeIcon icon={['fab', 'arrows-alt']} transform="grow-20" color={darktext}/>
+    <FontAwesomeIcon icon={['fas', 'arrows-alt']} transform="grow-18" color={darktext}/>
 )
 
 export const GitHub = () => (
@@ -197,7 +197,7 @@ export const GitHub = () => (
 )
 
 export const Globe = () => (
-    <FontAwesomeIcon icon={['fab', 'globe']} transform="grow-20" color={darktext}/>
+    <FontAwesomeIcon icon={['fas', 'globe']} transform="grow-18" color={darktext}/>
 )
 
 export const Gradle = () => (
@@ -209,7 +209,7 @@ export const Insights = () => (
 )
 
 export const Key = () => (
-    <FontAwesomeIcon icon={['fas', 'key']} transform="grow-20" color={darktext}/>
+    <FontAwesomeIcon icon={['fas', 'key']} transform="grow-18" color={darktext}/>
 )
 
 export const Prompt = () => (
@@ -1195,6 +1195,56 @@ export default class Presentation extends Component {
         </Slide>
         {/* Slide } */}
 
+        {/* Slide { */}
+        <Slide bgColor="primary">
+          <Heading fit textColor="darktext">
+            Main Contributions
+          </Heading>
+
+          <Layout>
+            <Text height={standardHorizontalPadding*2}>
+              &nbsp;
+            </Text>
+          </Layout>
+
+          <Layout>
+            <Fill>
+              <Heading size={1} textColor="secondary" margin={standardMargin}>
+                <Globe/>
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading size={1} textColor="secondary" margin={standardMargin}>
+                <Key/>
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading size={1} textColor="secondary" margin={standardMargin}>
+                <Evaluation/>
+              </Heading>
+            </Fill>
+          </Layout>
+
+          <Layout>
+            <Fill>
+              <Heading size={4} textColor="secondary" margin={standardMargin}>
+                Clear Status
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading size={4} textColor="secondary" margin={standardMargin}>
+                Key Ideas
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading size={4} textColor="secondary" margin={standardMargin}>
+                Fast Grading
+              </Heading>
+            </Fill>
+          </Layout>
+
+        </Slide>
+        {/* Slide } */}
 
         {/* SECTION: Conclusion } */}
 
