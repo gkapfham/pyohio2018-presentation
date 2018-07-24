@@ -27,10 +27,11 @@ notifications:
     on_success: change
     on_failure: always
 
+# Lint the README file with mdl
 # Lint the presentation's code with eslint
 # Build the presentation using webpack
 # Don't do "start" since that does not terminate
 script:
+  - mdl README.md
   - npm run lint
   - npm run build
-  - mdl README.md
