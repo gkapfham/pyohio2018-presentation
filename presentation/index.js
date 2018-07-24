@@ -1083,6 +1083,14 @@ export default class Presentation extends Component {
         {/* Slide } */}
 
         {/* Slide { */}
+        <Slide bgColor="primary">
+          <Heading fill bold caps size={1} lineHeight={1.1} textColor="tertiary">
+            What code and concepts cause student frustration?
+          </Heading>
+        </Slide>
+        {/* Slide { */}
+
+        {/* Slide { */}
         <Slide transition={['slide']}>
           <Heading fit size={1} textColor="darktext">
             GitHub Classroom developers are great!
