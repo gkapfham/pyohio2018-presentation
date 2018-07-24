@@ -2,7 +2,6 @@
   "root": true,
   "parser": "babel-eslint",
   "extends": [
-    "formidable/configurations/es6-react",
     "prettier",
     "prettier/react"
   ],
