@@ -57,8 +57,11 @@ want to see the presentation slides in a presenter mode, you can go to the
 
 Since these slides are implemented in the
 [Spectacle](https://github.com/FormidableLabs/spectacle) framework, you may need
-to use Chrome Developer Tools, augmented with the React Developer Plugin, to
-resolve errors that prevent the slides from displaying correctly.
+to use Chrome or Firefox Developer Tools, augmented with the React Developer
+Plugin, to resolve errors that prevent the slides from displaying correctly. In
+my experience, it is also important to use Developer Tools to check the slides
+at different simulated resolutions so as to ensure that they display properly
+when connected to a projector.
 
 ## Problems or Praise
 
