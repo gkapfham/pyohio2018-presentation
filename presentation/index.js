@@ -1,4 +1,6 @@
+/* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
+/* eslint-enable no-unused-vars */
 
 {/* Support style modification with emotion */}
 import styled from 'react-emotion';
