@@ -170,8 +170,8 @@ export const Archive = () => (
   </div>
 )
 
-export const GitHub = () => (
-    <FontAwesomeIcon icon={['fab', 'github']} transform="grow-20" color={darktext}/>
+export const Deliverables = () => (
+    <FontAwesomeIcon icon={['fab', 'code']} transform="grow-20" color={darktext}/>
 )
 
 export const Comments = () => (
@@ -180,6 +180,10 @@ export const Comments = () => (
 
 export const CommentsShiftUp = () => (
   <FontAwesomeIcon icon={['fas', 'comments']} transform="grow-8, left-2" color={darktext}/>
+)
+
+export const GitHub = () => (
+    <FontAwesomeIcon icon={['fab', 'github']} transform="grow-20" color={darktext}/>
 )
 
 export const Gradle = () => (
