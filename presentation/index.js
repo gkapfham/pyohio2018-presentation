@@ -781,6 +781,45 @@ export default class Presentation extends Component {
         </Slide>
         {/* Slide } */}
 
+        {/* Slide { */}
+        <Slide transition={[ "spin", "slide" ]} bgColor="primary">
+          <Heading fit size={1} lineHeigh={1.2} textColor="darktext">Running GatorGrader on an Incorrect Project</Heading>
+          <Layout>
+            <Text height={standardHorizontalPadding}>
+              &nbsp;
+            </Text>
+          </Layout>
+          <Terminal title="gkapfham: ~(zsh)" output={[
+            "./gatorgrader.sh --check",
+            "> Task :test",
+            "testone.TestCreditCard > testConstructCreditCardWithDefaultBalance PASSED",
+            "testone.TestCreditCard > testConstructCreditCardWithSpecifiedBalance FAILED",
+            "testone.TestCreditCard > testChargeWhenLimitSurpassedDefaultBalance PASSED",
+            "... additional test case runs ...",
+            "> Task :run",
+            "Bank = California Savings",
+            "Account = 5391 0375 9387 5309",
+            "Balance = 408.0",
+            "Limit = 5000",
+            "New balance = 201.0",
+            "... additional output from program run ...",
+            "> Task :lint",
+            "mdl README.md PASSED",
+            "mdl reflection.md FAILED",
+            "proselint README.md PASSED",
+            "proselint reflection.md FAILED",
+            "> Task :check",
+            "Did CreditCard.java have at least 12 multiple-line comments? No",
+            "Did the running the program produce 20 lines of output? No",
+            "Did the the program's output contain the fragment 'Bowman'? Yes",
+            "Did the repository have at least additional 5 commits? No",
+            "... additional output from program checks ...",
+            "Overall, are there any mistakes in the assignment? Yes",
+          ]}
+          />
+        </Slide>
+        {/* Slide } */}
+
         {/* SECTION: Check } */}
 
         {/* SECTION: Feedback { */}
