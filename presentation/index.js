@@ -172,6 +172,10 @@ export const Archive = () => (
   </div>
 )
 
+export const DefectReports = () => (
+    <FontAwesomeIcon icon={['fas', 'bug']} transform="grow-20" color={darktext}/>
+)
+
 export const Deliverables = () => (
     <FontAwesomeIcon icon={['fas', 'code']} transform="grow-20" color={darktext}/>
 )
@@ -198,6 +202,10 @@ export const Insights = () => (
 
 export const Prompt = () => (
     <FontAwesomeIcon icon={['fas', 'terminal']} transform="grow-20" color={darktext}/>
+)
+
+export const PullRequests = () => (
+    <FontAwesomeIcon icon={['fas', 'code-branch']} transform="grow-20" color={darktext}/>
 )
 
 export const Python = () => (
@@ -1091,6 +1099,47 @@ export default class Presentation extends Component {
           </Heading>
         </Slide>
         {/* Slide { */}
+
+        {/* Slide { */}
+        <Slide bgColor="primary">
+          <Heading fit textColor="darktext">
+            Let's Collaborate
+          </Heading>
+
+          <Layout>
+            <Text height={standardHorizontalPadding*2}>
+              &nbsp;
+            </Text>
+          </Layout>
+
+          <Layout>
+            <Fill>
+              <Heading size={1} textColor="secondary" margin={standardMargin}>
+                <PullRequests/>
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading size={1} textColor="secondary" margin={standardMargin}>
+                <DefectReports/>
+              </Heading>
+            </Fill>
+          </Layout>
+
+          <Layout>
+            <Fill>
+              <Heading size={4} textColor="secondary" margin={standardMargin}>
+                Pull Requests
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading size={4} textColor="secondary" margin={standardMargin}>
+                Defect Reports
+              </Heading>
+            </Fill>
+          </Layout>
+
+        </Slide>
+        {/* Slide } */}
 
         {/* Slide { */}
         <Slide transition={['slide']}>
