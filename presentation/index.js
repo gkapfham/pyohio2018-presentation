@@ -586,7 +586,15 @@ export default class Presentation extends Component {
         {/* Slide { */}
         <Slide transition={['']} bgColor="primary">
           <Heading fill bold caps size={1} lineHeight={1.1} textColor="tertiary">
-            Use industry standard tools in all work
+            Use industry standard tools in all course work
+          </Heading>
+        </Slide>
+        {/* Slide } */}
+
+        {/* Slide { */}
+        <Slide transition={['']} bgColor="primary">
+          <Heading fill bold caps size={1} lineHeight={1.1} textColor="tertiary">
+            Develop new solutions in Python when necessary
           </Heading>
         </Slide>
         {/* Slide } */}
