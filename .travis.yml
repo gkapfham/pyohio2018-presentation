@@ -1,24 +1,29 @@
+# Use NodeJS
 language: node_js
 
+# Use the latest stable version of NodeJS
 node_js:
-  - "6"
-  - "8"
-  - "10"
+  - "node"
 
-# Use container-based Travis infrastructure.
+# Use container-based Travis infrastructure
 sudo: false
 
+# Only build on the master branch
 branches:
   only:
     - master
 
+# Make sure that npm is installed
 install:
   - npm install
 
+# Send emails when there is a change or failure
 notifications:
   email:
     on_success: change
     on_failure: always
 
+# Build the presentation
+# Don't do "start" since that does not terminate
 script:
   - npm run build
