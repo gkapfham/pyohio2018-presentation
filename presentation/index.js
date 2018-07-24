@@ -525,7 +525,7 @@ export default class Presentation extends Component {
         {/* Slide } */}
 
         {/* Slide { */}
-        <Slide bgColor="primary">
+        <Slide transition={['']} bgColor="primary">
           <Heading fit textColor="darktext">
             Important Goals
           </Heading>
