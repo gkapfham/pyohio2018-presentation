@@ -190,6 +190,10 @@ export const Gradle = () => (
     <FontAwesomeIcon icon={['fas', 'th-large']} transform="grow-20" color={darktext}/>
 )
 
+export const Insights = () => (
+    <FontAwesomeIcon icon={['fas', 'lightbulb']} transform="grow-20" color={darktext}/>
+)
+
 export const Prompt = () => (
     <FontAwesomeIcon icon={['fas', 'terminal']} transform="grow-20" color={darktext}/>
 )
