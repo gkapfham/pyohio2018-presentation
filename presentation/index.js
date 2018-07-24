@@ -696,7 +696,6 @@ export default class Presentation extends Component {
 
         {/* Slide { */}
         <CodeSlide
-          transition={[]}
           lang="js"
           code={require("raw-loader!../assets/code/travis.yml")}
           ranges={[
@@ -721,7 +720,6 @@ export default class Presentation extends Component {
 
         {/* Slide { */}
         <CodeSlide
-          transition={[]}
           lang="js"
           code={require("raw-loader!../assets/code/gatorgrader.sh")}
           ranges={[
