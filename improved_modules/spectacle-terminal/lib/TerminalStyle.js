@@ -55,7 +55,7 @@ exports.default = {
     backgroundColor: "#616161"
   },
   buttonExpand: {
-    backgroundColor: "#616161"
+    backgroundColor: "#9e9e9e"
   },
   main: {
     padding: "15px",
