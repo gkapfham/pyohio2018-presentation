@@ -182,6 +182,14 @@ export const CommentsShiftUp = () => (
   <FontAwesomeIcon icon={['fas', 'comments']} transform="grow-8, left-2" color={darktext}/>
 )
 
+export const Gradle = () => (
+    <FontAwesomeIcon icon={['fas', 'th-large']} transform="grow-20" color={darktext}/>
+)
+
+export const Prompt = () => (
+    <FontAwesomeIcon icon={['fas', 'terminal']} transform="grow-20" color={darktext}/>
+)
+
 export const Python = () => (
     <FontAwesomeIcon icon={['fab', 'python']} transform="grow-20" color={darktext}/>
 )
@@ -192,6 +200,10 @@ export const RepoFull = () => (
 
 export const RepoMinus = () => (
     <FontAwesomeIcon icon={['fas', 'minus-square']} transform="grow-20" color={darktext}/>
+)
+
+export const Script = () => (
+    <FontAwesomeIcon icon={['fas', 'cube']} transform="grow-20" color={darktext}/>
 )
 
 export const Toggle = () => (
@@ -693,6 +705,46 @@ export default class Presentation extends Component {
         </Slide>
         {/* Slide } */}
 
+        {/* Slide { */}
+        <Slide bgColor="primary">
+          <Heading fit textColor="darktext">
+            Flexible Checking
+          </Heading>
+
+          <Layout>
+            <Text height={standardHorizontalPadding*2}>
+              &nbsp;
+            </Text>
+          </Layout>
+
+          <Layout>
+            <Fill>
+              <Heading size={1} textColor="secondary" margin={standardMargin}>
+                <Prompt/>
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading size={1} textColor="secondary" margin={standardMargin}>
+                <Travis/>
+              </Heading>
+            </Fill>
+          </Layout>
+
+          <Layout>
+            <Fill>
+              <Heading size={4} textColor="secondary" margin={standardMargin}>
+                Local
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading size={4} textColor="secondary" margin={standardMargin}>
+                Travis
+              </Heading>
+            </Fill>
+          </Layout>
+
+        </Slide>
+        {/* Slide } */}
 
         {/* Slide { */}
         <CodeSlide
@@ -772,12 +824,92 @@ export default class Presentation extends Component {
             "> Task :check",
             "Did CreditCard.java have at least 12 multiple-line comments? Yes",
             "Did the running the program produce 20 lines of output? Yes",
-            "Did the the program's output contain the fragment 'Bowman'? Yes",
+            "Did the program's output contain the fragment 'Bowman'? Yes",
             "Did the repository have at least additional 5 commits? Yes",
             "... additional output from program checks ...",
             "Overall, are there any mistakes in the assignment? No",
           ]}
           />
+        </Slide>
+        {/* Slide } */}
+
+        {/* Slide { */}
+        <Slide transition={[ "spin", "slide" ]} bgColor="primary">
+          <Heading fit size={1} lineHeigh={1.2} textColor="darktext">Running GatorGrader on an Incorrect Project</Heading>
+          <Layout>
+            <Text height={standardHorizontalPadding}>
+              &nbsp;
+            </Text>
+          </Layout>
+          <Terminal title="gkapfham: ~(zsh)" output={[
+            "./gatorgrader.sh --check",
+            "> Task :test",
+            "testone.TestCreditCard > testConstructCreditCardWithDefaultBalance PASSED",
+            "testone.TestCreditCard > testConstructCreditCardWithSpecifiedBalance FAILED",
+            "testone.TestCreditCard > testChargeWhenLimitSurpassedDefaultBalance PASSED",
+            "... additional test case runs ...",
+            "> Task :run",
+            "Bank = California Savings",
+            "Account = 5391 0375 9387 5309",
+            "Balance = 408.0",
+            "Limit = 5000",
+            "New balance = 201.0",
+            "... additional output from program run ...",
+            "> Task :lint",
+            "mdl README.md PASSED",
+            "mdl reflection.md FAILED",
+            "proselint README.md PASSED",
+            "proselint reflection.md FAILED",
+            "> Task :check",
+            "Did CreditCard.java have at least 12 multiple-line comments? No",
+            "Did the running the program produce 20 lines of output? No",
+            "Did the program's output contain the fragment 'Bowman'? Yes",
+            "Did the repository have at least additional 5 commits? No",
+            "... additional output from program checks ...",
+            "Overall, are there any mistakes in the assignment? Yes",
+          ]}
+          />
+        </Slide>
+        {/* Slide } */}
+
+        {/* Slide { */}
+        <Slide bgColor="primary">
+          <Heading fit textColor="darktext">
+            Exciting New Features
+          </Heading>
+
+          <Layout>
+            <Text height={standardHorizontalPadding*2}>
+              &nbsp;
+            </Text>
+          </Layout>
+
+          <Layout>
+            <Fill>
+              <Heading size={1} textColor="secondary" margin={standardMargin}>
+                <Script/>
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading size={1} textColor="secondary" margin={standardMargin}>
+                <Gradle/>
+              </Heading>
+            </Fill>
+          </Layout>
+
+          <Layout>
+            <Fill>
+              <Heading size={4} textColor="secondary" margin={standardMargin}>
+                Script
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading size={4} textColor="secondary" margin={standardMargin}>
+                Gradle
+              </Heading>
+            </Fill>
+          </Layout>
+
         </Slide>
         {/* Slide } */}
 
