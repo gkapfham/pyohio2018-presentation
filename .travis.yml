@@ -23,7 +23,9 @@ notifications:
     on_success: change
     on_failure: always
 
-# Build the presentation
+# Lint the presentation's code with eslint
+# Build the presentation using webpack
 # Don't do "start" since that does not terminate
 script:
+  - npm run lint
   - npm run build
