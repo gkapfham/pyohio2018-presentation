@@ -13,6 +13,10 @@ branches:
   only:
     - master
 
+# install mdl for checking Markdown
+before_install:
+  - gem install mdl
+
 # Make sure that npm is installed
 install:
   - npm install
@@ -29,3 +33,4 @@ notifications:
 script:
   - npm run lint
   - npm run build
+  - mdl README.md
