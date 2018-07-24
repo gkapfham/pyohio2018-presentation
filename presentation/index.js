@@ -394,7 +394,7 @@ export default class Presentation extends Component {
           </Layout>
 
           <Layout>
-            <Text height="40px">
+            <Text height={standardHorizontalPadding*2}>
               &nbsp;
             </Text>
           </Layout>
