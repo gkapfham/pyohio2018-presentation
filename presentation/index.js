@@ -744,18 +744,15 @@ export default class Presentation extends Component {
 
         {/* Slide { */}
         <Slide transition={[ "spin", "slide" ]} bgColor="primary">
-          <Heading size={ 2 } caps fit textColor="tertiary">Terminal</Heading>
+          <Heading fit size={1} lineHeigh={1.2} textColor="darktext">Running GatorGrader on a Correct Submission</Heading>
+          <Layout>
+            <Text height={standardHorizontalPadding}>
+              &nbsp;
+            </Text>
+          </Layout>
           <Terminal title="1. gkapfham: ~(zsh)" output={[
-            "npm test",
-            <div style={{ color: "#33B969"}}>TOTAL: 174 SUCCESS</div>,
-            <div>
-              <div>=============================== Coverage summary ===============================</div>
-              <div style={{ color: "#DEC612"}}>Statements   : 51.29% ( 278/542 )</div>
-              <div style={{ color: "#EE5057"}}>Branches     : 38.78% ( 95/245 )</div>
-              <div style={{ color: "#EE5057"}}>Functions    : 46.21% ( 61/132 )</div>
-              <div style={{ color: "#DEC612"}}>Lines        : 52.69% ( 274/520 )</div>
-              <div>================================================================================</div>
-            </div>]}
+            "./gatorgrader.sh --check",
+          ]}
           />
         </Slide>
         {/* Slide } */}
