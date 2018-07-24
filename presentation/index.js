@@ -575,6 +575,21 @@ export default class Presentation extends Component {
         </Slide>
         {/* Slide } */}
 
+        {/* Slide { */}
+        <Slide transition={['']} bgColor="primary">
+          <Heading fill bold caps size={1} lineHeight={1.1} textColor="tertiary">
+            Students and faculty effectively collaborate
+          </Heading>
+        </Slide>
+        {/* Slide } */}
+
+        {/* Slide { */}
+        <Slide transition={['']} bgColor="primary">
+          <Heading fill bold caps size={1} lineHeight={1.1} textColor="tertiary">
+            Use industry standard tools in all work
+          </Heading>
+        </Slide>
+        {/* Slide } */}
 
         {/* SECTION: Motivation } */}
 
@@ -733,7 +748,7 @@ export default class Presentation extends Component {
             The starter repository should <em>not</em> pass the tests
           </Heading>
         </Slide>
-        {/* Slide { */}
+        {/* Slide } */}
 
         {/* Slide { */}
         <Slide transition={['slide', 'spin']}>
