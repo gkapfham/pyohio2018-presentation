@@ -26,7 +26,7 @@ exports.default = {
     backgroundColor: "#e0e0e0",
     borderTopLeftRadius: "10px",
     borderTopRightRadius: "10px",
-    boxShadow: "inset 0px -3px 10px 0px rgba(0, 0, 0, 0.2)"
+    boxShadow: "inset 0px -3px 10px 0px #e0e0e0"
   },
   nav: {
     display: "flex",
@@ -49,20 +49,20 @@ exports.default = {
     marginRight: "1vw"
   },
   buttonClose: {
-    backgroundColor: "#EE5057"
+    backgroundColor: "#e64a19"
   },
   buttonMinimize: {
-    backgroundColor: "#DEC612"
+    backgroundColor: "#616161"
   },
   buttonExpand: {
-    backgroundColor: "#33B969"
+    backgroundColor: "#616161"
   },
   main: {
     padding: "15px",
-    backgroundColor: "#303539",
-    color: "white",
+    backgroundColor: "#212121",
+    color: "#e0e0e0",
     height: "50vh",
-    fontFamily: "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+    fontFamily: "monospace",
     direction: "ltr",
     textAlign: "left",
     whiteSpace: "pre",
