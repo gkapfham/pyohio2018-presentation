@@ -182,6 +182,10 @@ export const CommentsShiftUp = () => (
   <FontAwesomeIcon icon={['fas', 'comments']} transform="grow-8, left-2" color={darktext}/>
 )
 
+export const Gradle = () => (
+    <FontAwesomeIcon icon={['fas', 'th-large']} transform="grow-20" color={darktext}/>
+)
+
 export const Prompt = () => (
     <FontAwesomeIcon icon={['fas', 'terminal']} transform="grow-20" color={darktext}/>
 )
@@ -196,6 +200,10 @@ export const RepoFull = () => (
 
 export const RepoMinus = () => (
     <FontAwesomeIcon icon={['fas', 'minus-square']} transform="grow-20" color={darktext}/>
+)
+
+export const Script = () => (
+    <FontAwesomeIcon icon={['fas', 'cube']} transform="grow-20" color={darktext}/>
 )
 
 export const Toggle = () => (
@@ -816,7 +824,7 @@ export default class Presentation extends Component {
             "> Task :check",
             "Did CreditCard.java have at least 12 multiple-line comments? Yes",
             "Did the running the program produce 20 lines of output? Yes",
-            "Did the the program's output contain the fragment 'Bowman'? Yes",
+            "Did the program's output contain the fragment 'Bowman'? Yes",
             "Did the repository have at least additional 5 commits? Yes",
             "... additional output from program checks ...",
             "Overall, are there any mistakes in the assignment? No",
@@ -855,7 +863,7 @@ export default class Presentation extends Component {
             "> Task :check",
             "Did CreditCard.java have at least 12 multiple-line comments? No",
             "Did the running the program produce 20 lines of output? No",
-            "Did the the program's output contain the fragment 'Bowman'? Yes",
+            "Did the program's output contain the fragment 'Bowman'? Yes",
             "Did the repository have at least additional 5 commits? No",
             "... additional output from program checks ...",
             "Overall, are there any mistakes in the assignment? Yes",
