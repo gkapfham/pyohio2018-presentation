@@ -37,7 +37,7 @@ import {
 } from 'spectacle';
 
 {/* Load in an external plugin */}
-import Terminal from "spectacle-terminal";
+import Terminal from "../improved_modules/spectacle-terminal";
 
 {/* Load in a modified external plugin */}
 import CodeSlide from '../improved_modules/spectacle-code-slide';
@@ -693,27 +693,9 @@ export default class Presentation extends Component {
         </Slide>
         {/* Slide } */}
 
-        {/* Slide { */}
-        <Slide transition={[ "spin", "slide" ]} bgColor="primary">
-          <Heading size={ 2 } caps fit textColor="tertiary">Terminal</Heading>
-          <Terminal title="1. gkapfham: ~(zsh)" output={[
-            "npm test",
-            <div style={{ color: "#33B969"}}>TOTAL: 174 SUCCESS</div>,
-            <div>
-              <div>=============================== Coverage summary ===============================</div>
-              <div style={{ color: "#DEC612"}}>Statements   : 51.29% ( 278/542 )</div>
-              <div style={{ color: "#EE5057"}}>Branches     : 38.78% ( 95/245 )</div>
-              <div style={{ color: "#EE5057"}}>Functions    : 46.21% ( 61/132 )</div>
-              <div style={{ color: "#DEC612"}}>Lines        : 52.69% ( 274/520 )</div>
-              <div>================================================================================</div>
-            </div>]}
-          />
-        </Slide>
-        {/* Slide } */}
 
         {/* Slide { */}
         <CodeSlide
-          transition={[]}
           lang="js"
           code={require("raw-loader!../assets/code/travis.yml")}
           ranges={[
@@ -738,11 +720,10 @@ export default class Presentation extends Component {
 
         {/* Slide { */}
         <CodeSlide
-          transition={[]}
           lang="js"
           code={require("raw-loader!../assets/code/gatorgrader.sh")}
           ranges={[
-            { loc: [0, 270], title: "Let's Run GatorGrader",
+            { loc: [0, 270], title: "Let's Call GatorGrader",
               note: "Create a script for local use or on Travis" },
             { loc: [9, 16], title: "Decide if Check Passes",
               note: "The build should pass if all checks pass" },
@@ -759,6 +740,45 @@ export default class Presentation extends Component {
             { loc: [197, 201], title: "Count the Commits",
               note: "GatorGrader ensures a minimal commit count" },
           ]}/>
+        {/* Slide } */}
+
+        {/* Slide { */}
+        <Slide transition={[ "spin", "slide" ]} bgColor="primary">
+          <Heading fit size={1} lineHeigh={1.2} textColor="darktext">Running GatorGrader on a Correct Submission</Heading>
+          <Layout>
+            <Text height={standardHorizontalPadding}>
+              &nbsp;
+            </Text>
+          </Layout>
+          <Terminal title="gkapfham: ~(zsh)" output={[
+            "./gatorgrader.sh --check",
+            "> Task :test",
+            "testone.TestCreditCard > testConstructCreditCardWithDefaultBalance PASSED",
+            "testone.TestCreditCard > testConstructCreditCardWithSpecifiedBalance PASSED",
+            "testone.TestCreditCard > testChargeWhenLimitSurpassedDefaultBalance PASSED",
+            "... additional passing test cases ...",
+            "> Task :run",
+            "Bank = California Savings",
+            "Account = 5391 0375 9387 5309",
+            "Balance = 408.0",
+            "Limit = 5000",
+            "New balance = 208.0",
+            "... additional output from program run ...",
+            "> Task :lint",
+            "mdl README.md PASSED",
+            "mdl reflection.md PASSED",
+            "proselint README.md PASSED",
+            "proselint reflection.md PASSED",
+            "> Task :check",
+            "Did CreditCard.java have at least 12 multiple-line comments? Yes",
+            "Did the running the program produce 20 lines of output? Yes",
+            "Did the the program's output contain the fragment 'Bowman'? Yes",
+            "Did the repository have at least additional 5 commits? Yes",
+            "... additional output from program checks ...",
+            "Overall, are there any mistakes in the assignment? No",
+          ]}
+          />
+        </Slide>
         {/* Slide } */}
 
         {/* SECTION: Check } */}
