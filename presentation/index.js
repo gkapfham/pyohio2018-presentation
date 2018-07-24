@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
-/* eslint-enable no-unused-vars */
 
 {/* Support style modification with emotion */}
 import styled from 'react-emotion';
@@ -39,7 +38,7 @@ import {
 } from 'spectacle';
 
 {/* Load in an external plugin */}
-import Terminal from "../improved_modules/spectacle-terminal";
+import Terminal from '../improved_modules/spectacle-terminal';
 
 {/* Load in a modified external plugin */}
 import CodeSlide from '../improved_modules/spectacle-code-slide';
@@ -48,7 +47,7 @@ import CodeSlide from '../improved_modules/spectacle-code-slide';
 import preloader from 'spectacle/lib/utils/preloader';
 
 {/* Import the theme */}
-import createTheme from "../default";
+import createTheme from '../default';
 
 require('normalize.css');
 
@@ -78,12 +77,12 @@ var standardHorizontalPadding = 40;
 var standardMargin = 40;
 
 {/* Font used for all questions in section slides */}
-var questionFont = "Roboto Slab";
+var questionFont = 'Roboto Slab';
 
 {/* FontAwesome: Define the colors for the theme */}
 var primary = '#bdbdbd';
 var secondary =  '#d84315';
-var secondarylight = "#ff6e40";
+var secondarylight = '#ff6e40';
 var tertiary = '#1565c0';
 var lighttext = '#9e9e9e';
 var darktext = '#212121';
@@ -93,7 +92,7 @@ var lighttext = '#9e9e9e';
 const theme = createTheme({
   primary: '#bdbdbd',
   secondary: '#d84315',
-  secondarylight: "#ff6e40",
+  secondarylight: '#ff6e40',
   tertiary: '#1565c0',
   darktext: '#212121',
   lighttext: '#9e9e9e'
@@ -780,53 +779,53 @@ export default class Presentation extends Component {
         {/* Slide { */}
         <CodeSlide
           lang="js"
-          code={require("raw-loader!../assets/code/travis.yml")}
+          code={require('raw-loader!../assets/code/travis.yml')}
           ranges={[
-            { loc: [0, 270], title: "Let's Configure Travis CI",
-              note: "Travis CI runs private builds for students" },
-            { loc: [0, 8], title: "Use Java and Python",
-              note: "Java is the main language for this course" },
-            { loc: [9, 15], title: "Download Gradle",
-              note: "Students use Gradle to build projects" },
-            { loc: [16, 21], title: "Install Linters",
-              note: "Ensure that technical writing is acceptable" },
-            { loc: [22, 29], title: "Install GatorGrader",
-              note: "GatorGrader is a sub-module in the repository" },
-            { loc: [40, 46], title: "Run Gradle",
-              note: "Use Gradle to build program and run tests" },
-            { loc: [46, 48], title: "Run GatorGrader",
-              note: "This script will repeatedly invoke GatorGrader" },
-            { loc: [48, 51], title: "Run Linters",
-              note: "Identify obvious technical writing mistakes" },
+            { loc: [0, 270], title: 'Let\'s Configure Travis CI',
+              note: 'Travis CI runs private builds for students' },
+            { loc: [0, 8], title: 'Use Java and Python',
+              note: 'Java is the main language for this course' },
+            { loc: [9, 15], title: 'Download Gradle',
+              note: 'Students use Gradle to build projects' },
+            { loc: [16, 21], title: 'Install Linters',
+              note: 'Ensure that technical writing is acceptable' },
+            { loc: [22, 29], title: 'Install GatorGrader',
+              note: 'GatorGrader is a sub-module in the repository' },
+            { loc: [40, 46], title: 'Run Gradle',
+              note: 'Use Gradle to build program and run tests' },
+            { loc: [46, 48], title: 'Run GatorGrader',
+              note: 'This script will repeatedly invoke GatorGrader' },
+            { loc: [48, 51], title: 'Run Linters',
+              note: 'Identify obvious technical writing mistakes' },
           ]}/>
         {/* Slide } */}
 
         {/* Slide { */}
         <CodeSlide
           lang="js"
-          code={require("raw-loader!../assets/code/gatorgrader.sh")}
+          code={require('raw-loader!../assets/code/gatorgrader.sh')}
           ranges={[
-            { loc: [0, 270], title: "Let's Call GatorGrader",
-              note: "Create a script for local use or on Travis" },
-            { loc: [9, 16], title: "Decide if Check Passes",
-              note: "The build should pass if all checks pass" },
-            { loc: [53, 60], title: "Define the Command Line",
-              note: "Use getopt to parse the command-line arguments" },
-            { loc: [164, 169], title: "Check that a File Exists",
-              note: "GatorGrader ensures the existence of writing" },
-            { loc: [169, 175], title: "Check for Comments",
-              note: "GatorGrader ensures that students comment code" },
-            { loc: [179, 184], title: "Check the Output",
-              note: "GatorGrader checks the number of output lines" },
-            { loc: [189, 194], title: "Inspect the Output",
-              note: "GatorGrader inspects the output for patterns" },
-            { loc: [197, 201], title: "Count the Commits",
-              note: "GatorGrader ensures a minimal commit count" },
+            { loc: [0, 270], title: 'Let\'s Call GatorGrader',
+              note: 'Create a script for local use or on Travis' },
+            { loc: [9, 16], title: 'Decide if Check Passes',
+              note: 'The build should pass if all checks pass' },
+            { loc: [53, 60], title: 'Define the Command Line',
+              note: 'Use getopt to parse the command-line arguments' },
+            { loc: [164, 169], title: 'Check that a File Exists',
+              note: 'GatorGrader ensures the existence of writing' },
+            { loc: [169, 175], title: 'Check for Comments',
+              note: 'GatorGrader ensures that students comment code' },
+            { loc: [179, 184], title: 'Check the Output',
+              note: 'GatorGrader checks the number of output lines' },
+            { loc: [189, 194], title: 'Inspect the Output',
+              note: 'GatorGrader inspects the output for patterns' },
+            { loc: [197, 201], title: 'Count the Commits',
+              note: 'GatorGrader ensures a minimal commit count' },
           ]}/>
         {/* Slide } */}
 
         {/* Slide { */}
-        <Slide transition={[ "spin", "slide" ]} bgColor="primary">
+        <Slide transition={[ 'spin', 'slide' ]} bgColor="primary">
           <Heading fit size={1} lineHeigh={1.2} textColor="darktext">Running GatorGrader on a Correct Submission</Heading>
           <Layout>
             <Text height={standardHorizontalPadding}>
@@ -834,38 +833,38 @@ export default class Presentation extends Component {
             </Text>
           </Layout>
           <Terminal title="gkapfham: ~(zsh)" output={[
-            "./gatorgrader.sh --check",
-            "> Task :test",
-            "testone.TestCreditCard > testConstructCreditCardWithDefaultBalance PASSED",
-            "testone.TestCreditCard > testConstructCreditCardWithSpecifiedBalance PASSED",
-            "testone.TestCreditCard > testChargeWhenLimitSurpassedDefaultBalance PASSED",
-            "... additional passing test cases ...",
-            "> Task :run",
-            "Bank = California Savings",
-            "Account = 5391 0375 9387 5309",
-            "Balance = 408.0",
-            "Limit = 5000",
-            "New balance = 208.0",
-            "... additional output from program run ...",
-            "> Task :lint",
-            "mdl README.md PASSED",
-            "mdl reflection.md PASSED",
-            "proselint README.md PASSED",
-            "proselint reflection.md PASSED",
-            "> Task :check",
-            "Did CreditCard.java have at least 12 multiple-line comments? Yes",
-            "Did the running the program produce 20 lines of output? Yes",
-            "Did the program's output contain the fragment 'Bowman'? Yes",
-            "Did the repository have at least additional 5 commits? Yes",
-            "... additional output from program checks ...",
-            "Overall, are there any mistakes in the assignment? No",
+            './gatorgrader.sh --check',
+            '> Task :test',
+            'testone.TestCreditCard > testConstructCreditCardWithDefaultBalance PASSED',
+            'testone.TestCreditCard > testConstructCreditCardWithSpecifiedBalance PASSED',
+            'testone.TestCreditCard > testChargeWhenLimitSurpassedDefaultBalance PASSED',
+            '... additional passing test cases ...',
+            '> Task :run',
+            'Bank = California Savings',
+            'Account = 5391 0375 9387 5309',
+            'Balance = 408.0',
+            'Limit = 5000',
+            'New balance = 208.0',
+            '... additional output from program run ...',
+            '> Task :lint',
+            'mdl README.md PASSED',
+            'mdl reflection.md PASSED',
+            'proselint README.md PASSED',
+            'proselint reflection.md PASSED',
+            '> Task :check',
+            'Did CreditCard.java have at least 12 multiple-line comments? Yes',
+            'Did the running the program produce 20 lines of output? Yes',
+            'Did the program\'s output contain the fragment \'Bowman\'? Yes',
+            'Did the repository have at least additional 5 commits? Yes',
+            '... additional output from program checks ...',
+            'Overall, are there any mistakes in the assignment? No',
           ]}
           />
         </Slide>
         {/* Slide } */}
 
         {/* Slide { */}
-        <Slide transition={[ "spin", "slide" ]} bgColor="primary">
+        <Slide transition={[ 'spin', 'slide' ]} bgColor="primary">
           <Heading fit size={1} lineHeigh={1.2} textColor="darktext">Running GatorGrader on an Incorrect Project</Heading>
           <Layout>
             <Text height={standardHorizontalPadding}>
@@ -873,31 +872,31 @@ export default class Presentation extends Component {
             </Text>
           </Layout>
           <Terminal title="gkapfham: ~(zsh)" output={[
-            "./gatorgrader.sh --check",
-            "> Task :test",
-            "testone.TestCreditCard > testConstructCreditCardWithDefaultBalance PASSED",
-            "testone.TestCreditCard > testConstructCreditCardWithSpecifiedBalance FAILED",
-            "testone.TestCreditCard > testChargeWhenLimitSurpassedDefaultBalance PASSED",
-            "... additional test case runs ...",
-            "> Task :run",
-            "Bank = California Savings",
-            "Account = 5391 0375 9387 5309",
-            "Balance = 408.0",
-            "Limit = 5000",
-            "New balance = 201.0",
-            "... additional output from program run ...",
-            "> Task :lint",
-            "mdl README.md PASSED",
-            "mdl reflection.md FAILED",
-            "proselint README.md PASSED",
-            "proselint reflection.md FAILED",
-            "> Task :check",
-            "Did CreditCard.java have at least 12 multiple-line comments? No",
-            "Did the running the program produce 20 lines of output? No",
-            "Did the program's output contain the fragment 'Bowman'? Yes",
-            "Did the repository have at least additional 5 commits? No",
-            "... additional output from program checks ...",
-            "Overall, are there any mistakes in the assignment? Yes",
+            './gatorgrader.sh --check',
+            '> Task :test',
+            'testone.TestCreditCard > testConstructCreditCardWithDefaultBalance PASSED',
+            'testone.TestCreditCard > testConstructCreditCardWithSpecifiedBalance FAILED',
+            'testone.TestCreditCard > testChargeWhenLimitSurpassedDefaultBalance PASSED',
+            '... additional test case runs ...',
+            '> Task :run',
+            'Bank = California Savings',
+            'Account = 5391 0375 9387 5309',
+            'Balance = 408.0',
+            'Limit = 5000',
+            'New balance = 201.0',
+            '... additional output from program run ...',
+            '> Task :lint',
+            'mdl README.md PASSED',
+            'mdl reflection.md FAILED',
+            'proselint README.md PASSED',
+            'proselint reflection.md FAILED',
+            '> Task :check',
+            'Did CreditCard.java have at least 12 multiple-line comments? No',
+            'Did the running the program produce 20 lines of output? No',
+            'Did the program\'s output contain the fragment \'Bowman\'? Yes',
+            'Did the repository have at least additional 5 commits? No',
+            '... additional output from program checks ...',
+            'Overall, are there any mistakes in the assignment? Yes',
           ]}
           />
         </Slide>
