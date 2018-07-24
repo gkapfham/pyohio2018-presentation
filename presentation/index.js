@@ -343,7 +343,7 @@ export default class Presentation extends Component {
           </Layout>
 
           <Layout>
-            <Text height="20px">
+            <Text height={minimalHorizontalPadding}>
               &nbsp;
             </Text>
           </Layout>
@@ -360,7 +360,7 @@ export default class Presentation extends Component {
           </Layout>
 
           <Layout>
-            <Text height="20px">
+            <Text height={minimalHorizontalPadding}>
               &nbsp;
             </Text>
           </Layout>
