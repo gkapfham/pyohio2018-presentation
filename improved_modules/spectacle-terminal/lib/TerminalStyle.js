@@ -23,7 +23,7 @@ exports.default = {
   header: {
     position: "relative",
     padding: "10px",
-    backgroundColor: "#E0E9F0",
+    backgroundColor: "#e0e0e0",
     borderTopLeftRadius: "10px",
     borderTopRightRadius: "10px",
     boxShadow: "inset 0px -3px 10px 0px rgba(0, 0, 0, 0.2)"
