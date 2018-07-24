@@ -752,10 +752,13 @@ export default class Presentation extends Component {
           </Layout>
           <Terminal title="gkapfham: ~(zsh)" output={[
             "./gatorgrader.sh --check",
+            "> Task :test",
             "testone.TestCreditCard > testConstructCreditCardWithDefaultBalance PASSED",
             "testone.TestCreditCard > testConstructCreditCardWithSpecifiedBalance PASSED",
             "testone.TestCreditCard > testChargeWhenLimitSurpassedDefaultBalance PASSED",
             "... additional passing test cases ...",
+            "> Task :run",
+
           ]}
           />
         </Slide>
