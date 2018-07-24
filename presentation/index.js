@@ -171,7 +171,7 @@ export const Archive = () => (
 )
 
 export const Deliverables = () => (
-    <FontAwesomeIcon icon={['fab', 'code']} transform="grow-20" color={darktext}/>
+    <FontAwesomeIcon icon={['fas', 'code']} transform="grow-20" color={darktext}/>
 )
 
 export const Comments = () => (
@@ -1038,6 +1038,47 @@ export default class Presentation extends Component {
               improve and study this approach?
             </Heading>
           </Layout>
+        </Slide>
+        {/* Slide } */}
+
+        {/* Slide { */}
+        <Slide bgColor="primary">
+          <Heading fit textColor="darktext">
+            Ideas for Experiments
+          </Heading>
+
+          <Layout>
+            <Text height={standardHorizontalPadding*2}>
+              &nbsp;
+            </Text>
+          </Layout>
+
+          <Layout>
+            <Fill>
+              <Heading size={1} textColor="secondary" margin={standardMargin}>
+                <Deliverables/>
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading size={1} textColor="secondary" margin={standardMargin}>
+                <Insights/>
+              </Heading>
+            </Fill>
+          </Layout>
+
+          <Layout>
+            <Fill>
+              <Heading size={4} textColor="secondary" margin={standardMargin}>
+                Deliverables
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading size={4} textColor="secondary" margin={standardMargin}>
+                Insights
+              </Heading>
+            </Fill>
+          </Layout>
+
         </Slide>
         {/* Slide } */}
 
