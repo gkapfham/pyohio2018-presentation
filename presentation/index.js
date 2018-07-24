@@ -1052,7 +1052,7 @@ export default class Presentation extends Component {
         {/* Slide } */}
 
         {/* Slide { */}
-        <Slide bgColor="primary">
+        <Slide transitionDuration={0} transition={['']} bgColor="primary">
           <Heading fit textColor="darktext">
             Ideas for Experiments
           </Heading>
@@ -1093,7 +1093,7 @@ export default class Presentation extends Component {
         {/* Slide } */}
 
         {/* Slide { */}
-        <Slide bgColor="primary">
+        <Slide transitionDuration={0} transition={['']} bgColor="primary">
           <Heading fill bold caps size={1} lineHeight={1.1} textColor="tertiary">
             What code and concepts cause student frustration?
           </Heading>
@@ -1101,7 +1101,7 @@ export default class Presentation extends Component {
         {/* Slide { */}
 
         {/* Slide { */}
-        <Slide bgColor="primary">
+        <Slide transitionDuration={0} transition={['']} bgColor="primary">
           <Heading fit textColor="darktext">
             Let's Collaborate
           </Heading>
