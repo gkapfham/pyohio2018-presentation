@@ -64,6 +64,7 @@ const images = {
   ClassroomDefect: require('../assets/images/ClassroomDefect.png'),
   SpeakerDeck: require('../assets/images/SpeakerDeck.png'),
   PresentationRepo: require('../assets/images/PresentationRepo.png'),
+  GatorGrader: require('../assets/images/GatorGrader.png'),
 };
 preloader(images);
 
@@ -1243,6 +1244,21 @@ export default class Presentation extends Component {
             </Fill>
           </Layout>
 
+        </Slide>
+        {/* Slide } */}
+
+        {/* Slide { */}
+        <Slide transition={['slide']}>
+          <Heading fit size={1} textColor="darktext">
+            Checkout GatorGrader on GitHub!
+          </Heading>
+          <Layout>
+            <Text height={standardHorizontalPadding}>
+              &nbsp;
+            </Text>
+          </Layout>
+          {/* TODO: Update the image when it is moved */}
+          <Image src={images.GatorGrader}/>
         </Slide>
         {/* Slide } */}
 
