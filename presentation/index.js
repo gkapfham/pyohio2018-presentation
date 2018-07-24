@@ -188,8 +188,16 @@ export const CommentsShiftUp = () => (
   <FontAwesomeIcon icon={['fas', 'comments']} transform="grow-8, left-2" color={darktext}/>
 )
 
+export const Evaluation = () => (
+    <FontAwesomeIcon icon={['fab', 'arrows-alt']} transform="grow-20" color={darktext}/>
+)
+
 export const GitHub = () => (
     <FontAwesomeIcon icon={['fab', 'github']} transform="grow-20" color={darktext}/>
+)
+
+export const Globe = () => (
+    <FontAwesomeIcon icon={['fab', 'globe']} transform="grow-20" color={darktext}/>
 )
 
 export const Gradle = () => (
@@ -198,6 +206,10 @@ export const Gradle = () => (
 
 export const Insights = () => (
     <FontAwesomeIcon icon={['fas', 'lightbulb']} transform="grow-20" color={darktext}/>
+)
+
+export const Key = () => (
+    <FontAwesomeIcon icon={['fas', 'key']} transform="grow-20" color={darktext}/>
 )
 
 export const Prompt = () => (
