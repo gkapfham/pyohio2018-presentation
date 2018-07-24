@@ -758,6 +758,13 @@ export default class Presentation extends Component {
             "testone.TestCreditCard > testChargeWhenLimitSurpassedDefaultBalance PASSED",
             "... additional passing test cases ...",
             "> Task :run",
+            "Bank = California Savings",
+            "Account = 5391 0375 9387 5309",
+            "Balance = 408.0",
+            "Limit = 5000",
+            "New balance = 208.0",
+            "... additionl output from program run ...",
+
 
           ]}
           />
