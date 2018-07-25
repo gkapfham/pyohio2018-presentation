@@ -167,17 +167,15 @@ library.add(fab, far, fas)
 {/* Declare all of the specific icons used in the slides */}
 
 export const Archive = () => (
-  <div>
-    <FontAwesomeIcon icon={['fas', 'archive']} size="3x" color="#212121"/>
-  </div>
+  <FontAwesomeIcon icon={['fas', 'cubes']} transform="grow-18" color={darktext}/>
 )
 
 export const DefectReports = () => (
-    <FontAwesomeIcon icon={['fas', 'bug']} transform="grow-20" color={darktext}/>
+  <FontAwesomeIcon icon={['fas', 'bug']} transform="grow-20" color={darktext}/>
 )
 
 export const Deliverables = () => (
-    <FontAwesomeIcon icon={['fas', 'code']} transform="grow-20" color={darktext}/>
+  <FontAwesomeIcon icon={['fas', 'code']} transform="grow-20" color={darktext}/>
 )
 
 export const Comments = () => (
@@ -189,71 +187,67 @@ export const CommentsShiftUp = () => (
 )
 
 export const Evaluation = () => (
-    <FontAwesomeIcon icon={['fas', 'arrows-alt']} transform="grow-18" color={darktext}/>
+  <FontAwesomeIcon icon={['fas', 'arrows-alt']} transform="grow-18" color={darktext}/>
 )
 
 export const GitHub = () => (
-    <FontAwesomeIcon icon={['fab', 'github']} transform="grow-20" color={darktext}/>
+  <FontAwesomeIcon icon={['fab', 'github']} transform="grow-20" color={darktext}/>
 )
 
 export const Globe = () => (
-    <FontAwesomeIcon icon={['fas', 'globe']} transform="grow-18" color={darktext}/>
+  <FontAwesomeIcon icon={['fas', 'globe']} transform="grow-18" color={darktext}/>
 )
 
 export const Gradle = () => (
-    <FontAwesomeIcon icon={['fas', 'th-large']} transform="grow-20" color={darktext}/>
+  <FontAwesomeIcon icon={['fas', 'th-large']} transform="grow-20" color={darktext}/>
 )
 
 export const Insights = () => (
-    <FontAwesomeIcon icon={['fas', 'lightbulb']} transform="grow-20" color={darktext}/>
+  <FontAwesomeIcon icon={['fas', 'lightbulb']} transform="grow-20" color={darktext}/>
 )
 
 export const Key = () => (
-    <FontAwesomeIcon icon={['fas', 'key']} transform="grow-18" color={darktext}/>
+  <FontAwesomeIcon icon={['fas', 'key']} transform="grow-18" color={darktext}/>
 )
 
 export const Map = () => (
-  <FontAwesomeIcon icon={['fas', 'map']} size="2x" transform="down-3, left-2" color="#212121"/>
+  <FontAwesomeIcon icon={['fas', 'map']} size="2x" transform="down-3, left-2" color={darktext}/>
 )
 
-export const Package = () => (
-    <FontAwesomeIcon icon={['fas', 'package']} transform="grow-20" color={darktext}/>
-)
-
-export const PaperAirplane= () => (
-    <FontAwesomeIcon icon={['far', 'paper-plane']} transform="grow-20" color={darktext}/>
+export const PaperAirplane = () => (
+  <FontAwesomeIcon icon={['fas', 'list']} transform="grow-18" color={darktext}/>
 )
 
 export const Prompt = () => (
-    <FontAwesomeIcon icon={['fas', 'terminal']} transform="grow-20" color={darktext}/>
+  <FontAwesomeIcon icon={['fas', 'terminal']} transform="grow-20" color={darktext}/>
 )
 
 export const PullRequests = () => (
-    <FontAwesomeIcon icon={['fas', 'code-branch']} transform="grow-20" color={darktext}/>
+  <FontAwesomeIcon icon={['fas', 'code-branch']} transform="grow-20" color={darktext}/>
 )
 
 export const Python = () => (
-    <FontAwesomeIcon icon={['fab', 'python']} transform="grow-20" color={darktext}/>
+  <FontAwesomeIcon icon={['fab', 'python']} transform="grow-20" color={darktext}/>
 )
 
 export const RepoFull = () => (
-    <FontAwesomeIcon icon={['fas', 'square']} transform="grow-20" color={darktext}/>
+  <FontAwesomeIcon icon={['fas', 'square']} transform="grow-20" color={darktext}/>
 )
 
 export const RepoMinus = () => (
-    <FontAwesomeIcon icon={['fas', 'minus-square']} transform="grow-20" color={darktext}/>
+  <FontAwesomeIcon icon={['fas', 'minus-square']} transform="grow-20" color={darktext}/>
 )
 
 export const Script = () => (
-    <FontAwesomeIcon icon={['fas', 'cube']} transform="grow-20" color={darktext}/>
+  <FontAwesomeIcon icon={['fas', 'cube']} transform="grow-20" color={darktext}/>
 )
 
 export const Toggle = () => (
-    <FontAwesomeIcon icon={['fas', 'toggle-on']} transform="grow-20" color={darktext}/>
+  <FontAwesomeIcon icon={['fas', 'toggle-on']} transform="grow-20" color={darktext}/>
 )
 
 export const Travis = () => (
-    <FontAwesomeIcon icon={['fas', 'user-secret']} transform="grow-20" color={darktext}/>
+  <FontAwesomeIcon icon={['fas', 'user-secret']} transform="grow-20" color={darktext}/>
 )
 
 export const Twitter = () => (
@@ -263,7 +257,7 @@ export const Twitter = () => (
 )
 
 export const Trophy = () => (
-    <FontAwesomeIcon icon={['fas', 'trophy']} transform="grow-20" color={darktext}/>
+  <FontAwesomeIcon icon={['fas', 'trophy']} transform="grow-18" color={darktext}/>
 )
 
 export const Web = () => (
@@ -608,6 +602,57 @@ export default class Presentation extends Component {
           <Heading fill bold caps size={1} lineHeight={1.1} textColor="tertiary">
             Develop new solutions in Python when necessary
           </Heading>
+        </Slide>
+        {/* Slide } */}
+
+        {/* Slide { */}
+        <Slide transition={['']} bgColor="primary">
+          <Heading fit textColor="darktext">
+            Benefits of Python
+          </Heading>
+
+          <Layout>
+            <Text height={standardHorizontalPadding*2}>
+              &nbsp;
+            </Text>
+          </Layout>
+
+          <Layout>
+            <Fill>
+              <Heading size={1} textColor="secondary" margin={standardMargin}>
+                <Archive/>
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading size={1} textColor="secondary" margin={standardMargin}>
+                <Trophy/>
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading size={1} textColor="secondary" margin={standardMargin}>
+                <PaperAirplane/>
+              </Heading>
+            </Fill>
+          </Layout>
+
+          <Layout>
+            <Fill>
+              <Heading size={4} textColor="secondary" margin={standardMargin}>
+                Tools
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading size={4} textColor="secondary" margin={standardMargin}>
+                Options
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading size={4} textColor="secondary" margin={standardMargin}>
+                Testing
+              </Heading>
+            </Fill>
+          </Layout>
+
         </Slide>
         {/* Slide } */}
 
