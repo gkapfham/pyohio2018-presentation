@@ -1302,7 +1302,7 @@ export default class Presentation extends Component {
         {/* Slide } */}
 
         {/* Slide { */}
-        <Slide transition={['slide']}>
+        <Slide transition={['spin', 'slide']}>
           <Heading fit size={1} textColor="darktext">
             GitHub Classroom developers are great!
           </Heading>
