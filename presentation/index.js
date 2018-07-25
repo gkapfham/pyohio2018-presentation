@@ -1242,7 +1242,23 @@ export default class Presentation extends Component {
             What code and concepts cause student frustration?
           </Heading>
         </Slide>
+        {/* Slide } */}
+
         {/* Slide { */}
+        <Slide transitionDuration={0} transition={['']} bgColor="primary">
+          <Heading fill bold caps size={1} lineHeight={1.1} textColor="tertiary">
+            What features best support emerging programmers?
+          </Heading>
+        </Slide>
+        {/* Slide } */}
+
+        {/* Slide { */}
+        <Slide transitionDuration={0} transition={['']} bgColor="primary">
+          <Heading fill bold caps size={1} lineHeight={1.1} textColor="tertiary">
+            How do team members influence learning?
+          </Heading>
+        </Slide>
+        {/* Slide } */}
 
         {/* Slide { */}
         <Slide transitionDuration={0} transition={['']} bgColor="primary">
@@ -1328,6 +1344,21 @@ export default class Presentation extends Component {
         {/* Slide } */}
 
         {/* Slide { */}
+        <Slide transition={['slide']}>
+          <Heading fit size={1} textColor="darktext">
+            Check out GatorGrader on GitHub!
+          </Heading>
+          <Layout>
+            <Text height={standardHorizontalPadding}>
+              &nbsp;
+            </Text>
+          </Layout>
+          {/* TODO: Update the image when it is moved */}
+          <Image src={images.GatorGrader}/>
+        </Slide>
+        {/* Slide } */}
+
+        {/* Slide { */}
         <Slide bgColor="primary">
           <Heading fit textColor="darktext">
             Main Contributions
@@ -1378,20 +1409,6 @@ export default class Presentation extends Component {
         </Slide>
         {/* Slide } */}
 
-        {/* Slide { */}
-        <Slide transition={['slide']}>
-          <Heading fit size={1} textColor="darktext">
-            Checkout GatorGrader on GitHub!
-          </Heading>
-          <Layout>
-            <Text height={standardHorizontalPadding}>
-              &nbsp;
-            </Text>
-          </Layout>
-          {/* TODO: Update the image when it is moved */}
-          <Image src={images.GatorGrader}/>
-        </Slide>
-        {/* Slide } */}
 
         {/* SECTION: Conclusion } */}
 
