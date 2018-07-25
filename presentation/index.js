@@ -591,6 +591,22 @@ export default class Presentation extends Component {
 
         {/* Slide { */}
         <Slide transition={['']} bgColor="primary">
+          <Heading fit textColor="darktext">
+            Deliverables to Check
+          </Heading>
+          <Appear transitionDuration={100}>
+          <List textColor={darktext} textAlign="center" start={1}>
+            <ListItem>Item 1</ListItem>
+            <ListItem>Item 2</ListItem>
+            <ListItem>Item 3</ListItem>
+            <ListItem>Item 4</ListItem>
+          </List>
+          </Appear>
+        </Slide>
+        {/* Slide } */}
+
+        {/* Slide { */}
+        <Slide transition={['']} bgColor="primary">
           <Heading fill bold caps size={1} lineHeight={1.1} textColor="tertiary">
             Use industry standard tools in all course work
           </Heading>
