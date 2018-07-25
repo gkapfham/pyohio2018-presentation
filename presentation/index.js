@@ -212,6 +212,18 @@ export const Key = () => (
     <FontAwesomeIcon icon={['fas', 'key']} transform="grow-18" color={darktext}/>
 )
 
+export const Map = () => (
+  <FontAwesomeIcon icon={['fas', 'map']} size="2x" transform="down-3, left-2" color="#212121"/>
+)
+
+export const Package = () => (
+    <FontAwesomeIcon icon={['fas', 'package']} transform="grow-20" color={darktext}/>
+)
+
+export const PaperAirplane= () => (
+    <FontAwesomeIcon icon={['far', 'paper-plane']} transform="grow-20" color={darktext}/>
+)
+
 export const Prompt = () => (
     <FontAwesomeIcon icon={['fas', 'terminal']} transform="grow-20" color={darktext}/>
 )
@@ -250,8 +262,8 @@ export const Twitter = () => (
   </div>
 )
 
-export const Map = () => (
-  <FontAwesomeIcon icon={['fas', 'map']} size="2x" transform="down-3, left-2" color="#212121"/>
+export const Trophy = () => (
+    <FontAwesomeIcon icon={['fas', 'trophy']} transform="grow-20" color={darktext}/>
 )
 
 export const Web = () => (
