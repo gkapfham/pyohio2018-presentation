@@ -599,6 +599,7 @@ export default class Presentation extends Component {
             <ListItem margin={minimalHorizontalPadding}>Source Code</ListItem>
             <ListItem margin={minimalHorizontalPadding}>Technical Writing</ListItem>
             <ListItem margin={minimalHorizontalPadding}>Commit Counts</ListItem>
+            <ListItem margin={minimalHorizontalPadding}>Commit Messages</ListItem>
             <ListItem margin={minimalHorizontalPadding}>Program Output</ListItem>
             <ListItem margin={minimalHorizontalPadding}>Data Files</ListItem>
           </List>
