@@ -578,7 +578,7 @@ export default class Presentation extends Component {
         {/* Slide { */}
         <Slide transition={['']} bgColor="primary">
           <Heading fill bold caps size={1} lineHeight={1.1} textColor="tertiary">
-            Students and faculty effectively collaborate
+            Help students and faculty effectively collaborate
           </Heading>
         </Slide>
         {/* Slide } */}
