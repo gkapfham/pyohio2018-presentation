@@ -757,7 +757,7 @@ export default class Presentation extends Component {
         {/* Slide { */}
 
         {/* Slide { */}
-        <Slide transition={['']} bgColor="primary">
+        <Slide bgColor="primary">
           <Heading fit textColor="darktext">
             Using Travis CI
           </Heading>
