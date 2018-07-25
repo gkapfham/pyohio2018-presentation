@@ -214,7 +214,7 @@ export const Map = () => (
   <FontAwesomeIcon icon={['fas', 'map']} size="2x" transform="down-3, left-2" color={darktext}/>
 )
 
-export const PaperAirplane = () => (
+export const ListIcon = () => (
   <FontAwesomeIcon icon={['fas', 'list']} transform="grow-18" color={darktext}/>
 )
 
@@ -595,11 +595,12 @@ export default class Presentation extends Component {
             Deliverables to Check
           </Heading>
           <Appear transitionDuration={100}>
-          <List textColor={darktext} textAlign="center" start={1}>
-            <ListItem>Item 1</ListItem>
-            <ListItem>Item 2</ListItem>
-            <ListItem>Item 3</ListItem>
-            <ListItem>Item 4</ListItem>
+          <List bold textColor={darktext} textAlign="left" textSize="2em" margin={minimalHorizontalPadding} start={1}>
+            <ListItem margin={minimalHorizontalPadding}>Source Code</ListItem>
+            <ListItem margin={minimalHorizontalPadding}>Technical Writing</ListItem>
+            <ListItem margin={minimalHorizontalPadding}>Commit Counts</ListItem>
+            <ListItem margin={minimalHorizontalPadding}>Program Output</ListItem>
+            <ListItem margin={minimalHorizontalPadding}>Data Files</ListItem>
           </List>
           </Appear>
         </Slide>
@@ -646,7 +647,7 @@ export default class Presentation extends Component {
             </Fill>
             <Fill>
               <Heading size={1} textColor="secondary" margin={standardMargin}>
-                <PaperAirplane/>
+                <ListIcon/>
               </Heading>
             </Fill>
           </Layout>
