@@ -1055,6 +1055,37 @@ export default class Presentation extends Component {
         {/* Slide { */}
         <Slide bgColor="primary">
           <Heading fit textColor="darktext">
+            Previous Courses and Topics
+          </Heading>
+          <Layout>
+            <Text height={standardHorizontalPadding}>
+              &nbsp;
+            </Text>
+          </Layout>
+          <Appear transitionDuration={100}>
+          <List bold textColor={darktext} textAlign="left" textSize="2em" margin={minimalHorizontalPadding} start={1}>
+            <ListItem margin={minimalHorizontalPadding}>Computational Expression</ListItem>
+            <ListItem margin={minimalHorizontalPadding}>Data Abstraction</ListItem>
+            <ListItem margin={minimalHorizontalPadding}>Web Development</ListItem>
+            <ListItem margin={minimalHorizontalPadding}>Software Engineering</ListItem>
+          </List>
+          </Appear>
+          <Layout>
+            <Text height={standardHorizontalPadding}>
+              &nbsp;
+            </Text>
+          </Layout>
+          <Appear>
+          <Heading fit textColor="secondary">
+            Different topics, goals, languages, and levels
+          </Heading>
+          </Appear>
+        </Slide>
+        {/* Slide } */}
+
+        {/* Slide { */}
+        <Slide bgColor="primary">
+          <Heading fit textColor="darktext">
             Exciting New Features
           </Heading>
 
