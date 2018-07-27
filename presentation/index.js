@@ -170,6 +170,10 @@ export const Archive = () => (
   <FontAwesomeIcon icon={['fas', 'cubes']} transform="grow-18" color={darktext}/>
 )
 
+export const Arrow = () => (
+  <FontAwesomeIcon icon={['fas', 'long-arrow-alt-right']} transform="grow-18" color={darktext}/>
+)
+
 export const DefectReports = () => (
   <FontAwesomeIcon icon={['fas', 'bug']} transform="grow-20" color={darktext}/>
 )
@@ -836,7 +840,7 @@ export default class Presentation extends Component {
         {/* Slide { */}
         <Slide transition={['slide', 'spin']}>
           <Heading fit size={1} textColor="darktext">
-            Create an assignment using the solution
+            Create an assignment using the starter
           </Heading>
           <Layout>
             <Text height={standardHorizontalPadding}>
@@ -958,7 +962,7 @@ export default class Presentation extends Component {
             { loc: [0, 270], title: 'Let\'s Call GatorGrader',
               note: 'Create a script for local use or on Travis' },
             { loc: [9, 16], title: 'Decide if Check Passes',
-              note: 'The build should pass if all checks pass' },
+              note: 'The build passes if all of the checks pass' },
             { loc: [53, 60], title: 'Define the Command Line',
               note: 'Use getopt to parse the command-line arguments' },
             { loc: [164, 169], title: 'Check that a File Exists',
@@ -1103,6 +1107,11 @@ export default class Presentation extends Component {
             </Fill>
             <Fill>
               <Heading size={1} textColor="secondary" margin={standardMargin}>
+                <Arrow/>
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading size={1} textColor="secondary" margin={standardMargin}>
                 <Gradle/>
               </Heading>
             </Fill>
@@ -1112,6 +1121,11 @@ export default class Presentation extends Component {
             <Fill>
               <Heading size={4} textColor="secondary" margin={standardMargin}>
                 Script
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading size={1} textColor="secondary" margin={standardMargin}>
+                &nbsp;
               </Heading>
             </Fill>
             <Fill>
