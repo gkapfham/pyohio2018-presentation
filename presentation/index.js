@@ -1428,7 +1428,7 @@ export default class Presentation extends Component {
           </Heading>
 
           <Layout>
-            <Text height={standardHorizontalPadding*2}>
+            <Text height={standardHorizontalPadding}>
               &nbsp;
             </Text>
           </Layout>
@@ -1468,6 +1468,10 @@ export default class Presentation extends Component {
               </Heading>
             </Fill>
           </Layout>
+
+          <Heading size={4} textColor="darktext">
+            GatorEducator/GatorGrader
+          </Heading>
 
         </Slide>
         {/* Slide } */}
