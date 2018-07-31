@@ -811,12 +811,12 @@ export default class Presentation extends Component {
           <Layout>
             <Fill>
               <Heading size={4} textColor="secondary" margin={standardMargin}>
-                Starter
+                Solution
               </Heading>
             </Fill>
             <Fill>
               <Heading size={4} textColor="secondary" margin={standardMargin}>
-                Solution
+                Starter
               </Heading>
             </Fill>
             <Fill>
