@@ -15,9 +15,9 @@
   "license": "MIT",
   "dependencies": {
     "normalize.css": "7.0.0",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
-    "spectacle": "^4.3.1",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "spectacle": "^5.2.0",
     "spectacle-code-slide": "^0.5.2",
     "spectacle-renderer": "^0.0.3",
     "spectacle-terminal": "^0.5.0"
