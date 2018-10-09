@@ -1356,7 +1356,7 @@ export default class Presentation extends Component {
             </Fill>
             <Fill>
               <Heading size={4} textColor="secondary" margin={standardMargin}>
-                Defect Reports
+                Bug Reports
               </Heading>
             </Fill>
           </Layout>
