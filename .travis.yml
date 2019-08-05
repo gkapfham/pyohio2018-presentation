@@ -17,8 +17,9 @@ branches:
 before_install:
   - gem install mdl
 
-# Make sure that npm is installed
+# Make sure that npm packages are installed
 install:
+  - npm cache clean
   - npm install
 
 # Send emails when there is a change or failure
