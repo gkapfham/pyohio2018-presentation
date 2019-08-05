@@ -19,7 +19,7 @@ before_install:
 
 # Make sure that npm packages are installed
 install:
-  - npm cache clean
+  - npm cache clean --force
   - npm install
 
 # Send emails when there is a change or failure
