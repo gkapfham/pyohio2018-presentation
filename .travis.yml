@@ -40,3 +40,4 @@ script:
   # Note that this presentation still runs correctly
   # when the "npm run start" command is used locally.
   # - npm run build
+  - npm build
